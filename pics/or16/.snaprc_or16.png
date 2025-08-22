@@ -1,0 +1,21 @@
+#----------------------------------------------------------
+# /home/ci_inovador/Documentos/inge4-workspace/pics/or16//.snaprc_or16.png : snapshot resource file                          
+# label = or16.png                                      
+#----------------------------------------------------------
+set tmpstr ""
+set tmpbar ""
+lappend tmpstr "dir" $sdir
+lappend tmpstr "label" or16.png
+lappend tmpstr "fplan" $sdir/ss_or16.png.fplan.gif
+lappend tmpstr "amoeba" $sdir/ss_or16.png.amoeba.gif
+lappend tmpstr "place" $sdir/ss_or16.png.place.gif
+lappend tmpstr "trgGlbOverflowPctH" 0
+lappend tmpstr "trgGlbOverflowPctV" 0
+lappend tmpbar "Congestion"
+lappend tmpstr "Congestion" 0
+lappend tmpbar WNS
+lappend tmpstr WNS 2147483647.0
+lappend tmpbar TNS
+lappend tmpstr TNS 2147483647.0
+lappend tmpbar Overlap
+lappend tmpstr Overlap 0

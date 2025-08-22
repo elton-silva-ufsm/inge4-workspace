@@ -1,0 +1,123 @@
+(DELAYFILE
+  (SDFVERSION  "OVI 3.0")
+  (DESIGN      "and16")
+  (DATE        "Thu Aug 21 12:38:29 -03 2025")
+  (VENDOR      "Cadence, Inc.")
+  (PROGRAM     "Genus(TM) Synthesis Solution")
+  (VERSION     "21.18-s082_1")
+  (DIVIDER     .)
+  (VOLTAGE     ::1.1)
+  (PROCESS     "::1.0")
+  (TEMPERATURE ::0.0)
+  (TIMESCALE   1ps)
+  (CELL
+     (CELLTYPE "AND2X1")
+     (INSTANCE g192__2398)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.0))
+          (PORT B (::0.0))
+          (IOPATH A Y (::25) (::17))
+          (IOPATH B Y (::30) (::20))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "NOR4BBX1")
+     (INSTANCE g193__5107)
+     (DELAY
+        (ABSOLUTE
+          (PORT AN (::0.0))
+          (PORT BN (::0.0))
+          (PORT C (::0.0))
+          (PORT D (::0.0))
+          (IOPATH D Y (::24) (::11))
+          (IOPATH BN Y (::40) (::20))
+          (IOPATH C Y (::36) (::13))
+          (IOPATH AN Y (::43) (::21))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "NAND3BXL")
+     (INSTANCE g194__6260)
+     (DELAY
+        (ABSOLUTE
+          (PORT AN (::0.0))
+          (PORT B (::0.0))
+          (PORT C (::0.0))
+          (IOPATH B Y (::9) (::20))
+          (IOPATH C Y (::8) (::17))
+          (IOPATH AN Y (::19) (::34))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "NAND4XL")
+     (INSTANCE g196__4319)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.0))
+          (PORT B (::0.0))
+          (PORT C (::0.0))
+          (PORT D (::0.0))
+          (IOPATH D Y (::8) (::21))
+          (IOPATH A Y (::11) (::33))
+          (IOPATH B Y (::10) (::31))
+          (IOPATH C Y (::9) (::27))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND4X1")
+     (INSTANCE g195__8428)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.0))
+          (PORT B (::0.0))
+          (PORT C (::0.0))
+          (PORT D (::0.0))
+          (IOPATH D Y (::47) (::19))
+          (IOPATH A Y (::58) (::23))
+          (IOPATH B Y (::56) (::22))
+          (IOPATH C Y (::53) (::21))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "NAND4XL")
+     (INSTANCE g197__5526)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.0))
+          (PORT B (::0.0))
+          (PORT C (::0.0))
+          (PORT D (::0.0))
+          (IOPATH D Y (::9) (::24))
+          (IOPATH A Y (::12) (::35))
+          (IOPATH B Y (::11) (::33))
+          (IOPATH C Y (::10) (::29))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "DLY1X1")
+     (INSTANCE fopt)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.0))
+          (IOPATH A Y (::46) (::45))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "BUFX20")
+     (INSTANCE drc)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.0))
+          (IOPATH A Y (::662) (::705))
+        )
+     )
+  )
+)

@@ -1,0 +1,75 @@
+#!/usr/bin/bash
+
+clear
+
+export ROOT=$(pwd)
+
+module load cdn/xcelium/xcelium2409 
+module load cdn/genus/genus211 
+module load cdn/innovus/innovus211 
+
+# Use 64-bits Cadence Tools
+export CDS_AUTO_64BIT="ALL"
+export PDK_PATH="/home/tools/design_kits/cadence/GPDK045"
+
+export lyt="${ROOT}/layout"
+export logs="${ROOT}/logs"
+export scr="${ROOT}/scripts"
+export src="${ROOT}/src"
+export lib="${ROOT}/lib"
+export tests="${ROOT}/src/tests"
+export syn="${ROOT}/synthesis"
+export cons="${ROOT}/constraints"
+export custom="${ROOT}/custom"
+
+export work_dir="${ROOT}/work"
+export rpt="${ROOT}/synthesis/reports"
+#------------------------------------
+# export design="and16"
+export design="or16"
+#------------------------------------
+
+if [ ! -d "$work_dir" ]; then
+  mkdir -p "$work_dir"
+fi
+cd $work_dir
+
+case ${1} in
+  x)
+    xrun -clean
+    echo -e "\033[1;33mExecuting logical simulation...\033[0m"
+    xrun -f ${scr}/xrun.conf
+  ;;
+  xs)
+    xrun -clean
+    echo -e "\033[1;33mExecuting logical simulation...\033[0m"
+    xrun -f ${scr}/xrun.conf
+  ;;
+  
+  g)
+    echo -e "\033[1;33mExecuting logic synthesis...\033[0m"
+    genus -a -o -logs "${logs}/genus.log /dev/null" \
+    -f ${scr}/logic_synt.tcl
+  ;;
+
+  i)
+    echo -e "\033[1;33mExecuting pyshical synthesis...\033[0m";
+    innovus -stylus -abort_on_error -overwrite -log "${logs}/innovus.log /dev/null" \
+    -files ${scr}/phy_synt.tcl
+  ;;
+  all)
+    echo -e "\033[1;33mExecuting logical simulation...\033[0m"
+    xrun -f ${scr}/xrun.conf
+    
+    echo -e "\033[1;33mExecuting logic synthesis...\033[0m"
+    genus -a -o -b -logs "${logs}/genus.log /dev/null" \
+    -f ${scr}/logic_synt.tcl
+    
+    echo -e "\033[1;33mExecuting pyshical synthesis...\033[0m";
+    innovus -stylus -abort_on_error -overwrite -log "${logs}/innovus.log /dev/null" \
+    -files ${scr}/phy_synt.tcl
+  ;;
+
+  *)
+    echo "Missing an argument: usage: ${0} <tool_opt: x|xs|g|i|all>"
+esac
