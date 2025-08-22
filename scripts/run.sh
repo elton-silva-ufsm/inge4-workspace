@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#hi
 
 clear
 
