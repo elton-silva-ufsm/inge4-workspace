@@ -10,8 +10,7 @@ set clk_latency 0.35 ;# ns ("a guess")
 set in_delay 5.0 ;# ns ("a guess too")
 set out_delay 10.0 ;# ns ("a guess too")
 
-set out_load 3 ;#pF ("a guess too")
-set in_load 3 ;#pF ("a guess too")
+set out_load 0.045 ;#pF ("a guess too")
 
 set slew "150 180 300 350" ;#minimum rise, minimum fall, maximum rise and maximum fall 
 set slew_min_rise 0.15 ;# ns

@@ -1,0 +1,36 @@
+`timescale 1ns / 1ps
+
+module test_chien_block_12;
+
+    reg [3:0] lambda1;
+    reg [3:0] lambda2;
+    wire [14:0] error_vector;
+
+    // Instantiate the chien_block_12 module
+    chien_block_12 uut (
+        .lambda1(lambda1),
+        .lambda2(lambda2),
+        .error_vector(error_vector)
+    );
+
+    initial begin
+        $display("------ BCH Chien Search Test ------");
+
+        // Test 1: lambda(x) = 1 + 0*x + 12*x^2
+        lambda1 = 4'd0;
+        lambda2 = 4'd12;
+        #10;
+        $display("Test 1: lambda1 = %d, lambda2 = %d", lambda1, lambda2);
+        $display("Error Vector: %b", error_vector);
+
+        // Test 2: lambda(x) = 1 + 11*x + 3*x^2
+        lambda1 = 4'd11;
+        lambda2 = 4'd3;
+        #10;
+        $display("Test 2: lambda1 = %d, lambda2 = %d", lambda1, lambda2);
+        $display("Error Vector: %b", error_vector);
+
+        $finish;
+    end
+
+endmodule

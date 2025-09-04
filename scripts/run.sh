@@ -4,6 +4,7 @@ clear
 
 export ROOT=$(pwd)
 
+module load lic/lic_gmicro
 module load cdn/xcelium/xcelium2409 
 module load cdn/genus/genus211 
 module load cdn/innovus/innovus211 
@@ -26,7 +27,9 @@ export work_dir="${ROOT}/work"
 export rpt="${ROOT}/synthesis/reports"
 #------------------------------------
 # export design="and16"
-export design="or16"
+# export design="or16"
+export design="syndrome_block_se"
+export design="h_decoder_11_7"
 #------------------------------------
 
 if [ ! -d "$work_dir" ]; then
@@ -41,9 +44,18 @@ case ${1} in
     xrun -f ${scr}/xrun.conf
   ;;
   xs)
-    xrun -clean
+    xrun -clean -gui
     echo -e "\033[1;33mExecuting logical simulation...\033[0m"
     xrun -f ${scr}/xrun.conf
+  ;;
+  b)
+    xrun -clean 
+    echo -e "\033[1;33mExecuting BCH logical simulation...\033[0m"
+    # xrun ${src}/memory.sv \
+    # xrun ${src}/bch_encoder.sv \
+    xrun ${src}/h_encoder_11_7.sv \
+    -access +rw -nohistory -quiet -sv \
+    -log ${logs}/xrun.log -timescale 1ns/10ps # -gui
   ;;
   
   g)

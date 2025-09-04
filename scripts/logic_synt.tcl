@@ -1,6 +1,7 @@
 
 # Logic Synthesis
 # It's important to set design variable to correspond to top-level design file name
+gui_show
 
 set ROOT $env(ROOT)
 set PDK_PATH $env(PDK_PATH)
