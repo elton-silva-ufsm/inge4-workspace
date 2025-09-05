@@ -29,7 +29,7 @@ export rpt="${ROOT}/synthesis/reports"
 # export design="and16"
 # export design="or16"
 export design="syndrome_block_se"
-export design="h_decoder_11_7"
+# export design="h_decoder_11_7"
 #------------------------------------
 
 if [ ! -d "$work_dir" ]; then
@@ -44,6 +44,16 @@ case ${1} in
     xrun -f ${scr}/xrun.conf
   ;;
   xs)
+    xrun -clean
+    echo -e "\033[1;33mExecuting logical simulation...\033[0m"
+    xrun -f ${scr}/xrun_syn.conf
+  ;;
+  xl)
+    xrun -clean
+    echo -e "\033[1;33mExecuting logical simulation...\033[0m"
+    xrun -f ${scr}/xrun_lyt.conf
+  ;;
+  xg)
     xrun -clean -gui
     echo -e "\033[1;33mExecuting logical simulation...\033[0m"
     xrun -f ${scr}/xrun.conf
@@ -53,7 +63,8 @@ case ${1} in
     echo -e "\033[1;33mExecuting BCH logical simulation...\033[0m"
     # xrun ${src}/memory.sv \
     # xrun ${src}/bch_encoder.sv \
-    xrun ${src}/h_encoder_11_7.sv \
+    # xrun ${src}/h_encoder_11_7.sv \
+    xrun ${src}/test_decoder_bch.sv \
     -access +rw -nohistory -quiet -sv \
     -log ${logs}/xrun.log -timescale 1ns/10ps # -gui
   ;;

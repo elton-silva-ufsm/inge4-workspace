@@ -81,7 +81,8 @@ switch $design {
    "especifico" {
    }
    default {
-      add_rings -type core_rings -jog_distance 0.6 -threshold 0.6 -nets "VDD VSS" -follow core -layer {bottom Metal4 top Metal4 right Metal3 left Metal3} -width 0.7 -spacing 0.4 -offset .6
+      # add_rings -type core_rings -jog_distance 0.6 -threshold 0.6 -nets "VDD VSS" -follow core -layer {bottom Metal4 top Metal4 right Metal3 left Metal3} -width 0.7 -spacing 0.4 -offset .6
+      add_rings -type core_rings -jog_distance 0.6 -threshold 0.6 -nets "VDD VSS" -follow core -layer {bottom Metal11 top Metal11 right Metal10 left Metal10} -width 0.7 -spacing 0.4 -offset 0.6
    }
 }
 
@@ -92,9 +93,14 @@ switch $design {
 	}
    "or16" {
 	}
+   "h_decoder_11_7" {
+   }
+   "syndrome_block_se" {
+   }
 	default {
-	add_stripes -block_ring_top_layer_limit Metal4 -max_same_layer_jog_length 0.44 -set_to_set_distance 7 -pad_core_ring_top_layer_limit Metal4 -spacing 0.4 -layer Metal3 -width 0.28 -start_offset 1 -nets "VDD VSS"
-	}
+	# add_stripes -block_ring_top_layer_limit Metal4 -max_same_layer_jog_length 0.44 -set_to_set_distance 7 -pad_core_ring_top_layer_limit Metal4 -spacing 0.4 -layer Metal3 -width 0.28 -start_offset 1 -nets "VDD VSS"
+	add_stripes -block_ring_top_layer_limit Metal11 -max_same_layer_jog_length 0.44 -set_to_set_distance 7 -pad_core_ring_top_layer_limit Metal11 -spacing 0.4 -layer Metal10 -width 0.22 -start_offset 1 -nets "VDD VSS"
+   }
 }
 
 #------------------------------------ [11]
@@ -102,19 +108,18 @@ switch $design {
   "especifico" {
   }
 	default {
-		route_special -layer_change_range {Metal1(1) Metal4(4)} -block_pin_target nearest_target -allow_jogging 1 -crossover_via_layer_range {Metal1(1) Metal4(4)} -nets "VDD VSS" -allow_layer_change 1 -target_via_layer_range {Metal1(1) Metal4(4)}
+		# route_special -layer_change_range {Metal1(1) Metal4(4)} -block_pin_target nearest_target -allow_jogging 1 -crossover_via_layer_range {Metal1(1) Metal4(4)} -nets "VDD VSS" -allow_layer_change 1 -target_via_layer_range {Metal1(1) Metal4(4)}
+      route_special -layer_change_range {Metal1(1) Metal11(11)} -block_pin_target nearest_target -allow_jogging 1 -crossover_via_layer_range {Metal1(1) Metal11(11)} -nets "VDD VSS" -allow_layer_change 1 -target_via_layer_range {Metal1(1) Metal11(11)}
   }
 }
 
 #------------------------------------ [12]
 if {[file exists $scr/pins/${design}_pin.tcl]} {
    source $scr/pins/${design}_pin.tcl
+} else {
+   set_db place_global_place_io_pins 1
 }
 gui_fit
-
-#------------------------------------ [13]
-# set_db place_global_place_io_pins 1
-# set_db placke_global_reorder_scan 0
 
 #------------------------------------ [14]
 place_design
@@ -170,3 +175,5 @@ set_db timing_analysis_check_type hold
 report_timing -unconstrained > $lyt/${design}/reports/${design}_hold_timing.rpt
 set_db timing_analysis_check_type setup
 report_timing -unconstrained > $lyt/${design}/reports/${design}_setup_timing.rpt
+
+exit

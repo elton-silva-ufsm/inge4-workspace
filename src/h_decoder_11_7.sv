@@ -1,68 +1,68 @@
-// module h_decoder_11_7 (
-//   input  logic [11:0] i_CodeWord,
-//   output logic [6:0]  o_DecodWord,
-//   output logic [4:0]  o_ErrorAdress,
-//   output logic        o_ErrorFlag
-// );
-
-//   logic [4:0] parity_chk, o_Syndrome;
-
-//   assign parity_chk[1] = ^{i_CodeWord[3], i_CodeWord[5], i_CodeWord[7], i_CodeWord[9], i_CodeWord[11]};       
-//   assign parity_chk[2] = ^{i_CodeWord[3], i_CodeWord[7:6], i_CodeWord[11]};
-//   assign parity_chk[3] = ^{i_CodeWord[7:5]};
-//   assign parity_chk[4] = ^{i_CodeWord[11:9]};
-//   assign parity_chk[0] = ^{i_CodeWord[11:1]};
-
-//   assign o_Syndrome = parity_chk[4:1] ^ {i_CodeWord[16], i_CodeWord[8], i_CodeWord[4], i_CodeWord[2], i_CodeWord[1]};
-
-//   assign o_ErrorFlag = |(o_Syndrome);
-//   assign o_ErrorAdress = (parity_chk[0] == i_CodeWord[0] && o_ErrorFlag) ? 5'b00000 : o_Syndrome;
-
-//   assign o_DecodWord = i_CodeWord ^ (1 << o_ErrorAdress);
-  
-// endmodule
-
-
 module h_decoder_11_7 (
     input  logic [11:0] i_CodeWord,
     output logic [6:0]  o_DecodWord,
-    output logic [3:0]  o_Syndrome,
-    output logic        o_ErrorFlag
+    output logic [4:0]  o_Syndrome,
+    output logic        o_ErrorC,
+    output logic        o_ErrorD
 );
+    logic [4:0]  paridade, paridade_in, paridade_err;
+    logic [38:0] corrigido;
 
-    logic p1_chk, p2_chk, p4_chk, p8_chk, po_chk;
-    logic [11:0] correctedWord, temp_input;
+    assign paridade_in = {i_CodeWord[8], i_CodeWord[4], i_CodeWord[2], i_CodeWord[1], i_CodeWord[0]};
+    assign o_Syndrome = paridade_err;
 
     always_comb begin
+        // P0
+        paridade[0] = ^{i_CodeWord[11:1]};
+        // P1
+        paridade[1] =   i_CodeWord[3]  ^ i_CodeWord[5]  ^ i_CodeWord[7]  ^ i_CodeWord[9]  ^ i_CodeWord[11];
+        // P2
+        paridade[2] =   i_CodeWord[3]  ^ i_CodeWord[6]  ^ i_CodeWord[7]  ^ i_CodeWord[10] ^ i_CodeWord[11];
+        // P4
+        paridade[3] = ^{i_CodeWord[7:5]};
+        // P8
+        paridade[4] = ^{i_CodeWord[11:9]};
 
-    p1_chk = ^{i_CodeWord[3], i_CodeWord[5], i_CodeWord[7], i_CodeWord[9], i_CodeWord[11]};
-    p2_chk = ^{i_CodeWord[3], i_CodeWord[6], i_CodeWord[7], i_CodeWord[10], i_CodeWord[11]};
-    p4_chk = ^{i_CodeWord[5], i_CodeWord[6], i_CodeWord[7]};
-    p8_chk = ^{i_CodeWord[8], i_CodeWord[9], i_CodeWord[10], i_CodeWord[11]};
-    po_chk = ^{i_CodeWord[11:0]};
+        // Compare the calculated parity with the received parity
+        paridade_err = paridade_in ^ paridade;
+    end
 
-    o_Syndrome = {p8_chk, p4_chk, p2_chk, p1_chk};
-    o_ErrorFlag = |o_Syndrome || (po_chk != i_CodeWord[0]);
- 
-    case(o_Syndrome)
-        4'd1 : correctedWord = i_CodeWord ^ (1 <<  0);
-        4'd2 : correctedWord = i_CodeWord ^ (1 <<  1);
-        4'd3 : correctedWord = i_CodeWord ^ (1 <<  2);
-        4'd4 : correctedWord = i_CodeWord ^ (1 <<  3);
-        4'd5 : correctedWord = i_CodeWord ^ (1 <<  4);
-        4'd6 : correctedWord = i_CodeWord ^ (1 <<  5);
-        4'd7 : correctedWord = i_CodeWord ^ (1 <<  6);
-        4'd8 : correctedWord = i_CodeWord ^ (1 <<  7);
-        4'd9 : correctedWord = i_CodeWord ^ (1 <<  8);
-        4'd10: correctedWord = i_CodeWord ^ (1 <<  9);
-        4'd11: correctedWord = i_CodeWord ^ (1 << 10);
-        default: correctedWord = i_CodeWord;
-    endcase
+    // always_comb begin        
+    //     if (paridade_err == 5'b00000) begin
+    //         o_ErrorC = 1'b0;
+    //         o_ErrorD = 1'b0;
+    //         corrigido = i_CodeWord; 
+    //     end else if (paridade_err <) begin
+    //         o_ErrorC = 1'b0;
+    //         o_ErrorD = 1'b1;
+    //         corrigido = i_CodeWord;             
+    //     end else if ((paridade_err[4:1] < 12) && (paridade_err[0] == 0)) begin
+    //         o_ErrorC = 1'b1;
+    //         o_ErrorD = 1'b0;
+    //         corrigido = i_CodeWord ^ (1 << (paridade_err[4:1]));
+    //     end
+    // end
+
+    always_comb begin
+        if (paridade_err == 5'b00000) begin
+            o_ErrorC = 1'b0;   // nada a corrigir
+            o_ErrorD = 1'b0;   // nada detectado
+            corrigido = i_CodeWord;
+        end else if ((paridade_err[4:1] < 12) && (paridade_err[0] == 1)) begin
+            o_ErrorC = 1'b1;   // corrigiu
+            o_ErrorD = 1'b0;   // não é apenas detectado
+            corrigido = i_CodeWord ^ (1 << (paridade_err[4:1]));
+        end else  begin
+            o_ErrorC = 1'b0;   // não corrigiu
+            o_ErrorD = 1'b1;   // mas detectou
+            corrigido = i_CodeWord;
+        end 
 
     end
 
-    assign o_DecodWord = { correctedWord[11], correctedWord[10], correctedWord[9],
-                           correctedWord[7], correctedWord[6],  correctedWord[5], 
-                           correctedWord[3]};
+
+    always_comb begin
+        o_DecodWord = {corrigido[11:9], corrigido[7:5], corrigido[3]};
+    end
 
 endmodule
