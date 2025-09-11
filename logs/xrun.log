@@ -1,12 +1,8 @@
     syndrome_block sb (
                     |
 xmelab: *W,CUVWSI (../src/decoder_ref.sv,23|20): 2 input ports were not connected:
-xmelab: (../src/bch/syndrome_block.v,4): clk
-xmelab: (../src/bch/syndrome_block.v,5): rst
-
-    chien_block cb (
-                 |
-xmelab: *W,CUVWSI (../src/decoder_ref.sv,42|17): 2 input ports were not connected:
+xmelab: (../src/bch/syndrome_bloxmsim: *W,NCTERM: Simulation received SIGTERM signal from process 260216, user id 1003 (<unknown>).
+melab: *W,CUVWSI (../src/decoder_ref.sv,42|17): 2 input ports were not connected:
 xmelab: (../src/bch/chien_block.v,4): clk
 xmelab: (../src/bch/chien_block.v,5): rst
 
@@ -225,4 +221,5 @@ xcelium> run
 ╘══════════╧════════════════╧═════════════════════╧════════════════╧════════════════════╛
 Simulation complete via $finish(1) at time 121548 NS + 0
 ../src/tests/bch_toplevel_tb.sv:178         $finish;
-xcelium> 
+xcelium> ^C
+xcelium> exit
