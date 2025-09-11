@@ -63,7 +63,8 @@ switch $design {
 set_db design_process_node 45
 #------------------------------------ [08]
 switch $design {
-   "especifico" {
+   "bch_toplevel" {
+      create_floorplan -core_density_size 1 0.95 3 3 3 3
    }
    default {
 		# 																		rat den l b r t
@@ -119,7 +120,9 @@ if {[file exists $scr/pins/${design}_pin.tcl]} {
 } else {
    set_db place_global_place_io_pins 1
 }
+
 gui_fit
+# suspend
 
 #------------------------------------ [14]
 place_design

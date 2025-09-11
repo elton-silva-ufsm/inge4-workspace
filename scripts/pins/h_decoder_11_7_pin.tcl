@@ -5,7 +5,7 @@ set spc_l "0.5"
 set pin_t ""
 set spc_t ""
 
-set pin_r "o_DecodWord[6] o_DecodWord[5] o_DecodWord[4] o_DecodWord[3] o_DecodWord[2] o_DecodWord[1] o_DecodWord[0] o_Syndrome[4] o_Syndrome[3] o_Syndrome[2] o_Syndrome[1] o_Syndrome[0] o_ErrorFlag"
+set pin_r "o_DecodWord[6] o_DecodWord[5] o_DecodWord[4] o_DecodWord[3] o_DecodWord[2] o_DecodWord[1] o_DecodWord[0] o_Syndrome[4] o_Syndrome[3] o_Syndrome[2] o_Syndrome[1] o_Syndrome[0] o_ErrorC o_ErrorD"
 set spc_r "0.5"
 
 set pin_b ""

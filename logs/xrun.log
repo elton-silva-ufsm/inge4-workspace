@@ -1,27 +1,228 @@
+    syndrome_block sb (
+                    |
+xmelab: *W,CUVWSI (../src/decoder_ref.sv,23|20): 2 input ports were not connected:
+xmelab: (../src/bch/syndrome_block.v,4): clk
+xmelab: (../src/bch/syndrome_block.v,5): rst
+
+    chien_block cb (
+                 |
+xmelab: *W,CUVWSI (../src/decoder_ref.sv,42|17): 2 input ports were not connected:
+xmelab: (../src/bch/chien_block.v,4): clk
+xmelab: (../src/bch/chien_block.v,5): rst
+
 	Top level design units:
-		syndrome_block_se_tb
+		$unit_0x1f94cd36
+		bch_toplevel_tb
+	Reading SDF file from location "/home/ci_inovador/Documentos/inge4-workspace/synthesis/bch_toplevel/bch_toplevel.sdf"
+        .S3_out(S3_out_ref),
+                         |
+xmelab: *W,CUVMPW (../src/tests/bch_toplevel_tb.sv,61|25): port sizes differ in port connection(1/4) for the instance(bch_toplevel_tb) .
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\corrected_codeword_reg[6]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 3557>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\corrected_codeword_reg[2]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 3578>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\corrected_codeword_reg[5]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 3599>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\corrected_codeword_reg[11]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 3620>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\corrected_codeword_reg[10]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 3641>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\corrected_codeword_reg[8]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 3662>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\error_vector_out_reg[6]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 3683>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\error_vector_out_reg[2]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 3704>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\corrected_codeword_reg[9]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 3725>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\corrected_codeword_reg[7]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 3763>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\corrected_codeword_reg[12]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 3820>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\corrected_codeword_reg[13]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 3872>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\corrected_codeword_reg[4]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 3893>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\corrected_codeword_reg[3]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 3914>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\error_vector_out_reg[5]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 3935>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\corrected_codeword_reg[1]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 3956>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\error_vector_out_reg[11]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 3977>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\error_vector_out_reg[8]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 4022>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\error_vector_out_reg[10]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 4043>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\error_vector_out_reg[12]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 4064>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\error_vector_out_reg[7]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 4085>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\error_vector_out_reg[3]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 4106>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\error_vector_out_reg[9]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 4127>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\error_vector_out_reg[4]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 4148>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\corrected_codeword_reg[0]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 4207>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\error_vector_out_reg[13]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 4304>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.error_flag_reg of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 4367>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\S3_out_reg[3]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 4414>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\error_vector_out_reg[1]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 4435>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\error_vector_out_reg[0]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 4600>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\corrected_codeword_reg[14]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 4813>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\S1_out_reg[3]  of module DFFRHQX4 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 5060>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\error_vector_out_reg[14]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 5325>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\S2_out_reg[2]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 5404>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\S1_out_reg[1]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 5457>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\S2_out_reg[0]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 5478>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\S1_out_reg[0]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 5959>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\S1_out_reg[2]  of module DFFRHQX4 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 5978>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\S3_out_reg[1]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 6529>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\S3_out_reg[0]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 6564>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\S3_out_reg[2]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 6585>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\lambda1_out_reg[0]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 9626>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\lambda2_out_reg[2]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 9659>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\lambda1_out_reg[1]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 9708>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\lambda2_out_reg[3]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 9729>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\lambda1_out_reg[2]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 9750>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\lambda2_out_reg[0]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 9863>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\lambda1_out_reg[3]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 9910>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\lambda2_out_reg[1]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 9931>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\bm_lambda1_reg[1]  of module DFFRX1 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 10248>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\bm_lambda1_reg[0]  of module DFFRX1 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 10269>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\bm_lambda2_reg[1]  of module DFFRX1 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 10290>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\bm_lambda1_reg[3]  of module DFFRX1 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 10311>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\bm_lambda2_reg[0]  of module DFFRX1 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 10332>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\bm_lambda2_reg[3]  of module DFFRX1 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 10353>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\bm_lambda2_reg[2]  of module DFFRX1 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 10374>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\bm_lambda1_reg[2]  of module DFFRX1 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 10395>.
+	SDF statistics: 
+		 No. of Pathdelays = 2393    	 No. of Disabled Pathdelays = 0        Annotated = 100.00% (2393/2393) 
+		 No. of Tchecks    = 399     	 No. of Disabled Tchecks    = 0        Annotated = 42.86% (171.00/399) 
+xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
 xcelium> source /home/tools/cadence/installs/XCELIUM2409/tools/xcelium/files/xmsimrc
 xcelium> run
-000000111010000|0000001|0000001|00000001|0|1
-000000111010011|0000001|0000001|00000010|0|1
-000000111010101|0000001|0000001|00000100|0|1
-000000111011001|0000001|0000001|00001000|0|1
-000000111000001|0000001|0000001|00010000|0|1
-000000111110001|0000001|0000001|00100000|0|1
-000000110010001|0000001|0000001|01000000|0|1
-000000101010001|0000001|0000001|10000000|0|1
-000000011010001|0000001|0000001|11010001|0|1
-000001111010001|0000001|0000001|01110011|0|1
-000010111010001|0000001|0000001|11100110|0|1
-000100111010001|0000001|0000001|00011101|0|1
-001000111010001|0000001|0000001|00111010|0|1
-010000111010001|0000001|0000001|01110100|0|1
-100000111010001|0000001|0000001|11101000|0|1
-Testes Concluídos
-1920 Erros Corrigidos
-  0 Erros Detectados
-  0 Erros não detectados
-128 Testes sem erros
-Simulation complete via $finish(1) at time 10320 NS + 0
-../src/tests/syndrome_block_se_tb.sv:106     $finish();
-xcelium> exit
+╒═══════════════════════════════════════════════════════════════════════════════════════╕
+│Test n.1 - Double error correcting in every position of a encoded Word                 │
+╞═══╤═══════════════╤═══════════════╤═══════════════╤═══════════════╤═══════════════╤═╤═╡
+│i  │codeword_rx    │corrected_DUT  │corrected_REF  │err_vec_DUT    │err_vec_REF    │e│f│
+╞═══╪═══════════════╪═══════════════╪═══════════════╪═══════════════╪═══════════════╪═╪═╡
+│  1│000000111010001│000000111010001│000000111010001│000000000000000│000000000000000│0│0│
+│  2│000000111010000│000000111010001│000000111010001│000000000000001│000000000000001│1│1│
+│  3│000000111010011│000000111010001│000000111010001│000000000000010│000000000000010│1│1│
+│  4│000000111010101│000000111010001│000000111010001│000000000000100│000000000000100│1│1│
+│  5│000000111011001│000000111010001│000000111010001│000000000001000│000000000001000│1│1│
+│  6│000000111000001│000000111010001│000000111010001│000000000010000│000000000010000│1│1│
+│  7│000000111110001│000000111010001│000000111010001│000000000100000│000000000100000│1│1│
+│  8│000000110010001│000000111010001│000000111010001│000000001000000│000000001000000│1│1│
+│  9│000000101010001│000000111010001│000000111010001│000000010000000│000000010000000│1│1│
+│ 10│000000011010001│000000111010001│000000111010001│000000100000000│000000100000000│1│1│
+│ 11│000001111010001│000000111010001│000000111010001│000001000000000│000001000000000│1│1│
+│ 12│000010111010001│000000111010001│000000111010001│000010000000000│000010000000000│1│1│
+│ 13│000100111010001│000000111010001│000000111010001│000100000000000│000100000000000│1│1│
+│ 14│001000111010001│000000111010001│000000111010001│001000000000000│001000000000000│1│1│
+│ 15│010000111010001│000000111010001│000000111010001│010000000000000│010000000000000│1│1│
+│ 16│100000111010001│000000111010001│000000111010001│100000000000000│100000000000000│1│1│
+│ 17│000000111010010│000000111010001│000000111010001│000000000000011│000000000000011│1│1│
+│ 18│000000111010100│000000111010001│000000111010001│000000000000101│000000000000101│1│1│
+│ 19│000000111011000│000000111010001│000000111010001│000000000001001│000000000001001│1│1│
+│ 20│000000111000000│000000111010001│000000111010001│000000000010001│000000000010001│1│1│
+│ 21│000000111110000│000000111010001│000000111010001│000000000100001│000000000100001│1│1│
+│ 22│000000110010000│000000111010001│000000111010001│000000001000001│000000001000001│1│1│
+│ 23│000000101010000│000000111010001│000000111010001│000000010000001│000000010000001│1│1│
+│ 24│000000011010000│000000111010001│000000111010001│000000100000001│000000100000001│1│1│
+│ 25│000001111010000│000000111010001│000000111010001│000001000000001│000001000000001│1│1│
+│ 26│000010111010000│000000111010001│000000111010001│000010000000001│000010000000001│1│1│
+│ 27│000100111010000│000000111010001│000000111010001│000100000000001│000100000000001│1│1│
+│ 28│001000111010000│000000111010001│000000111010001│001000000000001│001000000000001│1│1│
+│ 29│010000111010000│000000111010001│000000111010001│010000000000001│010000000000001│1│1│
+│ 30│100000111010000│000000111010001│000000111010001│100000000000001│100000000000001│1│1│
+│ 31│000000111010111│000000111010001│000000111010001│000000000000110│000000000000110│1│1│
+│ 32│000000111011011│000000111010001│000000111010001│000000000001010│000000000001010│1│1│
+│ 33│000000111000011│000000111010001│000000111010001│000000000010010│000000000010010│1│1│
+│ 34│000000111110011│000000111010001│000000111010001│000000000100010│000000000100010│1│1│
+│ 35│000000110010011│000000111010001│000000111010001│000000001000010│000000001000010│1│1│
+│ 36│000000101010011│000000111010001│000000111010001│000000010000010│000000010000010│1│1│
+│ 37│000000011010011│000000111010001│000000111010001│000000100000010│000000100000010│1│1│
+│ 38│000001111010011│000000111010001│000000111010001│000001000000010│000001000000010│1│1│
+│ 39│000010111010011│000000111010001│000000111010001│000010000000010│000010000000010│1│1│
+│ 40│000100111010011│000000111010001│000000111010001│000100000000010│000100000000010│1│1│
+│ 41│001000111010011│000000111010001│000000111010001│001000000000010│001000000000010│1│1│
+│ 42│010000111010011│000000111010001│000000111010001│010000000000010│010000000000010│1│1│
+│ 43│100000111010011│000000111010001│000000111010001│100000000000010│100000000000010│1│1│
+│ 44│000000111011101│000000111010001│000000111010001│000000000001100│000000000001100│1│1│
+│ 45│000000111000101│000000111010001│000000111010001│000000000010100│000000000010100│1│1│
+│ 46│000000111110101│000000111010001│000000111010001│000000000100100│000000000100100│1│1│
+│ 47│000000110010101│000000111010001│000000111010001│000000001000100│000000001000100│1│1│
+│ 48│000000101010101│000000111010001│000000111010001│000000010000100│000000010000100│1│1│
+│ 49│000000011010101│000000111010001│000000111010001│000000100000100│000000100000100│1│1│
+│ 50│000001111010101│000000111010001│000000111010001│000001000000100│000001000000100│1│1│
+│ 51│000010111010101│000000111010001│000000111010001│000010000000100│000010000000100│1│1│
+│ 52│000100111010101│000000111010001│000000111010001│000100000000100│000100000000100│1│1│
+│ 53│001000111010101│000000111010001│000000111010001│001000000000100│001000000000100│1│1│
+│ 54│010000111010101│000000111010001│000000111010001│010000000000100│010000000000100│1│1│
+│ 55│100000111010101│000000111010001│000000111010001│100000000000100│100000000000100│1│1│
+│ 56│000000111001001│000000111010001│000000111010001│000000000011000│000000000011000│1│1│
+│ 57│000000111111001│000000111010001│000000111010001│000000000101000│000000000101000│1│1│
+│ 58│000000110011001│000000111010001│000000111010001│000000001001000│000000001001000│1│1│
+│ 59│000000101011001│000000111010001│000000111010001│000000010001000│000000010001000│1│1│
+│ 60│000000011011001│000000111010001│000000111010001│000000100001000│000000100001000│1│1│
+│ 61│000001111011001│000000111010001│000000111010001│000001000001000│000001000001000│1│1│
+│ 62│000010111011001│000000111010001│000000111010001│000010000001000│000010000001000│1│1│
+│ 63│000100111011001│000000111010001│000000111010001│000100000001000│000100000001000│1│1│
+│ 64│001000111011001│000000111010001│000000111010001│001000000001000│001000000001000│1│1│
+│ 65│010000111011001│000000111010001│000000111010001│010000000001000│010000000001000│1│1│
+│ 66│100000111011001│000000111010001│000000111010001│100000000001000│100000000001000│1│1│
+│ 67│000000111100001│000000111010001│000000111010001│000000000110000│000000000110000│1│1│
+│ 68│000000110000001│000000111010001│000000111010001│000000001010000│000000001010000│1│1│
+│ 69│000000101000001│000000111010001│000000111010001│000000010010000│000000010010000│1│1│
+│ 70│000000011000001│000000111010001│000000111010001│000000100010000│000000100010000│1│1│
+│ 71│000001111000001│000000111010001│000000111010001│000001000010000│000001000010000│1│1│
+│ 72│000010111000001│000000111010001│000000111010001│000010000010000│000010000010000│1│1│
+│ 73│000100111000001│000000111010001│000000111010001│000100000010000│000100000010000│1│1│
+│ 74│001000111000001│000000111010001│000000111010001│001000000010000│001000000010000│1│1│
+│ 75│010000111000001│000000111010001│000000111010001│010000000010000│010000000010000│1│1│
+│ 76│100000111000001│000000111010001│000000111010001│100000000010000│100000000010000│1│1│
+│ 77│000000110110001│000000111010001│000000111010001│000000001100000│000000001100000│1│1│
+│ 78│000000101110001│000000111010001│000000111010001│000000010100000│000000010100000│1│1│
+│ 79│000000011110001│000000111010001│000000111010001│000000100100000│000000100100000│1│1│
+│ 80│000001111110001│000000111010001│000000111010001│000001000100000│000001000100000│1│1│
+│ 81│000010111110001│000000111010001│000000111010001│000010000100000│000010000100000│1│1│
+│ 82│000100111110001│000000111010001│000000111010001│000100000100000│000100000100000│1│1│
+│ 83│001000111110001│000000111010001│000000111010001│001000000100000│001000000100000│1│1│
+│ 84│010000111110001│000000111010001│000000111010001│010000000100000│010000000100000│1│1│
+│ 85│100000111110001│000000111010001│000000111010001│100000000100000│100000000100000│1│1│
+│ 86│000000100010001│000000111010001│000000111010001│000000011000000│000000011000000│1│1│
+│ 87│000000010010001│000000111010001│000000111010001│000000101000000│000000101000000│1│1│
+│ 88│000001110010001│000000111010001│000000111010001│000001001000000│000001001000000│1│1│
+│ 89│000010110010001│000000111010001│000000111010001│000010001000000│000010001000000│1│1│
+│ 90│000100110010001│000000111010001│000000111010001│000100001000000│000100001000000│1│1│
+│ 91│001000110010001│000000111010001│000000111010001│001000001000000│001000001000000│1│1│
+│ 92│010000110010001│000000111010001│000000111010001│010000001000000│010000001000000│1│1│
+│ 93│100000110010001│000000111010001│000000111010001│100000001000000│100000001000000│1│1│
+│ 94│000000001010001│000000111010001│000000111010001│000000110000000│000000110000000│1│1│
+│ 95│000001101010001│000000111010001│000000111010001│000001010000000│000001010000000│1│1│
+│ 96│000010101010001│000000111010001│000000111010001│000010010000000│000010010000000│1│1│
+│ 97│000100101010001│000000111010001│000000111010001│000100010000000│000100010000000│1│1│
+│ 98│001000101010001│000000111010001│000000111010001│001000010000000│001000010000000│1│1│
+│ 99│010000101010001│000000111010001│000000111010001│010000010000000│010000010000000│1│1│
+│100│100000101010001│000000111010001│000000111010001│100000010000000│100000010000000│1│1│
+│101│000001011010001│000000111010001│000000111010001│000001100000000│000001100000000│1│1│
+│102│000010011010001│000000111010001│000000111010001│000010100000000│000010100000000│1│1│
+│103│000100011010001│000000111010001│000000111010001│000100100000000│000100100000000│1│1│
+│104│001000011010001│000000111010001│000000111010001│001000100000000│001000100000000│1│1│
+│105│010000011010001│000000111010001│000000111010001│010000100000000│010000100000000│1│1│
+│106│100000011010001│000000111010001│000000111010001│100000100000000│100000100000000│1│1│
+│107│000011111010001│000000111010001│000000111010001│000011000000000│000011000000000│1│1│
+│108│000101111010001│000000111010001│000000111010001│000101000000000│000101000000000│1│1│
+│109│001001111010001│000000111010001│000000111010001│001001000000000│001001000000000│1│1│
+│110│010001111010001│000000111010001│000000111010001│010001000000000│010001000000000│1│1│
+│111│100001111010001│000000111010001│000000111010001│100001000000000│100001000000000│1│1│
+│112│000110111010001│000000111010001│000000111010001│000110000000000│000110000000000│1│1│
+│113│001010111010001│000000111010001│000000111010001│001010000000000│001010000000000│1│1│
+│114│010010111010001│000000111010001│000000111010001│010010000000000│010010000000000│1│1│
+│115│100010111010001│000000111010001│000000111010001│100010000000000│100010000000000│1│1│
+│116│001100111010001│000000111010001│000000111010001│001100000000000│001100000000000│1│1│
+│117│010100111010001│000000111010001│000000111010001│010100000000000│010100000000000│1│1│
+│118│100100111010001│000000111010001│000000111010001│100100000000000│100100000000000│1│1│
+│119│011000111010001│000000111010001│000000111010001│011000000000000│011000000000000│1│1│
+│120│101000111010001│000000111010001│000000111010001│101000000000000│101000000000000│1│1│
+╞═══╧══════╤════════╧═══════╤═══════╧═════════════╤═╧══════════════╤╧═══════════════╧═╧═╡
+│N.o tests │Corrected Words │Words with no errors │Detected errors │Program Fails       │
+│       120│             119│                    1│               0│                   0│
+╘══════════╧════════════════╧═════════════════════╧════════════════╧════════════════════╛
+╒═══════════════════════════════════════════════════════════════════════════════════════╕
+│Test n.2 - Until 5 errors in the encoded word, exploring Hamming Distance              │
+╞══════════════╤════════════════╤══════════════════╤═════════════════╤══════════════════╡
+│One Error     │Two Errors      │Three Errors      │Four Errors      │Five Errors       │
+│            15│             105│               455│             1365│              3003│
+╞══════════════╧════════════════╧══════════════════╧═════════════════╧══════════════════╡
+╞══════════╤════════════════╤═════════════════════╤════════════════╤════════════════════╡
+│N.o tests │Corrected Words │Words with no errors │Detected errors │Program Fails       │
+│      4943│             120│                    0│            2115│                2708│
+╘══════════╧════════════════╧═════════════════════╧════════════════╧════════════════════╛
+Simulation complete via $finish(1) at time 121548 NS + 0
+../src/tests/bch_toplevel_tb.sv:178         $finish;
+xcelium> 

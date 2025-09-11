@@ -1,0 +1,97 @@
+`timescale 1ns / 1ps
+
+`include "../src/bch_tables.sv"
+`include "../src/bch/chien_block.v"
+`include "../src/bch/ibm_block.v"
+`include "../src/bch/syndrome_block.v"
+`include "../src/decoder_ref.sv"
+
+module bch_toplevel_tb;
+
+    parameter INPUT_FILE   = "../src/input/o_data_bch_15_7.hex";
+    parameter COMPARE_FILE = "../src/input/i_data_7.hex";
+    parameter ERROR_FILE = "../src/input/errors.bin";
+
+    logic [14:0] r_x [0:127];
+    logic [6:0]  d_x [0:127]; 
+    logic [14:0]  e_x [0:119]; 
+
+    logic clk;
+    logic rst;
+    logic [14:0] codeword, corrupted;
+
+    wire [14:0] corrected_codeword;
+    wire [14:0] error_vector_out;
+    wire [3:0]  S1_out, S2_out, S3_out, lambda1_out, lambda2_out;
+    wire        error_flag;
+
+    bch_toplevel DUV (
+        .clk(clk),
+        .rst(rst),
+        .codeword(codeword),
+        .corrected_codeword(corrected_codeword),
+        .S1_out(S1_out),
+        .S2_out(S2_out),
+        .S3_out(S3_out),
+        .lambda1_out(lambda1_out),
+        .lambda2_out(lambda2_out),
+        .error_vector_out(error_vector_out),
+        .error_flag(error_flag)
+    );
+
+    wire [14:0] corrected_codeword_ref;
+    wire [14:0] error_vector_out_ref;
+    wire [3:0]  S1_out_ref, S2_out_ref, lambda1_out_ref, lambda2_out_ref;
+    wire        error_flag_ref;
+
+    decoder_ref REF (
+        .clk(clk),
+        .rst(rst),
+        .codeword(codeword),
+
+        .corrected_codeword(corrected_codeword_ref),
+        .S1_out(S1_out_ref),
+        .S2_out(S2_out_ref),
+        .S3_out(S3_out_ref),
+        .lambda1_out(lambda1_out_ref),
+        .lambda2_out(lambda2_out_ref),
+        .error_vector_out(error_vector_out_ref),
+        .error_flag(error_flag_ref)
+    );
+
+
+    // Clock generation
+    initial begin
+        clk = 0;
+        forever #5 clk = ~clk;
+    end
+
+    // Main stimulus
+    initial begin
+        $readmemh(INPUT_FILE,   r_x);
+        $readmemh(COMPARE_FILE, d_x);
+        $readmemb(ERROR_FILE, e_x);
+
+        $display("╒═══╤═══════════════╤═══════════════╤═══════════════╤═══════════════╤═╤═╕");
+        $display("│i  │codeword_rx    │corrected_DUT  │corrected_REF  │err_vec        │e│f│");
+        $display("╞═══╪═══════════════╪═══════════════╪═══════════════╪═══════════════╪═╪═╡");
+
+        rst = 1;
+        codeword = 0;
+        #20 rst = 0;
+
+        for (int i = 0; i <= 120; i++) begin
+            corrupted = (r_x[0] ^ e_x[i]); 
+            codeword =  corrupted;
+            repeat (4) @(negedge clk);
+            $display("│%3d│%15b│%15b│%15b│%15b│%1b│%1b│", 
+                     i, codeword, corrected_codeword,
+                     corrected_codeword_ref, error_vector_out, error_flag, error_flag_ref);
+        end
+
+        $display("╘═══╧═══════════════╧═══════════════╧═══════════════╧═══════════════╧═╧═╛");
+
+        $finish;
+    end
+
+endmodule

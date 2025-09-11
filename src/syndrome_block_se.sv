@@ -6,6 +6,8 @@ module syndrome_block_se (
     output logic o_ErrorD
 );
 
+// H.B. Ghorpade
+
 parameter logic [8:0] GeneratorPolinomial = 9'b111010001;
 
 logic [14:0] Op6, Op5, Op4, Op3, Op2, Op1, corrected;

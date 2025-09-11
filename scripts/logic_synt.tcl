@@ -49,6 +49,10 @@ foreach lc [get_db base_cells -if {.name == "SDF*"}] {
   set_db $lc .dont_use true
 }
 
+foreach lc [get_db base_cells -if {.name == "CLKBUF*"}] {
+  set_db $lc .dont_use true
+}
+
 syn_generic
 syn_map
 syn_opt

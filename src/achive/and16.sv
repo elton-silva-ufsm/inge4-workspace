@@ -1,8 +1,8 @@
 module and16 (
-  input logic [15:0] A,
-  output logic Y 
+    input logic [15:0] a,
+    output logic y
 );
 
-assign Y = &A; 
+assign y = &a;
 
 endmodule
