@@ -38,48 +38,62 @@ module bch_bm_block_tb;
 
 
         // Display output
-        $display("|PARAMETERS    ||REF      ||DUT      |");
-        $display("|S1  |S2  |S3  ||l1  |l2  ||l1  |l2  |");
+        $display("╒══════════════╦═════════╦═════════╕");
+        $display("│PARAMETERS    ║REF      ║DUT      │");
+        $display("╞════╤════╤════╬════╤════╬════╤════╡");
+        $display("│S1  │S2  │S3  ║l1  │l2  ║l1  │l2  │");
 
         // Initialize Inputs
         clk = 0;
         rst = 1;
 
-        S1 = 0;
-        S2 = 0;
-        S3 = 0;
+        S1 = 4'b0;
+        S2 = 4'b0;
+        S3 = 4'b0;
 
         // Hold reset for 10 ns
-        repeat(2) @(negedge clk);
+        @(negedge clk);
         rst = 0;
 
-        S1 = 1011;// Apply  Test vectors
-        S2 = 1001;
-        S3 = 0010;
+        S1 = 4'b0011;// Syndrome de x^7+x^3
+        S2 = 4'b0101;
+        S3 = 4'b0110;
 
-        repeat(5) @(negedge clk);
-        $display("|%4b|%4b|%4b||%4b|%4b||%4b|%4b|", S1, S2, S3, lambda1, lambda2, olambda1, olambda2);
+        $display("│%4b│%4b│%4b║%4b│%4b║%4b│%4b│", S1, S2, S3, lambda1, lambda2, olambda1, olambda2);
+        @(negedge clk);
 
-        S1 = 1010;// Apply  Test vectors
-        S2 = 1001;
-        S3 = 0010;
+        S1 = 4'b1011;// Apply  Test vectors
+        S2 = 4'b1001;
+        S3 = 4'b0010;
 
-        repeat(5) @(negedge clk);
-        $display("|%4b|%4b|%4b||%4b|%4b||%4b|%4b|", S1, S2, S3, lambda1, lambda2, olambda1, olambda2);
+        @(negedge clk);
+        $display("│%4b│%4b│%4b║%4b│%4b║%4b│%4b│", S1, S2, S3, lambda1, lambda2, olambda1, olambda2);
+        @(negedge clk);
+
+        S1 = 4'b1010;// Apply  Test vectors
+        S2 = 4'b1001;
+        S3 = 4'b0010;
+
+        @(negedge clk);
+        $display("│%4b│%4b│%4b║%4b│%4b║%4b│%4b│", S1, S2, S3, lambda1, lambda2, olambda1, olambda2);
+        @(negedge clk);
         
-        S1 = 1011;// Apply  Test vectors
-        S2 = 1011;
-        S3 = 0010;
+        S1 = 4'b1011;// Apply  Test vectors
+        S2 = 4'b1011;
+        S3 = 4'b0010;
 
-        repeat(5) @(negedge clk);
-        $display("|%4b|%4b|%4b||%4b|%4b||%4b|%4b|", S1, S2, S3, lambda1, lambda2, olambda1, olambda2);
-        S1 = 1011;// Apply  Test vectors
-        S2 = 1001;
-        S3 = 0110;
+        @(negedge clk);
+        $display("│%4b│%4b│%4b║%4b│%4b║%4b│%4b│", S1, S2, S3, lambda1, lambda2, olambda1, olambda2);
+        @(negedge clk);
+        S1 = 4'b1011;// Apply  Test vectors
+        S2 = 4'b1001;
+        S3 = 4'b0110;
 
-        repeat(5) @(negedge clk);
-        $display("|%4b|%4b|%4b||%4b|%4b||%4b|%4b|", S1, S2, S3, lambda1, lambda2, olambda1, olambda2);
+        @(negedge clk);
+        $display("│%4b│%4b│%4b║%4b│%4b║%4b│%4b│", S1, S2, S3, lambda1, lambda2, olambda1, olambda2);
 
+
+        $display("╘══════════════╩═════════╩═════════╛");
         $finish();
     end
 

@@ -1,83 +1,21 @@
     syndrome_block sb (
                     |
 xmelab: *W,CUVWSI (../src/decoder_ref.sv,23|20): 2 input ports were not connected:
-xmelab: (../src/bch/syndrome_bloxmsim: *W,NCTERM: Simulation received SIGTERM signal from process 260216, user id 1003 (<unknown>).
-melab: *W,CUVWSI (../src/decoder_ref.sv,42|17): 2 input ports were not connected:
+xmelab: (../src/bch/syndrome_block.v,4): clk
+xmelab: (../src/bch/syndrome_block.v,5): rst
+
+    chien_block cb (
+                 |
+xmelab: *W,CUVWSI (../src/decoder_ref.sv,42|17): 2 input ports were not connected:
 xmelab: (../src/bch/chien_block.v,4): clk
 xmelab: (../src/bch/chien_block.v,5): rst
 
 	Top level design units:
-		$unit_0x1f94cd36
+		$unit_0x368e8177
 		bch_toplevel_tb
-	Reading SDF file from location "/home/ci_inovador/Documentos/inge4-workspace/synthesis/bch_toplevel/bch_toplevel.sdf"
         .S3_out(S3_out_ref),
                          |
 xmelab: *W,CUVMPW (../src/tests/bch_toplevel_tb.sv,61|25): port sizes differ in port connection(1/4) for the instance(bch_toplevel_tb) .
-xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\corrected_codeword_reg[6]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 3557>.
-xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\corrected_codeword_reg[2]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 3578>.
-xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\corrected_codeword_reg[5]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 3599>.
-xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\corrected_codeword_reg[11]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 3620>.
-xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\corrected_codeword_reg[10]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 3641>.
-xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\corrected_codeword_reg[8]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 3662>.
-xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\error_vector_out_reg[6]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 3683>.
-xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\error_vector_out_reg[2]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 3704>.
-xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\corrected_codeword_reg[9]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 3725>.
-xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\corrected_codeword_reg[7]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 3763>.
-xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\corrected_codeword_reg[12]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 3820>.
-xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\corrected_codeword_reg[13]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 3872>.
-xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\corrected_codeword_reg[4]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 3893>.
-xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\corrected_codeword_reg[3]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 3914>.
-xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\error_vector_out_reg[5]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 3935>.
-xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\corrected_codeword_reg[1]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 3956>.
-xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\error_vector_out_reg[11]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 3977>.
-xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\error_vector_out_reg[8]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 4022>.
-xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\error_vector_out_reg[10]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 4043>.
-xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\error_vector_out_reg[12]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 4064>.
-xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\error_vector_out_reg[7]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 4085>.
-xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\error_vector_out_reg[3]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 4106>.
-xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\error_vector_out_reg[9]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 4127>.
-xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\error_vector_out_reg[4]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 4148>.
-xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\corrected_codeword_reg[0]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 4207>.
-xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\error_vector_out_reg[13]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 4304>.
-xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.error_flag_reg of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 4367>.
-xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\S3_out_reg[3]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 4414>.
-xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\error_vector_out_reg[1]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 4435>.
-xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\error_vector_out_reg[0]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 4600>.
-xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\corrected_codeword_reg[14]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 4813>.
-xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\S1_out_reg[3]  of module DFFRHQX4 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 5060>.
-xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\error_vector_out_reg[14]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 5325>.
-xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\S2_out_reg[2]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 5404>.
-xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\S1_out_reg[1]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 5457>.
-xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\S2_out_reg[0]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 5478>.
-xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\S1_out_reg[0]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 5959>.
-xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\S1_out_reg[2]  of module DFFRHQX4 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 5978>.
-xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\S3_out_reg[1]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 6529>.
-xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\S3_out_reg[0]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 6564>.
-xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\S3_out_reg[2]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 6585>.
-xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\lambda1_out_reg[0]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 9626>.
-xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\lambda2_out_reg[2]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 9659>.
-xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\lambda1_out_reg[1]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 9708>.
-xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\lambda2_out_reg[3]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 9729>.
-xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\lambda1_out_reg[2]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 9750>.
-xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\lambda2_out_reg[0]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 9863>.
-xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\lambda1_out_reg[3]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 9910>.
-xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\lambda2_out_reg[1]  of module DFFRX2 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 9931>.
-xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\bm_lambda1_reg[1]  of module DFFRX1 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 10248>.
-xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\bm_lambda1_reg[0]  of module DFFRX1 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 10269>.
-xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\bm_lambda2_reg[1]  of module DFFRX1 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 10290>.
-xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\bm_lambda1_reg[3]  of module DFFRX1 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 10311>.
-xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\bm_lambda2_reg[0]  of module DFFRX1 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 10332>.
-xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\bm_lambda2_reg[3]  of module DFFRX1 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 10353>.
-xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\bm_lambda2_reg[2]  of module DFFRX1 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 10374>.
-xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_toplevel_tb.DUV.\bm_lambda1_reg[2]  of module DFFRX1 <../synthesis/bch_toplevel/bch_toplevel.sdf, line 10395>.
-	SDF statistics: 
-		 No. of Pathdelays = 2393    	 No. of Disabled Pathdelays = 0        Annotated = 100.00% (2393/2393) 
-		 No. of Tchecks    = 399     	 No. of Disabled Tchecks    = 0        Annotated = 42.86% (171.00/399) 
-xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
-
--------------------------------------
-Relinquished control to SimVision...
-xcelium> 
 xcelium> source /home/tools/cadence/installs/XCELIUM2409/tools/xcelium/files/xmsimrc
 xcelium> run
 ╒═══════════════════════════════════════════════════════════════════════════════════════╕
@@ -219,7 +157,6 @@ xcelium> run
 │N.o tests │Corrected Words │Words with no errors │Detected errors │Program Fails       │
 │      4943│             120│                    0│            2115│                2708│
 ╘══════════╧════════════════╧═════════════════════╧════════════════╧════════════════════╛
-Simulation complete via $finish(1) at time 121548 NS + 0
+Simulation complete via $finish(1) at time 283612 NS + 0
 ../src/tests/bch_toplevel_tb.sv:178         $finish;
-xcelium> ^C
 xcelium> exit

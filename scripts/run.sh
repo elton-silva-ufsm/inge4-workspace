@@ -34,7 +34,6 @@ export rpt="${ROOT}/synthesis/reports"
 # export design="bch_bm_block"
 # export design="bch_chien_block"
 export design="bch_toplevel"
-# export design="bch_cbm_block"
 #------------------------------------
 
 if [ ! -d "$work_dir" ]; then

@@ -2,6 +2,21 @@
 
 `include "../src/bch/syndrome_block.v"
 
+// Resposta obtida:
+// xcelium> run
+// Starting Test...
+// ╒══════════════╦══════════════╕
+// │REF           ║DUT           │
+// ╞══════════════╬══════════════╡
+// │S1  │S2  │S3  ║S1  │S2  │S3  │
+// │0000│0000│0000║0000│0000│0000│
+// │0011│0101│0110║0011│0101│0110│
+// │1011│1001│1100║1011│1001│1100│
+// │1011│1001│0010║1011│1001│0010│
+// │0101│0010│0001║0101│0010│0001│
+// │0000│0000│0000║0000│0000│0000│
+// ╘══════════════╩══════════════╛
+
 module bch_syndrome_block_tb;
 
     reg clk;
@@ -35,6 +50,12 @@ module bch_syndrome_block_tb;
     // Stimulus
     initial begin
         $display("Starting Test...");
+
+        // Display the result
+        $display("╒══════════════╦══════════════╕");
+        $display("│REF           ║DUT           │");
+        $display("╞══════════════╬══════════════╡");
+        $display("│S1  │S2  │S3  ║S1  │S2  │S3  │");
         
         // Reset condition
         rst = 1;
@@ -43,29 +64,46 @@ module bch_syndrome_block_tb;
         
         // Test with the first codeword: 101010111100101
         rst = 0;
-        codeword = 15'b101010111100101; // Original encoded word
+        codeword = 15'b000000000000000; // Original encoded word
+        #20;
+
+        $display("│%4b│%4b│%4b║%4b│%4b│%4b│", S1, S2, S3, oS1, oS2, oS3);
+
+        // Test with the second codeword: 10110011100101
+        codeword = 15'b000000010001000;
         #20;
 
         // Display the result
-        $display("|REF           ||DUT           |");
-        $display("|S1  |S2  |S3  ||S1  |S2  |S3  |");
-        $display("|%4b|%4b|%4b||%4b|%4b|%4b|", S1, S2, S3, oS1, oS2, oS3);
+        $display("│%4b│%4b│%4b║%4b│%4b│%4b│", S1, S2, S3, oS1, oS2, oS3);
+
+        // Test with the second codeword: 10110011100101
+        codeword = 15'b000000010000000;
+        #20;
+
+        // Display the result
+        $display("│%4b│%4b│%4b║%4b│%4b│%4b│", S1, S2, S3, oS1, oS2, oS3);
 
         // Test with the second codeword: 10110011100101
         codeword = 15'b101110011100101;
         #20;
 
         // Display the result
-        $display("|%4b|%4b|%4b||%4b|%4b|%4b|", S1, S2, S3, oS1, oS2, oS3);
+        $display("│%4b│%4b│%4b║%4b│%4b│%4b│", S1, S2, S3, oS1, oS2, oS3);
 
         // Test with the third codeword: 10110111100101
         codeword = 15'b10110111100101; // New codeword added
         #20;
 
         // Display the result
-        $display("|%4b|%4b|%4b||%4b|%4b|%4b|", S1, S2, S3, oS1, oS2, oS3);
+        $display("│%4b│%4b│%4b║%4b│%4b│%4b│", S1, S2, S3, oS1, oS2, oS3);
+
+        codeword = 15'b101010111100101;
 
         #10;
+        $display("│%4b│%4b│%4b║%4b│%4b│%4b│", S1, S2, S3, oS1, oS2, oS3);
+
+
+        $display("╘══════════════╩══════════════╛");
         $finish;
     end
 
