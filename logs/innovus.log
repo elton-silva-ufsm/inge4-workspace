@@ -4,18 +4,18 @@ Copyright 2021 Cadence Design Systems, Inc. All rights reserved worldwide.
 
 Version:	v21.15-s110_1, built Fri Sep 23 13:08:12 PDT 2022
 Options:	-stylus -abort_on_error -overwrite -log /home/ci_inovador/Documentos/inge4-workspace/logs/innovus.log /dev/null -files /home/ci_inovador/Documentos/inge4-workspace/scripts/phy_synt.tcl 
-Date:		Thu Sep 11 10:00:15 2025
+Date:		Tue Sep 16 12:25:00 2025
 Host:		eltonsilva (x86_64 w/Linux 4.18.0-553.36.1.el8_10.x86_64) (14cores*20cpus*13th Gen Intel(R) Core(TM) i5-13500 24576KB)
 OS:		Rocky Linux release 8.10 (Green Obsidian)
 
 License:
-		[10:00:15.460089] Configured Lic search path (21.01-s002): 27001@192.168.1.10
+		[12:25:00.460113] Configured Lic search path (21.01-s002): 27001@192.168.1.10
 
 		invs	Innovus Implementation System	21.1	checkout succeeded
 		8 CPU jobs allowed with the current license(s). Use set_multi_cpu_usage to set your required CPU count.
 
 
-Create and set the environment variable TMPDIR to /tmp/innovus_temp_376650_eltonsilva_ci_inovador_L48dUt.
+Create and set the environment variable TMPDIR to /tmp/innovus_temp_145254_eltonsilva_ci_inovador_WPXQux.
 
 Change the soft stacksize limit to 0.2%RAM (63 mbytes). Set global soft_stack_size_limit to change the value.
 
@@ -109,7 +109,7 @@ Read 489 cells in library 'fast_vdd1v0'
 @file 34: #------------------------------------ [03]
 @file 35: switch {bch_toplevel} {
 @file 39: # PADS ${PDK_PATH}/giolib045_v3.3/lef/giolib045.lef
-@@file 40: read_physical -lef "${PDK_PATH}/gsclib045_svt_v4.4/gsclib045/lef/gsclib045_tech.lef ${PDK_PATH}/gsclib045_svt_v4.4/gsclib045/lef/gsclib045_macro.lef"
+@@file 40: read_physical -lefs "${PDK_PATH}/gsclib045_svt_v4.4/gsclib045/lef/gsclib045_tech.lef ${PDK_PATH}/gsclib045_svt_v4.4/gsclib045/lef/gsclib045_macro.lef"
 
 Loading LEF file /home/tools/design_kits/cadence/GPDK045/gsclib045_svt_v4.4/gsclib045/lef/gsclib045_tech.lef ...
 
@@ -125,16 +125,16 @@ Type 'man IMPLF-200' for more detail.
 @file 43: #------------------------------------ [04]
 @file 44: switch {bch_toplevel} {
 @@file 48: read_netlist $syn/$design/$design.v
-#% Begin Load netlist data ... (date=09/11 10:00:27, mem=1059.1M)
-*** Begin netlist parsing (mem=1228.6M) ***
+#% Begin Load netlist data ... (date=09/16 12:25:12, mem=1030.6M)
+*** Begin netlist parsing (mem=1228.1M) ***
 Created 489 new cells from 2 timing libraries.
 Reading netlist ...
 Backslashed names will retain backslash and a trailing blank character.
 Reading verilog netlist '/home/ci_inovador/Documentos/inge4-workspace/synthesis/bch_toplevel/bch_toplevel.v'
 
-*** Memory Usage v#1 (Current mem = 1231.598M, initial mem = 500.883M) ***
-*** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=1231.6M) ***
-#% End Load netlist data ... (date=09/11 10:00:27, total cpu=0:00:00.0, real=0:00:00.0, peak res=1073.7M, current mem=1073.7M)
+*** Memory Usage v#1 (Current mem = 1232.145M, initial mem = 492.883M) ***
+*** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=1232.1M) ***
+#% End Load netlist data ... (date=09/16 12:25:12, total cpu=0:00:00.0, real=0:00:00.0, peak res=1045.1M, current mem=1045.1M)
 Top level cell is bch_toplevel.
 Hooked 978 DB cells to tlib cells.
 Starting recursive module instantiation check.
@@ -142,9 +142,9 @@ No recursion found.
 Building hierarchical netlist for Cell bch_toplevel ...
 *** Netlist is unique.
 ** info: there are 1073 modules.
-** info: there are 785 stdCell insts.
+** info: there are 791 stdCell insts.
 
-*** Memory Usage v#1 (Current mem = 1295.012M, initial mem = 500.883M) ***
+*** Memory Usage v#1 (Current mem = 1294.559M, initial mem = 492.883M) ***
 @file 49: }
 @file 51: #------------------------------------ [05]
 @@file 52: init_design
@@ -204,11 +204,11 @@ Initializing multi-corner resistance tables ...
 Default value for post_route extraction mode's extract_rc_effort_level (extract_rc_effort_level option of set_db) changed to 'medium'.
 *Info: initialize multi-corner CTS.
 Reading timing constraints file '/home/ci_inovador/Documentos/inge4-workspace/constraints/basic.sdc' ...
-Current (total cpu=0:00:17.2, real=0:00:17.0, peak res=1468.8M, current mem=1468.8M)
+Current (total cpu=0:00:17.2, real=0:00:17.0, peak res=1443.2M, current mem=1443.2M)
 bch_toplevel
 INFO (CTE): Constraints read successfully.
-Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1476.0M, current mem=1476.0M)
-Current (total cpu=0:00:17.2, real=0:00:17.0, peak res=1476.0M, current mem=1476.0M)
+Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1450.5M, current mem=1450.5M)
+Current (total cpu=0:00:17.2, real=0:00:17.0, peak res=1450.5M, current mem=1450.5M)
 Total number of combinational cells: 327
 Total number of sequential cells: 152
 Total number of tristate cells: 10
@@ -254,7 +254,6 @@ Applying the recommended capacitance filtering threshold values for 45nm process
 @@file 67: create_floorplan -core_density_size 1 0.95 3 3 3 3
 Adjusting coreMargin bottom  to finFet grid (PlacementGrid) : after adjusting :3.04
 Adjusting coreMargin top     to finFet grid (PlacementGrid) : after adjusting :3.04
-Adjusting core size to PlacementGrid : width :41.6 height : 41.04
 **WARN: (IMPFP-3961):	The techSite 'CornerSite' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
 Type 'man IMPFP-3961' for more detail.
 **WARN: (IMPFP-3961):	The techSite 'IOSite' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
@@ -275,12 +274,12 @@ add_rings command will disallow rings to go over rows.
 @file 81: switch {bch_toplevel} {
 @file 85: # add_rings -type core_rings -jog_distance 0.6 -threshold 0.6 -nets "VDD VSS" -follow core -layer {bottom Metal4 top Metal4 right Metal3 left Metal3} -width 0.7 -spacing 0.4 -offset .6
 @@file 86: add_rings -type core_rings -jog_distance 0.6 -threshold 0.6 -nets "VDD VSS" -follow core -layer {bottom Metal11 top Metal11 right Metal10 left Metal10} -width 0.7 -spacing 0.4 -offset 0.6
-#% Begin add_rings (date=09/11 10:00:32, mem=1509.5M)
+#% Begin add_rings (date=09/16 12:25:17, mem=1484.0M)
 
 
-viaInitial starts at Thu Sep 11 10:00:32 2025
-viaInitial ends at Thu Sep 11 10:00:32 2025
-Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1695.9M)
+viaInitial starts at Tue Sep 16 12:25:17 2025
+viaInitial ends at Tue Sep 16 12:25:17 2025
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1697.9M)
 Ring generation is complete.
 vias are now being generated.
 add_rings created 8 wires.
@@ -292,7 +291,7 @@ ViaGen created 8 vias, deleted 0 via to avoid violation.
 |  Via10 |        8       |        0       |
 | Metal11|        4       |       NA       |
 +--------+----------------+----------------+
-#% End add_rings (date=09/11 10:00:32, total cpu=0:00:00.0, real=0:00:00.0, peak res=1513.0M, current mem=1513.0M)
+#% End add_rings (date=09/16 12:25:17, total cpu=0:00:00.0, real=0:00:00.0, peak res=1487.5M, current mem=1487.5M)
 @file 87: }
 @file 89:
 @file 90: # suspend
@@ -300,12 +299,12 @@ ViaGen created 8 vias, deleted 0 via to avoid violation.
 @file 92: switch {bch_toplevel} {
 @file 102: # add_stripes -block_ring_top_layer_limit Metal4 -max_same_layer_jog_length 0.44 -set_to_set_distance 7 -pad_core_ring_top_layer_limit Metal4 -spacing 0.4 -layer Metal3 -width 0.28 -start_offset 1 -nets "VDD VSS"
 @@file 103: add_stripes -block_ring_top_layer_limit Metal11 -max_same_layer_jog_length 0.44 -set_to_set_distance 7 -pad_core_ring_top_layer_limit Metal11 -spacing 0.4 -layer Metal10 -width 0.22 -start_offset 1 -nets "VDD VSS"
-#% Begin add_stripes (date=09/11 10:00:32, mem=1513.0M)
+#% Begin add_stripes (date=09/16 12:25:17, mem=1487.5M)
 
-Initialize fgc environment(mem: 1696.9M) ...  fail and won't use fgc to check drc(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1696.9M)
-Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1696.9M)
-Loading wires (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1696.9M)
-Loading via instances (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1696.9M)
+Initialize fgc environment(mem: 1698.9M) ...  fail and won't use fgc to check drc(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1698.9M)
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1698.9M)
+Loading wires (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1698.9M)
+Loading via instances (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1698.9M)
 Starting stripe generation ...
 Non-Default Mode Option Settings :
   NONE
@@ -319,16 +318,16 @@ ViaGen created 24 vias, deleted 0 via to avoid violation.
 | Metal10|       12       |       NA       |
 |  Via10 |       24       |        0       |
 +--------+----------------+----------------+
-#% End add_stripes (date=09/11 10:00:32, total cpu=0:00:00.0, real=0:00:00.0, peak res=1514.0M, current mem=1514.0M)
+#% End add_stripes (date=09/16 12:25:17, total cpu=0:00:00.0, real=0:00:00.0, peak res=1488.4M, current mem=1488.4M)
 @file 104: }
 @file 106:
 @file 107: #------------------------------------ [11]
 @file 108: switch {bch_toplevel} {
 @file 112: # route_special -layer_change_range {Metal1(1) Metal4(4)} -block_pin_target nearest_target -allow_jogging 1 -crossover_via_layer_range {Metal1(1) Metal4(4)} -nets "VDD VSS" -allow_layer_change 1 -target_via_layer_range {Metal1(1) Metal4(4)}
-@@file 113: route_special -layer_change_range {Metal1(1) Metal11(11)} -block_pin_target nearest_target -allow_jogging 1 -crossover_via_layer_range {Metal1(1) Metal11(11)} -nets "VDD VSS" -allow_layer_change 1 -target_via_layer_range {Metal1(1) Metal11(11)}
-#% Begin route_special (date=09/11 10:00:32, mem=1514.0M)
+@@file 113: route_special -layer_change_range {Metal1(1) Metal11(11)} -block_pin_target nearest_target -allow_jogging 1 -crossover_via_layer_range {Metal2(2) Metal5(5)} -nets "VDD VSS" -allow_layer_change 1 -target_via_layer_range {Metal1(2) Metal11(11)}
+#% Begin route_special (date=09/16 12:25:17, mem=1488.4M)
 **WARN: (IMPSR-4058):	Route_special option: blockPinTarget should be used in conjunction with option: -connect blockPin. 
-*** Begin SPECIAL ROUTE on Thu Sep 11 10:00:32 2025 ***
+*** Begin SPECIAL ROUTE on Tue Sep 16 12:25:17 2025 ***
 SPECIAL ROUTE ran on directory: /home/ci_inovador/Documentos/inge4-workspace/work
 SPECIAL ROUTE ran on machine: eltonsilva (Linux 4.18.0-553.36.1.el8_10.x86_64 x86_64 2.50Ghz)
 
@@ -339,8 +338,8 @@ routeSpecial set to true
 srouteBottomLayerLimit set to 1
 srouteBottomTargetLayerLimit set to 1
 srouteConnectConverterPin set to false
-srouteCrossoverViaBottomLayer set to 1
-srouteCrossoverViaTopLayer set to 11
+srouteCrossoverViaBottomLayer set to 2
+srouteCrossoverViaTopLayer set to 5
 srouteFollowCorePinEnd set to 3
 srouteJogControl set to "preferWithChanges differentLayer"
 sroutePadPinAllPorts set to true
@@ -349,7 +348,7 @@ srouteRoutePowerBarPortOnBothDir set to true
 srouteStopBlockPin set to "nearestTarget"
 srouteTopLayerLimit set to 11
 srouteTopTargetLayerLimit set to 11
-End option processing: cpu: 0:00:00, real: 0:00:00, peak: 3215.00 megs.
+End option processing: cpu: 0:00:00, real: 0:00:00, peak: 3217.00 megs.
 
 Reading DB technology information...
 Finished reading DB technology information.
@@ -358,13 +357,13 @@ Finished reading floorplan and netlist information.
 **WARN: (IMPSR-4302):	Cap-table/qrcTechFile is found in the design, so the same information from the technology file will be ignored.
 Read in 24 layers, 11 routing layers, 1 overlap layer
 Read in 2 nondefault rules, 0 used
-Read in 583 macros, 52 used
-Read in 52 components
-  52 core components: 52 unplaced, 0 placed, 0 fixed
-Read in 68 logical pins
-Read in 66 nets
+Read in 583 macros, 48 used
+Read in 48 components
+  48 core components: 48 unplaced, 0 placed, 0 fixed
+Read in 33 logical pins
+Read in 33 nets
 Read in 2 special nets, 2 routed
-Read in 104 terminals
+Read in 96 terminals
 2 nets selected.
 
 Begin power routing ...
@@ -376,38 +375,16 @@ Cannot find any AREAIO class pad pin of net VDD. Check net list, or change port 
 **WARN: (IMPSR-1256):	Unable to find any CORE class pad pin of the VSS net due to unavailability of the pin or check netlist in the routing area or layer. Change routing area or layer to include the expected pin or check netlist. Alternatively, change port class in the technology file.
 Type 'man IMPSR-1256' for more detail.
 Cannot find any AREAIO class pad pin of net VSS. Check net list, or change port class in the technology file, or change option to include pin in given range.
-**WARN: (IMPPP-531):	ViaGen Warning: Due to MAXVIASTACK rule violation, viaGen fail to generate via on layer Via5 at (39.00, 44.02) (39.22, 44.14).
-**WARN: (IMPPP-531):	ViaGen Warning: Due to MAXVIASTACK rule violation, viaGen fail to generate via on layer Via5 at (32.00, 44.02) (32.22, 44.14).
-**WARN: (IMPPP-531):	ViaGen Warning: Due to MAXVIASTACK rule violation, viaGen fail to generate via on layer Via5 at (25.00, 44.02) (25.22, 44.14).
-**WARN: (IMPPP-531):	ViaGen Warning: Due to MAXVIASTACK rule violation, viaGen fail to generate via on layer Via5 at (18.00, 44.02) (18.22, 44.14).
-**WARN: (IMPPP-531):	ViaGen Warning: Due to MAXVIASTACK rule violation, viaGen fail to generate via on layer Via5 at (11.00, 44.02) (11.22, 44.14).
-**WARN: (IMPPP-531):	ViaGen Warning: Due to MAXVIASTACK rule violation, viaGen fail to generate via on layer Via5 at (4.00, 44.02) (4.22, 44.14).
-**WARN: (IMPPP-531):	ViaGen Warning: Due to MAXVIASTACK rule violation, viaGen fail to generate via on layer Via5 at (39.00, 40.60) (39.22, 40.72).
-**WARN: (IMPPP-531):	ViaGen Warning: Due to MAXVIASTACK rule violation, viaGen fail to generate via on layer Via5 at (32.00, 40.60) (32.22, 40.72).
-**WARN: (IMPPP-531):	ViaGen Warning: Due to MAXVIASTACK rule violation, viaGen fail to generate via on layer Via5 at (25.00, 40.60) (25.22, 40.72).
-**WARN: (IMPPP-531):	ViaGen Warning: Due to MAXVIASTACK rule violation, viaGen fail to generate via on layer Via5 at (18.00, 40.60) (18.22, 40.72).
-**WARN: (IMPPP-531):	ViaGen Warning: Due to MAXVIASTACK rule violation, viaGen fail to generate via on layer Via5 at (11.00, 40.60) (11.22, 40.72).
-**WARN: (IMPPP-531):	ViaGen Warning: Due to MAXVIASTACK rule violation, viaGen fail to generate via on layer Via5 at (4.00, 40.60) (4.22, 40.72).
-**WARN: (IMPPP-531):	ViaGen Warning: Due to MAXVIASTACK rule violation, viaGen fail to generate via on layer Via5 at (39.00, 37.18) (39.22, 37.30).
-**WARN: (IMPPP-531):	ViaGen Warning: Due to MAXVIASTACK rule violation, viaGen fail to generate via on layer Via5 at (32.00, 37.18) (32.22, 37.30).
-**WARN: (IMPPP-531):	ViaGen Warning: Due to MAXVIASTACK rule violation, viaGen fail to generate via on layer Via5 at (25.00, 37.18) (25.22, 37.30).
-**WARN: (IMPPP-531):	ViaGen Warning: Due to MAXVIASTACK rule violation, viaGen fail to generate via on layer Via5 at (18.00, 37.18) (18.22, 37.30).
-**WARN: (IMPPP-531):	ViaGen Warning: Due to MAXVIASTACK rule violation, viaGen fail to generate via on layer Via5 at (11.00, 37.18) (11.22, 37.30).
-**WARN: (IMPPP-531):	ViaGen Warning: Due to MAXVIASTACK rule violation, viaGen fail to generate via on layer Via5 at (4.00, 37.18) (4.22, 37.30).
-**WARN: (IMPPP-531):	ViaGen Warning: Due to MAXVIASTACK rule violation, viaGen fail to generate via on layer Via5 at (39.00, 33.76) (39.22, 33.88).
-**WARN: (IMPPP-531):	ViaGen Warning: Due to MAXVIASTACK rule violation, viaGen fail to generate via on layer Via5 at (32.00, 33.76) (32.22, 33.88).
-**WARN: (EMS-27):	Message (IMPPP-531) has exceeded the current message display limit of 20.
-To increase the message display limit, refer to the product command reference manual.
 CPU time for VDD FollowPin 0 seconds
 CPU time for VSS FollowPin 0 seconds
   Number of IO ports routed: 0
   Number of Block ports routed: 0
   Number of Stripe ports routed: 0
-  Number of Core ports routed: 50
+  Number of Core ports routed: 46
   Number of Pad ports routed: 0
   Number of Power Bump ports routed: 0
-  Number of Followpin connections: 25
-End power routing: cpu: 0:00:00, real: 0:00:00, peak: 3218.00 megs.
+  Number of Followpin connections: 23
+End power routing: cpu: 0:00:00, real: 0:00:00, peak: 3219.00 megs.
 
 
 
@@ -415,86 +392,80 @@ End power routing: cpu: 0:00:00, real: 0:00:00, peak: 3218.00 megs.
  Updating DB with 0 via definition ...Extracting standard cell pins and blockage ...... 
 Pin and blockage extraction finished
 
-route_special created 75 wires.
-ViaGen created 450 vias, deleted 0 via to avoid violation.
+route_special created 69 wires.
+ViaGen created 414 vias, deleted 0 via to avoid violation.
 +--------+----------------+----------------+
 |  Layer |     Created    |     Deleted    |
 +--------+----------------+----------------+
-| Metal1 |       75       |       NA       |
-|  Via1  |       50       |        0       |
-|  Via2  |       50       |        0       |
-|  Via3  |       50       |        0       |
-|  Via4  |       50       |        0       |
-|  Via5  |       50       |        0       |
-|  Via6  |       50       |        0       |
-|  Via7  |       50       |        0       |
-|  Via8  |       50       |        0       |
-|  Via9  |       50       |        0       |
+| Metal1 |       69       |       NA       |
+|  Via1  |       46       |        0       |
+|  Via2  |       46       |        0       |
+|  Via3  |       46       |        0       |
+|  Via4  |       46       |        0       |
+|  Via5  |       46       |        0       |
+|  Via6  |       46       |        0       |
+|  Via7  |       46       |        0       |
+|  Via8  |       46       |        0       |
+|  Via9  |       46       |        0       |
 +--------+----------------+----------------+
-#% End route_special (date=09/11 10:00:33, total cpu=0:00:00.2, real=0:00:01.0, peak res=1542.2M, current mem=1532.4M)
+#% End route_special (date=09/16 12:25:18, total cpu=0:00:00.2, real=0:00:01.0, peak res=1517.1M, current mem=1506.9M)
 @file 114: }
 @file 116:
-@file 117: #------------------------------------ [12]
-@file 118: if {[file exists $scr/pins/${design}_pin.tcl]} {
-@file 119: source $scr/pins/${design}_pin.tcl
+@file 117: # gui_fit
+@file 118: # suspend
+@file 119: #------------------------------------ [12]
+@file 120: if {[file exists $scr/pins/${design}_pin.tcl]} {
+@file 121: source $scr/pins/${design}_pin.tcl
 #@ Begin verbose source /home/ci_inovador/Documentos/inge4-workspace/scripts/pins/bch_toplevel_pin.tcl (pre)
 @file 1: set pin_l "codeword[14] codeword[13] codeword[12] codeword[11] codeword[10] 
            codeword[9]  codeword[8]  codeword[7]  codeword[6]  codeword[5] 
            codeword[4]  codeword[3]  codeword[2]  codeword[1]  codeword[0]"
 @file 4: set spc_l "1.5"
 @file 5:
-@file 6: set pin_t "clk rst
-           lambda1_out[3] lambda1_out[2] lambda1_out[1] lambda1_out[0] 
-           lambda2_out[3] lambda2_out[2] lambda2_out[1] lambda2_out[0]
-           S1_out[3]      S1_out[2]      S1_out[1]      S1_out[0] 
-           S2_out[3]      S2_out[2]      S2_out[1]      S2_out[0] 
-           S3_out[3]      S3_out[2]      S3_out[1]      S3_out[0]"
-@file 12: set spc_t "1.5"
-@file 13:
-@file 14: set pin_r "corrected_codeword[14] corrected_codeword[13] corrected_codeword[12] corrected_codeword[11] corrected_codeword[10] 
+@file 6: set pin_t "clk rst"
+@file 7: set spc_t "1.5"
+@file 8:
+@file 9: set pin_r "corrected_codeword[14] corrected_codeword[13] corrected_codeword[12] corrected_codeword[11] corrected_codeword[10] 
            corrected_codeword[9]  corrected_codeword[8]  corrected_codeword[7]  corrected_codeword[6]  corrected_codeword[5] 
            corrected_codeword[4]  corrected_codeword[3]  corrected_codeword[2]  corrected_codeword[1]  corrected_codeword[0]"
-@file 17: set spc_r "1.5"
+@file 12: set spc_r "1.5"
+@file 13:
+@file 14: set pin_b "error_flag"
+@file 15: set spc_b "1.5"
+@file 16:
+@@file 17: set_db assign_pins_edit_in_batch true
 @file 18:
-@file 19: set pin_b "error_vector_out[14] error_vector_out[13] error_vector_out[12] error_vector_out[11] error_vector_out[10] 
-           error_vector_out[9]  error_vector_out[8]  error_vector_out[7]  error_vector_out[6]  error_vector_out[5] 
-           error_vector_out[4]  error_vector_out[3]  error_vector_out[2]  error_vector_out[1]  error_vector_out[0] 
-           error_flag"
-@file 23: set spc_b "1.5"
-@file 24:
-@@file 25: set_db assign_pins_edit_in_batch true
-@file 26:
-@file 27: if {[info exists pin_l] && [string length $pin_l] > 0} {
-@@file 28: edit_pin -pin $pin_l -spread_type center -edge 0 -layer Metal2 -fix_overlap 1 -spacing $spc_l -pin_width 0.08 -fixed_pin 1
+@file 19: if {[info exists pin_l] && [string length $pin_l] > 0} {
+@@file 20: edit_pin -pin $pin_l -spread_type center -edge 0 -layer Metal2 -fix_overlap 1 -spacing $spc_l -pin_width 0.08 -fixed_pin 1
 Successfully spread [15] pins.
-editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1700.2M).
-@file 29: }
-@file 30: if {[info exists pin_t] && [string length $pin_t] > 0} {
-@@file 31: edit_pin -pin $pin_t -spread_type center -edge 1 -layer Metal3 -fix_overlap 1 -spacing $spc_t -pin_width 0.08 -fixed_pin 1
-Successfully spread [22] pins.
-editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1700.2M).
-@file 32: }
-@file 33: if {[info exists pin_r] && [string length $pin_r] > 0} {
-@@file 34: edit_pin -pin $pin_r -spread_type center -edge 2 -layer Metal2 -fix_overlap 1 -spacing $spc_r -pin_width 0.08 -fixed_pin 1
+editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1701.2M).
+@file 21: }
+@file 22: if {[info exists pin_t] && [string length $pin_t] > 0} {
+@@file 23: edit_pin -pin $pin_t -spread_type center -edge 1 -layer Metal3 -fix_overlap 1 -spacing $spc_t -pin_width 0.08 -fixed_pin 1
+Successfully spread [2] pins.
+editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1701.2M).
+@file 24: }
+@file 25: if {[info exists pin_r] && [string length $pin_r] > 0} {
+@@file 26: edit_pin -pin $pin_r -spread_type center -edge 2 -layer Metal2 -fix_overlap 1 -spacing $spc_r -pin_width 0.08 -fixed_pin 1
 Successfully spread [15] pins.
-editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1700.2M).
-@file 35: }
-@file 36: if {[info exists pin_b] && [string length $pin_b] > 0} {
-@@file 37: edit_pin -pin $pin_b -spread_type center -edge 3 -layer Metal3 -fix_overlap 1 -spacing $spc_b -pin_width 0.08 -fixed_pin 1
-Successfully spread [16] pins.
-editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1700.2M).
-@file 38:
-@file 39: }
-@@file 40: set_db assign_pins_edit_in_batch false
+editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1701.2M).
+@file 27: }
+@file 28: if {[info exists pin_b] && [string length $pin_b] > 0} {
+@@file 29: edit_pin -pin $pin_b -spread_type center -edge 3 -layer Metal3 -fix_overlap 1 -spacing $spc_b -pin_width 0.08 -fixed_pin 1
+Successfully spread [1] pins.
+editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1701.2M).
+@file 30:
+@file 31: }
+@@file 32: set_db assign_pins_edit_in_batch false
 #@ End verbose source /home/ci_inovador/Documentos/inge4-workspace/scripts/pins/bch_toplevel_pin.tcl
-@file 120: }
-@file 123:
-@@file 124: gui_fit
-@file 125: # suspend
-@file 126:
-@file 127: #------------------------------------ [14]
-@@file 128: place_design
-*** placeDesign #1 [begin] : totSession cpu/real = 0:00:17.6/0:00:17.2 (1.0), mem = 1700.2M
+@file 122: }
+@file 125:
+@file 126: # gui_fit
+@file 127: # suspend
+@file 128:
+@file 129: #------------------------------------ [14]
+@@file 130: place_design
+*** placeDesign #1 [begin] : totSession cpu/real = 0:00:17.5/0:00:17.2 (1.0), mem = 1701.2M
 Extracting standard cell pins and blockage ...... 
 Pin and blockage extraction finished
 *** Starting place_design default flow ***
@@ -521,18 +492,18 @@ Set Default Net Load as 0.5 pF.
 Deleted 0 physical inst  (cell - / prefix -).
 INFO: #ExclusiveGroups=0
 INFO: There are no Exclusive Groups.
-*** Starting "NanoPlace(TM) placement v#6 (mem=1796.1M)" ...
+*** Starting "NanoPlace(TM) placement v#6 (mem=1793.1M)" ...
 *** Build Buffered Sizing Timing Model
-(cpu=0:00:00.5 mem=1796.1M) ***
+(cpu=0:00:00.5 mem=1793.1M) ***
 *** Build Virtual Sizing Timing Model
-(cpu=0:00:00.5 mem=1802.1M) ***
+(cpu=0:00:00.5 mem=1800.1M) ***
 No user-set net weight.
 Net fanout histogram:
-2		: 369 (44.8%) nets
-3		: 206 (25.0%) nets
-4     -	14	: 238 (28.9%) nets
-15    -	39	: 8 (1.0%) nets
-40    -	79	: 2 (0.2%) nets
+2		: 377 (45.6%) nets
+3		: 200 (24.2%) nets
+4     -	14	: 244 (29.5%) nets
+15    -	39	: 6 (0.7%) nets
+40    -	79	: 0 (0.0%) nets
 80    -	159	: 0 (0.0%) nets
 160   -	319	: 0 (0.0%) nets
 320   -	639	: 0 (0.0%) nets
@@ -542,75 +513,75 @@ Net fanout histogram:
 5120+		: 0 (0.0%) nets
 Options: timingDriven clkGateAware ignoreScan pinGuide congEffort=auto gpeffort=medium 
 Scan chains were not defined.
-#std cell=785 (0 fixed + 785 movable) #buf cell=0 #inv cell=99 #block=0 (0 floating + 0 preplaced)
-#ioInst=0 #net=823 #term=2924 #term/net=3.55, #fixedIo=0, #floatIo=0, #fixedPin=68, #floatPin=0
-stdCell: 785 single + 0 double + 0 multi
-Total standard cell length = 0.9482 (mm), area = 0.0016 (mm^2)
+#std cell=791 (0 fixed + 791 movable) #buf cell=0 #inv cell=100 #block=0 (0 floating + 0 preplaced)
+#ioInst=0 #net=827 #term=2886 #term/net=3.49, #fixedIo=0, #floatIo=0, #fixedPin=33, #floatPin=0
+stdCell: 791 single + 0 double + 0 multi
+Total standard cell length = 0.8318 (mm), area = 0.0014 (mm^2)
 Estimated cell power/ground rail width = 0.160 um
 Average module density = 0.950.
 Density for the design = 0.950.
-       = stdcell_area 4741 sites (1621 um^2) / alloc_area 4992 sites (1707 um^2).
-Pin Density = 0.5857.
-            = total # of pins 2924 / total area 4992.
+       = stdcell_area 4159 sites (1422 um^2) / alloc_area 4378 sites (1497 um^2).
+Pin Density = 0.6592.
+            = total # of pins 2886 / total area 4378.
 === lastAutoLevel = 6 
 Clock gating cells determined by native netlist tracing.
-Iteration  1: Total net bbox = 2.605e+03 (1.41e+03 1.19e+03)
-              Est.  stn bbox = 2.775e+03 (1.49e+03 1.28e+03)
-              cpu = 0:00:00.0 real = 0:00:00.0 mem = 1852.0M
-Iteration  2: Total net bbox = 2.605e+03 (1.41e+03 1.19e+03)
-              Est.  stn bbox = 2.775e+03 (1.49e+03 1.28e+03)
-              cpu = 0:00:00.0 real = 0:00:00.0 mem = 1852.0M
-Iteration  3: Total net bbox = 2.605e+03 (1.22e+03 1.39e+03)
-              Est.  stn bbox = 2.956e+03 (1.35e+03 1.61e+03)
-              cpu = 0:00:00.0 real = 0:00:00.0 mem = 1854.5M
+Iteration  1: Total net bbox = 1.682e+03 (1.28e+03 4.05e+02)
+              Est.  stn bbox = 1.825e+03 (1.36e+03 4.65e+02)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 1849.0M
+Iteration  2: Total net bbox = 1.682e+03 (1.28e+03 4.05e+02)
+              Est.  stn bbox = 1.825e+03 (1.36e+03 4.65e+02)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 1849.0M
+Iteration  3: Total net bbox = 1.288e+03 (9.52e+02 3.36e+02)
+              Est.  stn bbox = 1.445e+03 (1.04e+03 4.03e+02)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 1851.6M
 Active setup views:
     analysis_normal_slow_max
-Iteration  4: Total net bbox = 4.586e+03 (2.46e+03 2.12e+03)
-              Est.  stn bbox = 5.218e+03 (2.73e+03 2.49e+03)
-              cpu = 0:00:00.1 real = 0:00:00.0 mem = 1854.5M
-Iteration  5: Total net bbox = 6.191e+03 (3.46e+03 2.73e+03)
-              Est.  stn bbox = 7.057e+03 (3.90e+03 3.16e+03)
-              cpu = 0:00:00.1 real = 0:00:00.0 mem = 1854.5M
-Iteration  6: Total net bbox = 6.549e+03 (3.61e+03 2.94e+03)
-              Est.  stn bbox = 7.453e+03 (4.07e+03 3.38e+03)
-              cpu = 0:00:00.1 real = 0:00:00.0 mem = 1855.7M
-Iteration  7: Total net bbox = 7.068e+03 (3.87e+03 3.20e+03)
-              Est.  stn bbox = 8.009e+03 (4.35e+03 3.66e+03)
-              cpu = 0:00:00.2 real = 0:00:00.0 mem = 1855.7M
-Iteration  8: Total net bbox = 6.500e+03 (3.62e+03 2.88e+03)
-              Est.  stn bbox = 7.372e+03 (4.06e+03 3.31e+03)
-              cpu = 0:00:00.1 real = 0:00:00.0 mem = 1856.7M
+Iteration  4: Total net bbox = 4.073e+03 (1.82e+03 2.25e+03)
+              Est.  stn bbox = 4.635e+03 (2.02e+03 2.62e+03)
+              cpu = 0:00:00.1 real = 0:00:00.0 mem = 1851.6M
+Iteration  5: Total net bbox = 5.835e+03 (2.87e+03 2.96e+03)
+              Est.  stn bbox = 6.641e+03 (3.24e+03 3.41e+03)
+              cpu = 0:00:00.1 real = 0:00:00.0 mem = 1851.6M
+Iteration  6: Total net bbox = 6.347e+03 (3.26e+03 3.09e+03)
+              Est.  stn bbox = 7.187e+03 (3.64e+03 3.54e+03)
+              cpu = 0:00:00.1 real = 0:00:00.0 mem = 1852.8M
+Iteration  7: Total net bbox = 6.751e+03 (3.43e+03 3.33e+03)
+              Est.  stn bbox = 7.612e+03 (3.82e+03 3.79e+03)
+              cpu = 0:00:00.2 real = 0:00:00.0 mem = 1852.8M
+Iteration  8: Total net bbox = 6.043e+03 (3.10e+03 2.94e+03)
+              Est.  stn bbox = 6.824e+03 (3.45e+03 3.37e+03)
+              cpu = 0:00:00.1 real = 0:00:00.0 mem = 1853.8M
 
-Iteration  9: Total net bbox = 6.714e+03 (3.70e+03 3.01e+03)
-              Est.  stn bbox = 7.603e+03 (4.15e+03 3.45e+03)
-              cpu = 0:00:00.0 real = 0:00:00.0 mem = 1858.9M
-Iteration 10: Total net bbox = 6.714e+03 (3.70e+03 3.01e+03)
-              Est.  stn bbox = 7.603e+03 (4.15e+03 3.45e+03)
-              cpu = 0:00:00.0 real = 0:00:00.0 mem = 1858.9M
-*** cost = 6.714e+03 (3.70e+03 3.01e+03) (cpu for global=0:00:00.6) real=0:00:01.0***
+Iteration  9: Total net bbox = 6.246e+03 (3.06e+03 3.18e+03)
+              Est.  stn bbox = 7.039e+03 (3.41e+03 3.63e+03)
+              cpu = 0:00:00.2 real = 0:00:00.0 mem = 1857.9M
+Iteration 10: Total net bbox = 6.246e+03 (3.06e+03 3.18e+03)
+              Est.  stn bbox = 7.039e+03 (3.41e+03 3.63e+03)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 1857.9M
+*** cost = 6.246e+03 (3.06e+03 3.18e+03) (cpu for global=0:00:00.8) real=0:00:01.0***
 Info: 0 clock gating cells identified, 0 (on average) moved 0/2
-Solver runtime cpu: 0:00:00.5 real: 0:00:00.5
-Core Placement runtime cpu: 0:00:00.5 real: 0:00:01.0
+Solver runtime cpu: 0:00:00.7 real: 0:00:00.7
+Core Placement runtime cpu: 0:00:00.7 real: 0:00:01.0
 **WARN: (IMPSP-9025):	No scan chain specified/traced.
 Type 'man IMPSP-9025' for more detail.
-*** Starting place_detail (0:00:19.3 mem=1858.9M) ***
-Total net bbox length = 6.714e+03 (3.703e+03 3.012e+03) (ext = 9.710e+02)
-Move report: Detail placement moves 785 insts, mean move: 1.74 um, max move: 11.37 um 
-	Max move on inst (g333690): (40.52, 38.96) --> (36.00, 32.11)
-	Runtime: CPU: 0:00:00.1 REAL: 0:00:00.0 MEM: 1882.9MB
+*** Starting place_detail (0:00:19.4 mem=1857.9M) ***
+Total net bbox length = 6.246e+03 (3.063e+03 3.183e+03) (ext = 2.388e+02)
+Move report: Detail placement moves 791 insts, mean move: 1.83 um, max move: 15.97 um 
+	Max move on inst (g334598): (23.78, 18.43) --> (23.20, 3.04)
+	Runtime: CPU: 0:00:00.0 REAL: 0:00:00.0 MEM: 1881.9MB
 Summary Report:
-Instances move: 785 (out of 785 movable)
+Instances move: 791 (out of 791 movable)
 Instances flipped: 0
-Mean displacement: 1.74 um
-Max displacement: 11.37 um (Instance: g333690) (40.525, 38.956) -> (36, 32.11)
+Mean displacement: 1.83 um
+Max displacement: 15.97 um (Instance: g334598) (23.7785, 18.4305) -> (23.2, 3.04)
 	Length: 2 sites, height: 1 rows, site name: CoreSite, cell type: INVXL
-Total net bbox length = 7.519e+03 (4.199e+03 3.320e+03) (ext = 1.012e+03)
-Runtime: CPU: 0:00:00.1 REAL: 0:00:00.0 MEM: 1882.9MB
-*** Finished place_detail (0:00:19.3 mem=1882.9M) ***
-*** End of Placement (cpu=0:00:01.4, real=0:00:02.0, mem=1882.9M) ***
+Total net bbox length = 7.174e+03 (3.691e+03 3.483e+03) (ext = 2.671e+02)
+Runtime: CPU: 0:00:00.1 REAL: 0:00:00.0 MEM: 1881.9MB
+*** Finished place_detail (0:00:19.4 mem=1881.9M) ***
+*** End of Placement (cpu=0:00:01.6, real=0:00:03.0, mem=1881.9M) ***
 default core: bins with density > 0.750 = 44.44 % ( 4 / 9 )
-Density distribution unevenness ratio = 2.298%
-*** Free Virtual Timing Model ...(mem=1882.9M)
+Density distribution unevenness ratio = 1.709%
+*** Free Virtual Timing Model ...(mem=1881.9M)
 UM:   flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
 UM:*                                                                   final
       flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
@@ -640,32 +611,32 @@ Starting congRepair ...
 [NR-eGR] Metal9 has single uniform track structure
 [NR-eGR] Metal10 has single uniform track structure
 [NR-eGR] Metal11 has single uniform track structure
-[NR-eGR] Read 934 PG shapes
+[NR-eGR] Read 866 PG shapes
 [NR-eGR] Read 0 clock shapes
 [NR-eGR] Read 0 other shapes
 [NR-eGR] #Routing Blockages  : 0
 [NR-eGR] #Instance Blockages : 0
-[NR-eGR] #PG Blockages       : 934
+[NR-eGR] #PG Blockages       : 866
 [NR-eGR] #Halo Blockages     : 0
 [NR-eGR] #Boundary Blockages : 0
 [NR-eGR] #Clock Blockages    : 0
 [NR-eGR] #Other Blockages    : 0
 [NR-eGR] Num Prerouted Nets = 0  Num Prerouted Wires = 0
-[NR-eGR] Read 823 nets ( ignored 0 )
+[NR-eGR] Read 827 nets ( ignored 0 )
 [NR-eGR] ============ Routing rule table ============
-[NR-eGR] Rule id: 0  Nets: 823
+[NR-eGR] Rule id: 0  Nets: 827
 [NR-eGR] ========================================
 [NR-eGR] 
-[NR-eGR] Layer group 1: route 823 net(s) in layer range [2, 11]
-[NR-eGR] Early Global Route overflow of layer group 1: 0.00% H + 0.00% V. EstWL: 8.233650e+03um
+[NR-eGR] Layer group 1: route 827 net(s) in layer range [2, 11]
+[NR-eGR] Early Global Route overflow of layer group 1: 0.00% H + 0.00% V. EstWL: 7.848900e+03um
 [NR-eGR] Congestion Analysis By layer: (blocked Gcells are excluded) 
 [NR-eGR]                        OverCon           OverCon            
 [NR-eGR]                         #Gcell            #Gcell     %Gcell
 [NR-eGR]        Layer             (1-2)               (3)    OverCon
 [NR-eGR] ---------------------------------------------------------------
 [NR-eGR]  Metal1 ( 1)         0( 0.00%)         0( 0.00%)   ( 0.00%) 
-[NR-eGR]  Metal2 ( 2)         9( 1.23%)         1( 0.14%)   ( 1.37%) 
-[NR-eGR]  Metal3 ( 3)         2( 0.27%)         0( 0.00%)   ( 0.27%) 
+[NR-eGR]  Metal2 ( 2)        13( 2.03%)         2( 0.31%)   ( 2.35%) 
+[NR-eGR]  Metal3 ( 3)         3( 0.46%)         0( 0.00%)   ( 0.46%) 
 [NR-eGR]  Metal4 ( 4)         0( 0.00%)         0( 0.00%)   ( 0.00%) 
 [NR-eGR]  Metal5 ( 5)         0( 0.00%)         0( 0.00%)   ( 0.00%) 
 [NR-eGR]  Metal6 ( 6)         0( 0.00%)         0( 0.00%)   ( 0.00%) 
@@ -675,40 +646,40 @@ Starting congRepair ...
 [NR-eGR] Metal10 (10)         0( 0.00%)         0( 0.00%)   ( 0.00%) 
 [NR-eGR] Metal11 (11)         0( 0.00%)         0( 0.00%)   ( 0.00%) 
 [NR-eGR] ---------------------------------------------------------------
-[NR-eGR]        Total        11( 0.15%)         1( 0.01%)   ( 0.17%) 
+[NR-eGR]        Total        16( 0.25%)         2( 0.03%)   ( 0.28%) 
 [NR-eGR] 
 [NR-eGR] Overflow after Early Global Route 0.00% H + 0.00% V
-Early Global Route congestion estimation runtime: 0.10 seconds, mem = 1873.3M
+Early Global Route congestion estimation runtime: 0.10 seconds, mem = 1872.4M
 Local HotSpot Analysis: normalized max congestion hotspot area = 0.00, normalized total congestion hotspot area = 0.00 (area is in unit of 4 std-cell row bins)
 Skipped repairing congestion.
 [NR-eGR]                  Length (um)  Vias 
 [NR-eGR] -----------------------------------
-[NR-eGR]  Metal1   (1H)             0  2856 
-[NR-eGR]  Metal2   (2V)          3013  3830 
-[NR-eGR]  Metal3   (3H)          3498   705 
-[NR-eGR]  Metal4   (4V)          1378   257 
-[NR-eGR]  Metal5   (5H)          1114    19 
-[NR-eGR]  Metal6   (6V)            52     7 
-[NR-eGR]  Metal7   (7H)            52     0 
+[NR-eGR]  Metal1   (1H)             0  2853 
+[NR-eGR]  Metal2   (2V)          3015  3831 
+[NR-eGR]  Metal3   (3H)          3241   617 
+[NR-eGR]  Metal4   (4V)          1265   243 
+[NR-eGR]  Metal5   (5H)           907    43 
+[NR-eGR]  Metal6   (6V)           129     8 
+[NR-eGR]  Metal7   (7H)            83     0 
 [NR-eGR]  Metal8   (8V)             0     0 
 [NR-eGR]  Metal9   (9H)             0     0 
 [NR-eGR]  Metal10  (10V)            0     0 
 [NR-eGR]  Metal11  (11H)            0     0 
 [NR-eGR] -----------------------------------
-[NR-eGR]           Total         9107  7674 
+[NR-eGR]           Total         8639  7595 
 [NR-eGR] --------------------------------------------------------------------------
-[NR-eGR] Total half perimeter of net bounding box: 7519um
-[NR-eGR] Total length: 9107um, number of vias: 7674
+[NR-eGR] Total half perimeter of net bounding box: 7174um
+[NR-eGR] Total length: 8639um, number of vias: 7595
 [NR-eGR] --------------------------------------------------------------------------
 [NR-eGR] Total eGR-routed clock nets wire length: 0um, number of vias: 0
 [NR-eGR] --------------------------------------------------------------------------
-Early Global Route wiring runtime: 0.01 seconds, mem = 1857.3M
+Early Global Route wiring runtime: 0.01 seconds, mem = 1856.4M
 Tdgp not successfully inited but do clear! skip clearing
 End of congRepair (cpu=0:00:00.0, real=0:00:00.0)
 *** Finishing place_design default flow ***
 ***** Total cpu  0:0:2
 ***** Total real time  0:0:3
-**place_design ... cpu = 0: 0: 2, real = 0: 0: 3, mem = 1857.3M **
+**place_design ... cpu = 0: 0: 2, real = 0: 0: 3, mem = 1856.4M **
 Tdgp not successfully inited but do clear! skip clearing
 
 *** Summary of all messages that are not suppressed in this session:
@@ -723,12 +694,12 @@ UM: Running design category ...
 ------------------------------------------------------------
 	Current design flip-flop statistics
 
-Single-Bit FF Count          :           57
+Single-Bit FF Count          :           24
 Multi-Bit FF Count           :            0
-Total Bit Count              :           57
-Total FF Count               :           57
+Total Bit Count              :           24
+Total FF Count               :           24
 Bits Per Flop                :        1.000
-Total Clock Pin Cap(FF)      :       11.801
+Total Clock Pin Cap(FF)      :        4.968
 Multibit Conversion Ratio(%) :         0.00
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -740,7 +711,7 @@ Sequential Multibit cells usage statistics
 ------------------------------------------------------------
             Not Merged-bits         Merged-bits     Multibit Conversion %     Bits Per Flop
 ------------------------------------------------------------
--FlipFlops               57                    0        0.00                    1.00
+-FlipFlops               24                    0        0.00                    1.00
 ------------------------------------------------------------
 
 ------------------------------------------------------------
@@ -753,13 +724,14 @@ Category            Num of Insts Rejected     Reasons
 ------------------------------------------------------------
 ------------------------------------------------------------
       flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
-UM:          19.51             21                                      place_design
-*** placeDesign #1 [finish] : cpu/real = 0:00:01.9/0:00:03.0 (0.6), totSession cpu/real = 0:00:19.5/0:00:20.3 (1.0), mem = 1861.3M
-@file 129:
-@file 130: #------------------------------------ [15]
-@@file 131: set_db extract_rc_engine pre_route
-@@file 132: extract_rc
-Extraction called for design 'bch_toplevel' of instances=785 and nets=874 using extraction engine 'pre_route' .
+UM:          19.66             21                                      place_design
+*** placeDesign #1 [finish] : cpu/real = 0:00:02.1/0:00:03.2 (0.7), totSession cpu/real = 0:00:19.7/0:00:20.5 (1.0), mem = 1860.4M
+@file 131: # check_drc
+@file 132:
+@file 133: #------------------------------------ [15]
+@@file 134: set_db extract_rc_engine pre_route
+@@file 135: extract_rc
+Extraction called for design 'bch_toplevel' of instances=791 and nets=845 using extraction engine 'pre_route' .
 pre_route RC Extraction called for design bch_toplevel.
 RC Extraction called in multi-corner(2) mode.
 RCMode: PreRoute
@@ -773,14 +745,14 @@ PreRoute extraction is honoring NDR/Shielding/ExtraSpace for clock nets.
 Using Quantus QRC technology file ...
 Updating RC grid for preRoute extraction ...
 Initializing multi-corner resistance tables ...
-PreRoute RC Extraction DONE (CPU Time: 0:00:00.0  Real Time: 0:00:00.0  MEM: 1861.340M)
-@file 133: #------------------------------------ [16]
-@file 134: # set_db opt_drv_fix_max_cap true ; set_db opt_drv_fix_max_tran true ; set_db opt_fix_fanout_load false
-@file 135: # opt_design -pre_cts
-@file 136: #------------------------------------ [17]
-@@file 137: route_design
-#% Begin route_design (date=09/11 10:00:36, mem=1661.8M)
-#route_design: cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1661.76 (MB), peak = 1696.42 (MB)
+PreRoute RC Extraction DONE (CPU Time: 0:00:00.0  Real Time: 0:00:00.0  MEM: 1860.414M)
+@file 136: #------------------------------------ [16]
+@file 137: # set_db opt_drv_fix_max_cap true ; set_db opt_drv_fix_max_tran true ; set_db opt_fix_fanout_load false
+@file 138: # opt_design -pre_cts
+@file 139: #------------------------------------ [17]
+@@file 140: route_design
+#% Begin route_design (date=09/16 12:25:21, mem=1642.1M)
+#route_design: cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1642.14 (MB), peak = 1676.26 (MB)
 AAE_INFO: Pre Route call back at the beginning of routeDesign
 #**INFO: setDesignMode -flowEffort standard
 #**INFO: setDesignMode -powerEffort none
@@ -806,55 +778,55 @@ getAnalysisMode -cts                                     postCTS
 getAnalysisMode -virtualIPO                              false
 #**INFO: multi-cut via swapping will be performed after routing.
 #**INFO: All auto set options tuned by route_design will be restored to their original settings on command completion.
-Begin checking placement ... (start mem=1857.3M, init mem=1857.3M)
-*info: Placed = 785           
+Begin checking placement ... (start mem=1856.4M, init mem=1856.4M)
+*info: Placed = 791           
 *info: Unplaced = 0           
-Placement Density:94.97%(1621/1707)
-Placement Density (including fixed std cells):94.97%(1621/1707)
-Finished check_place (total: cpu=0:00:00.0, real=0:00:00.0; vio checks: cpu=0:00:00.0, real=0:00:00.0; mem=1857.3M)
+Placement Density:95.00%(1422/1497)
+Placement Density (including fixed std cells):95.00%(1422/1497)
+Finished check_place (total: cpu=0:00:00.0, real=0:00:00.0; vio checks: cpu=0:00:00.0, real=0:00:00.0; mem=1856.4M)
 
 changeUseClockNetStatus Option :  -noFixedNetWires 
 *** Changed status on (0) nets in Clock.
-*** End changeUseClockNetStatus (cpu=0:00:00.0, real=0:00:00.0, mem=1857.3M) ***
+*** End changeUseClockNetStatus (cpu=0:00:00.0, real=0:00:00.0, mem=1856.4M) ***
 #**INFO: auto set of droutePostRouteSwapVia to multiCut
 
 route_global_detail
 
-#Start route_global_detail on Thu Sep 11 10:00:40 2025
+#Start route_global_detail on Tue Sep 16 12:25:25 2025
 #
 #Generating timing data, please wait...
-#870 total nets, 823 already routed, 823 will ignore in trialRoute
+#843 total nets, 827 already routed, 827 will ignore in trialRoute
 #Reporting timing...
 ###############################################################
 #  Generated by:      Cadence Innovus 21.15-s110_1
 #  OS:                Linux x86_64(Host ID eltonsilva)
-#  Generated on:      Thu Sep 11 10:00:41 2025
+#  Generated on:      Tue Sep 16 12:25:26 2025
 #  Design:            bch_toplevel
 #  Command:           route_design
 ###############################################################
 #Normalized TNS: 0.000 -> -nan, r2r 0.000 -> -nan, unit 1000.000, clk period 0.000 (ns)
-#Stage 1: cpu time = 00:00:01, elapsed time = 00:00:01, memory = 1726.81 (MB), peak = 1729.98 (MB)
+#Stage 1: cpu time = 00:00:01, elapsed time = 00:00:01, memory = 1709.17 (MB), peak = 1712.06 (MB)
 #Library Standard Delay: 41.00ps
 #Slack threshold: 82.00ps
 #*** Analyzed 0 timing critical paths, and collected 0.
-#Stage 2: cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1726.88 (MB), peak = 1729.98 (MB)
-#Stage 3: cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1735.52 (MB), peak = 1735.57 (MB)
+#Stage 2: cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1709.23 (MB), peak = 1712.06 (MB)
+#Stage 3: cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1717.89 (MB), peak = 1719.19 (MB)
 #Default setup view is reset to analysis_normal_slow_max.
-#Stage 4: cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1735.52 (MB), peak = 1735.57 (MB)
+#Stage 4: cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1717.89 (MB), peak = 1719.19 (MB)
 #Current view: analysis_normal_slow_max 
 #Current enabled view: analysis_normal_slow_max 
-#Generating timing data took: cpu time = 00:00:01, elapsed time = 00:00:01, memory = 1735.15 (MB), peak = 1735.57 (MB)
+#Generating timing data took: cpu time = 00:00:01, elapsed time = 00:00:01, memory = 1717.53 (MB), peak = 1719.19 (MB)
 #Done generating timing data.
 #WARNING (NRIG-1303) The congestion map does not match the GCELL grid. Clearing the map.
 #Invoke dbWirePreImport deleteTR=1 convert_unrouted=0 selected_only=0 (nr_selected_net=0)
 #num needed restored net=0
-#need_extraction net=0 (total=874)
+#need_extraction net=0 (total=845)
 #NanoRoute Version 21.15-s110_1 NR220912-2004/21_15-UB
-#Start routing data preparation on Thu Sep 11 10:00:41 2025
+#Start routing data preparation on Tue Sep 16 12:25:26 2025
 #
 #Minimum voltage of a net in the design = 0.000.
 #Maximum voltage of a net in the design = 1.100.
-#Voltage range [0.000 - 1.100] has 872 nets.
+#Voltage range [0.000 - 1.100] has 843 nets.
 #Voltage range [0.900 - 1.100] has 1 net.
 #Voltage range [0.000 - 0.000] has 1 net.
 #Build and mark too close pins for the same net.
@@ -872,13 +844,13 @@ route_global_detail
 # Metal9       H   Track-Pitch = 0.19000    Line-2-Via Pitch = 0.15000
 # Metal10      V   Track-Pitch = 0.50000    Line-2-Via Pitch = 0.42000
 # Metal11      H   Track-Pitch = 0.47500    Line-2-Via Pitch = 0.43000
-#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1742.07 (MB), peak = 1775.84 (MB)
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1724.55 (MB), peak = 1758.22 (MB)
 #Regenerating Ggrids automatically.
 #Auto generating G-grids with size=15 tracks, using layer Metal3's pitch = 0.19000.
 #Using automatically generated G-grids.
 #(check_and_prepare_match_target_file) no match_target_file in constraint. quit
 #Done routing data preparation.
-#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 1746.98 (MB), peak = 1775.84 (MB)
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 1729.47 (MB), peak = 1758.22 (MB)
 #
 #Summary of active signal nets routing constraints set by OPT:
 #	preferred routing layers      : 0
@@ -912,98 +884,98 @@ route_global_detail
 #
 #----------------------------------------------------
 #Done timing-driven prevention
-#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1746.98 (MB), peak = 1775.84 (MB)
-#Total number of trivial nets (e.g. < 2 pins) = 51 (skipped).
-#Total number of routable nets = 823.
-#Total number of nets in the design = 874.
-#823 routable nets do not have any wires.
-#823 nets will be global routed.
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1729.47 (MB), peak = 1758.22 (MB)
+#Total number of trivial nets (e.g. < 2 pins) = 18 (skipped).
+#Total number of routable nets = 827.
+#Total number of nets in the design = 845.
+#827 routable nets do not have any wires.
+#827 nets will be global routed.
 #
-#Finished routing data preparation on Thu Sep 11 10:00:43 2025
+#Finished routing data preparation on Tue Sep 16 12:25:28 2025
 #
 #Cpu time = 00:00:00
 #Elapsed time = 00:00:00
 #Increased memory = 0.00 (MB)
-#Total memory = 1746.98 (MB)
-#Peak memory = 1775.84 (MB)
+#Total memory = 1729.47 (MB)
+#Peak memory = 1758.22 (MB)
 #
 #
-#Start global routing on Thu Sep 11 10:00:43 2025
+#Start global routing on Tue Sep 16 12:25:28 2025
 #
 #
-#Start global routing initialization on Thu Sep 11 10:00:43 2025
+#Start global routing initialization on Tue Sep 16 12:25:28 2025
 #
 #Number of eco nets is 0
 #
-#Start global routing data preparation on Thu Sep 11 10:00:43 2025
+#Start global routing data preparation on Tue Sep 16 12:25:28 2025
 #
-#Start routing resource analysis on Thu Sep 11 10:00:43 2025
+#Start routing resource analysis on Tue Sep 16 12:25:28 2025
 #
-#Routing resource analysis is done on Thu Sep 11 10:00:43 2025
+#Routing resource analysis is done on Tue Sep 16 12:25:28 2025
 #
 #  Resource Analysis:
 #
 #               Routing  #Avail      #Track     #Total     %Gcell
 #  Layer      Direction   Track     Blocked      Gcell    Blocked
 #  --------------------------------------------------------------
-#  Metal1         H          53         195         289    69.20%
-#  Metal2         V         221          17         289     0.00%
-#  Metal3         H         238          10         289     0.00%
-#  Metal4         V         223          15         289     0.00%
-#  Metal5         H         240           8         289     0.00%
-#  Metal6         V         223          15         289     0.00%
-#  Metal7         H         240           8         289     0.00%
-#  Metal8         V         223          15         289     0.00%
-#  Metal9         H         233          15         289     0.00%
-#  Metal10        V          66          28         289    11.42%
-#  Metal11        H          89          10         289     0.00%
+#  Metal1         H          50         180         240    74.17%
+#  Metal2         V         211          18         240     0.00%
+#  Metal3         H         223           7         240     0.00%
+#  Metal4         V         213          16         240     0.00%
+#  Metal5         H         224           6         240     0.00%
+#  Metal6         V         213          16         240     0.00%
+#  Metal7         H         224           6         240     0.00%
+#  Metal8         V         213          16         240     0.00%
+#  Metal9         H         218          12         240     0.00%
+#  Metal10        V          63          28         240     6.25%
+#  Metal11        H          82          10         240     0.00%
 #  --------------------------------------------------------------
-#  Total                   2050      14.56%        3179     7.33%
+#  Total                   1937      14.63%        2640     7.31%
 #
 #
 #
 #
-#Global routing data preparation is done on Thu Sep 11 10:00:43 2025
+#Global routing data preparation is done on Tue Sep 16 12:25:28 2025
 #
-#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1746.98 (MB), peak = 1775.84 (MB)
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1729.47 (MB), peak = 1758.22 (MB)
 #
 #
-#Global routing initialization is done on Thu Sep 11 10:00:43 2025
+#Global routing initialization is done on Tue Sep 16 12:25:28 2025
 #
-#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1746.98 (MB), peak = 1775.84 (MB)
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1729.47 (MB), peak = 1758.22 (MB)
 #
 #Skip 1/3 round for no nets in the round...
 #Skip 2/3 round for no nets in the round...
 #Route nets in 3/3 round...
 #start global routing iteration 1...
-#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1748.47 (MB), peak = 1775.84 (MB)
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1730.76 (MB), peak = 1758.22 (MB)
 #
 #start global routing iteration 2...
-#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1748.47 (MB), peak = 1775.84 (MB)
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1730.76 (MB), peak = 1758.22 (MB)
 #
 #
-#Total number of trivial nets (e.g. < 2 pins) = 51 (skipped).
-#Total number of routable nets = 823.
-#Total number of nets in the design = 874.
+#Total number of trivial nets (e.g. < 2 pins) = 18 (skipped).
+#Total number of routable nets = 827.
+#Total number of nets in the design = 845.
 #
-#823 routable nets have routed wires.
+#827 routable nets have routed wires.
 #
 #Routed nets constraints summary:
 #-----------------------------
 #        Rules   Unconstrained  
 #-----------------------------
-#      Default             823  
+#      Default             827  
 #-----------------------------
-#        Total             823  
+#        Total             827  
 #-----------------------------
 #
 #Routing constraints summary of the whole design:
 #-----------------------------
 #        Rules   Unconstrained  
 #-----------------------------
-#      Default             823  
+#      Default             827  
 #-----------------------------
-#        Total             823  
+#        Total             827  
 #-----------------------------
 #
 #
@@ -1014,9 +986,9 @@ route_global_detail
 #     Layer         (1-2)         (3-4)           (5)   OverCon
 #  ------------------------------------------------------------
 #  Metal1        0(0.00%)      0(0.00%)      0(0.00%)   (0.00%)
-#  Metal2       19(6.57%)      5(1.73%)      0(0.00%)   (8.30%)
-#  Metal3       24(8.30%)     22(7.61%)      1(0.35%)   (16.3%)
-#  Metal4       12(4.15%)      0(0.00%)      0(0.00%)   (4.15%)
+#  Metal2       13(5.42%)      3(1.25%)      2(0.83%)   (7.50%)
+#  Metal3       28(11.7%)      7(2.92%)      0(0.00%)   (14.6%)
+#  Metal4       11(4.58%)      0(0.00%)      0(0.00%)   (4.58%)
 #  Metal5        0(0.00%)      0(0.00%)      0(0.00%)   (0.00%)
 #  Metal6        0(0.00%)      0(0.00%)      0(0.00%)   (0.00%)
 #  Metal7        0(0.00%)      0(0.00%)      0(0.00%)   (0.00%)
@@ -1025,19 +997,19 @@ route_global_detail
 #  Metal10       0(0.00%)      0(0.00%)      0(0.00%)   (0.00%)
 #  Metal11       0(0.00%)      0(0.00%)      0(0.00%)   (0.00%)
 #  ------------------------------------------------------------
-#     Total     55(1.85%)     27(0.91%)      1(0.03%)   (2.80%)
+#     Total     52(2.11%)     10(0.41%)      2(0.08%)   (2.59%)
 #
 #  The worst congested Gcell overcon (routing demand over resource in number of tracks) = 5
-#  Overflow after GR: 1.58% H + 1.21% V
+#  Overflow after GR: 1.42% H + 1.18% V
 #
 #Hotspot report including placement blocked areas
 [hotspot] +----------------+-------------------+-------------------+-------------------------------------+
 [hotspot] |      layer     |    max hotspot    |   total hotspot   |            hotspot bbox             |
 [hotspot] +----------------+-------------------+-------------------+-------------------------------------+
 [hotspot] |   Metal1(H)    |              0.00 |              0.00 |   (none)                            |
-[hotspot] |   Metal2(V)    |              1.00 |              2.00 |     6.83     6.83    13.68    13.68 |
-[hotspot] |   Metal3(H)    |              9.00 |              9.00 |    -0.01     6.83    27.36    27.36 |
-[hotspot] |   Metal4(V)    |              2.00 |              2.00 |    13.68    13.68    27.36    20.52 |
+[hotspot] |   Metal2(V)    |              0.00 |              0.00 |   (none)                            |
+[hotspot] |   Metal3(H)    |              8.00 |              8.00 |    20.52     6.83    41.04    27.36 |
+[hotspot] |   Metal4(V)    |              4.00 |              4.00 |    20.52     6.83    34.20    20.52 |
 [hotspot] |   Metal5(H)    |              0.00 |              0.00 |   (none)                            |
 [hotspot] |   Metal6(V)    |              0.00 |              0.00 |   (none)                            |
 [hotspot] |   Metal7(H)    |              0.00 |              0.00 |   (none)                            |
@@ -1046,106 +1018,108 @@ route_global_detail
 [hotspot] |  Metal10(V)    |              0.00 |              0.00 |   (none)                            |
 [hotspot] |  Metal11(H)    |              0.00 |              0.00 |   (none)                            |
 [hotspot] +----------------+-------------------+-------------------+-------------------------------------+
-[hotspot] |      worst     | (Metal3)     9.00 | (Metal3)     9.00 |                                     |
+[hotspot] |      worst     | (Metal3)     8.00 | (Metal3)     8.00 |                                     |
 [hotspot] +----------------+-------------------+-------------------+-------------------------------------+
 [hotspot] |   all layers   |              0.00 |              0.00 |                                     |
 [hotspot] +----------------+-------------------+-------------------+-------------------------------------+
 Local HotSpot Analysis (blockage included) (3d): normalized congestion max/total hotspot area = 0.00/0.00 (area is in unit of 4 std-cell row bins)
 #Complete Global Routing.
-#Total wire length = 9178 um.
-#Total half perimeter of net bounding box = 8140 um.
-#Total wire length on LAYER Metal1 = 114 um.
-#Total wire length on LAYER Metal2 = 1911 um.
-#Total wire length on LAYER Metal3 = 2453 um.
-#Total wire length on LAYER Metal4 = 1738 um.
-#Total wire length on LAYER Metal5 = 1602 um.
-#Total wire length on LAYER Metal6 = 878 um.
-#Total wire length on LAYER Metal7 = 482 um.
-#Total wire length on LAYER Metal8 = 0 um.
+#Total wire length = 8734 um.
+#Total half perimeter of net bounding box = 7787 um.
+#Total wire length on LAYER Metal1 = 171 um.
+#Total wire length on LAYER Metal2 = 1789 um.
+#Total wire length on LAYER Metal3 = 2079 um.
+#Total wire length on LAYER Metal4 = 1895 um.
+#Total wire length on LAYER Metal5 = 1419 um.
+#Total wire length on LAYER Metal6 = 852 um.
+#Total wire length on LAYER Metal7 = 496 um.
+#Total wire length on LAYER Metal8 = 31 um.
 #Total wire length on LAYER Metal9 = 0 um.
 #Total wire length on LAYER Metal10 = 0 um.
 #Total wire length on LAYER Metal11 = 0 um.
-#Total number of vias = 6323
-#Up-Via Summary (total 6323):
+#Total number of vias = 6284
+#Up-Via Summary (total 6284):
 #           
 #-----------------------
 # Metal1           2756
-# Metal2           1720
-# Metal3            916
-# Metal4            563
-# Metal5            283
-# Metal6             85
+# Metal2           1686
+# Metal3            933
+# Metal4            559
+# Metal5            253
+# Metal6             93
+# Metal7              4
 #-----------------------
-#                  6323 
+#                  6284 
 #
-#Total number of involved regular nets 174
-#Maximum src to sink distance  117.9
-#Average of max src_to_sink distance  25.8
-#Average of ave src_to_sink distance  18.8
+#Total number of involved regular nets 177
+#Maximum src to sink distance  75.1
+#Average of max src_to_sink distance  24.6
+#Average of ave src_to_sink distance  16.5
 #Max overcon = 5 tracks.
-#Total overcon = 2.80%.
-#Worst layer Gcell overcon rate = 16.26%.
+#Total overcon = 2.59%.
+#Worst layer Gcell overcon rate = 14.58%.
 #
 #Global routing statistics:
 #Cpu time = 00:00:00
 #Elapsed time = 00:00:00
-#Increased memory = 1.85 (MB)
-#Total memory = 1748.83 (MB)
-#Peak memory = 1775.84 (MB)
+#Increased memory = 1.48 (MB)
+#Total memory = 1730.95 (MB)
+#Peak memory = 1758.22 (MB)
 #
-#Finished global routing on Thu Sep 11 10:00:43 2025
+#Finished global routing on Tue Sep 16 12:25:28 2025
 #
 #
-#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1748.83 (MB), peak = 1775.84 (MB)
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1730.95 (MB), peak = 1758.22 (MB)
 #Start Track Assignment.
-#Done with 1175 horizontal wires in 1 hboxes and 1225 vertical wires in 1 hboxes.
-#Done with 301 horizontal wires in 1 hboxes and 264 vertical wires in 1 hboxes.
+#Done with 1180 horizontal wires in 1 hboxes and 1182 vertical wires in 1 hboxes.
+#Done with 262 horizontal wires in 1 hboxes and 269 vertical wires in 1 hboxes.
 #Done with 1 horizontal wires in 1 hboxes and 1 vertical wires in 1 hboxes.
 #
 #Track assignment summary:
 # layer   (wire length)   (overlap)     (long ovlp)	(with obs/pg/clk)  
 #------------------------------------------------------------------------
-# Metal1       104.98 	  0.00%  	  0.00% 	  0.00%
-# Metal2      1817.66 	  0.18%  	  0.00% 	  0.00%
-# Metal3      2327.25 	  0.25%  	  0.00% 	  0.00%
-# Metal4      1661.58 	  0.05%  	  0.00% 	  0.00%
-# Metal5      1593.36 	  0.04%  	  0.00% 	  0.00%
-# Metal6       840.57 	  0.06%  	  0.00% 	  0.00%
-# Metal7       481.63 	  0.02%  	  0.00% 	  0.00%
-# Metal8         0.00 	  0.00%  	  0.00% 	  0.00%
+# Metal1       159.28 	  0.00%  	  0.00% 	  0.00%
+# Metal2      1650.69 	  0.08%  	  0.00% 	  0.00%
+# Metal3      1983.01 	  0.24%  	  0.00% 	  0.00%
+# Metal4      1808.90 	  0.04%  	  0.00% 	  0.00%
+# Metal5      1365.94 	  0.09%  	  0.00% 	  0.00%
+# Metal6       828.85 	  0.04%  	  0.00% 	  0.00%
+# Metal7       491.08 	  0.00%  	  0.00% 	  0.00%
+# Metal8        28.09 	  0.00%  	  0.00% 	  0.00%
 # Metal9         0.00 	  0.00%  	  0.00% 	  0.00%
 # Metal10        0.00 	  0.00%  	  0.00% 	  0.00%
 # Metal11        0.00 	  0.00%  	  0.00% 	  0.00%
 #------------------------------------------------------------------------
-# All        8827.02  	  0.13% 	  0.00% 	  0.00%
+# All        8315.83  	  0.10% 	  0.00% 	  0.00%
 #Complete Track Assignment.
-#Total wire length = 8726 um.
-#Total half perimeter of net bounding box = 8140 um.
-#Total wire length on LAYER Metal1 = 104 um.
-#Total wire length on LAYER Metal2 = 1781 um.
-#Total wire length on LAYER Metal3 = 2290 um.
-#Total wire length on LAYER Metal4 = 1652 um.
-#Total wire length on LAYER Metal5 = 1587 um.
-#Total wire length on LAYER Metal6 = 832 um.
-#Total wire length on LAYER Metal7 = 480 um.
-#Total wire length on LAYER Metal8 = 0 um.
+#Total wire length = 8212 um.
+#Total half perimeter of net bounding box = 7787 um.
+#Total wire length on LAYER Metal1 = 158 um.
+#Total wire length on LAYER Metal2 = 1611 um.
+#Total wire length on LAYER Metal3 = 1957 um.
+#Total wire length on LAYER Metal4 = 1796 um.
+#Total wire length on LAYER Metal5 = 1351 um.
+#Total wire length on LAYER Metal6 = 824 um.
+#Total wire length on LAYER Metal7 = 487 um.
+#Total wire length on LAYER Metal8 = 28 um.
 #Total wire length on LAYER Metal9 = 0 um.
 #Total wire length on LAYER Metal10 = 0 um.
 #Total wire length on LAYER Metal11 = 0 um.
-#Total number of vias = 6323
-#Up-Via Summary (total 6323):
+#Total number of vias = 6284
+#Up-Via Summary (total 6284):
 #           
 #-----------------------
 # Metal1           2756
-# Metal2           1720
-# Metal3            916
-# Metal4            563
-# Metal5            283
-# Metal6             85
+# Metal2           1686
+# Metal3            933
+# Metal4            559
+# Metal5            253
+# Metal6             93
+# Metal7              4
 #-----------------------
-#                  6323 
+#                  6284 
 #
-#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1748.94 (MB), peak = 1775.84 (MB)
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1731.06 (MB), peak = 1758.22 (MB)
 #
 #Start post global route fixing for timing critical nets ...
 #
@@ -1195,20 +1169,20 @@ Un-suppress "**WARN ..." messages.
 #found RESMODEL /home/tools/design_kits/cadence/GPDK045/gpdk045_v_6_0/qrc/rcbest/qrcTechFile 0.000000 
 #found RESMODEL /home/tools/design_kits/cadence/GPDK045/gpdk045_v_6_0/qrc/rcworst/qrcTechFile 125.000000 
 #number model r/c [2,2] [22,1584] read
-#Build RC corners: cpu time = 00:00:01, elapsed time = 00:00:01, memory = 1780.66 (MB), peak = 1798.28 (MB)
+#Build RC corners: cpu time = 00:00:01, elapsed time = 00:00:01, memory = 1762.77 (MB), peak = 1779.66 (MB)
 #Finish check_net_pin_list step Enter extract
 #Start init net ripin tree building
 #Finish init net ripin tree building
 #Cpu time = 00:00:00
 #Elapsed time = 00:00:00
-#Increased memory = 0.20 (MB)
-#Total memory = 1789.09 (MB)
-#Peak memory = 1798.28 (MB)
+#Increased memory = 0.19 (MB)
+#Total memory = 1771.21 (MB)
+#Peak memory = 1779.66 (MB)
 #begin processing metal fill model file
 #end processing metal fill model file
 #
 #Start Post Track Assignment Wire Spread.
-#Done with 402 horizontal wires in 1 hboxes and 338 vertical wires in 1 hboxes.
+#Done with 396 horizontal wires in 1 hboxes and 341 vertical wires in 1 hboxes.
 #Complete Post Track Assignment Wire Spread.
 #
 #Length limit = 200 pitches
@@ -1223,32 +1197,32 @@ Un-suppress "**WARN ..." messages.
 #Complete generating extraction boxes.
 #Extract 1 hboxes with single thread on machine with  Core_i5 2.50GHz 24576KB Cache 20CPU...
 #Process 0 special clock nets for rc extraction
-#Total 823 nets were built. 2 nodes added to break long wires. 0 net(s) have incomplete routes.
+#Total 827 nets were built. 3 nodes added to break long wires. 0 net(s) have incomplete routes.
 #Run Statistics for Extraction:
 #   Cpu time = 00:00:00, elapsed time = 00:00:00 .
-#   Increased memory =    10.78 (MB), total memory =  1799.96 (MB), peak memory =  1799.96 (MB)
+#   Increased memory =     9.76 (MB), total memory =  1781.06 (MB), peak memory =  1781.06 (MB)
 #
 #Scale RC for track assignment: res 1.000000; cap 1.000000; clk res 1.000000; clk cap 1.000000, xcap 1.000000
-#Simplify RC tree: cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1792.75 (MB), peak = 1800.16 (MB)
-#RC Statistics: 0 Res, 2109 Ground Cap, 606 XCap (Edge to Edge)
-#Register nets and terms for rcdb /tmp/innovus_temp_376650_eltonsilva_ci_inovador_L48dUt/nr376650_rdYVIH.rcdb.d
+#Simplify RC tree: cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1775.80 (MB), peak = 1781.21 (MB)
+#RC Statistics: 0 Res, 2061 Ground Cap, 676 XCap (Edge to Edge)
+#Register nets and terms for rcdb /tmp/innovus_temp_145254_eltonsilva_ci_inovador_WPXQux/nr145254_aq3wBr.rcdb.d
 #Finish registering nets and terms for rcdb.
 #Start writing RC data.
 #Finish writing RC data
-#Finish writing rcdb with 5033 nodes, 4210 edges, and 1212 xcaps
-#2 inserted nodes are removed
+#Finish writing rcdb with 4947 nodes, 4120 edges, and 1352 xcaps
+#3 inserted nodes are removed
 #Remove Post Track Assignment Wire Spread
-Restoring parasitic data from file '/tmp/innovus_temp_376650_eltonsilva_ci_inovador_L48dUt/nr376650_rdYVIH.rcdb.d' ...
+Restoring parasitic data from file '/tmp/innovus_temp_145254_eltonsilva_ci_inovador_WPXQux/nr145254_aq3wBr.rcdb.d' ...
 Reading RCDB with compressed RC data.
 Reading RCDB with compressed RC data.
-Begin read_parasitics... (cpu: 0:00:00.0 real: 0:00:00.0 mem: 2124.410M)
+Begin read_parasitics... (cpu: 0:00:00.0 real: 0:00:00.0 mem: 2113.945M)
 Following multi-corner parasitics specified:
-	/tmp/innovus_temp_376650_eltonsilva_ci_inovador_L48dUt/nr376650_rdYVIH.rcdb.d (rcdb)
+	/tmp/innovus_temp_145254_eltonsilva_ci_inovador_WPXQux/nr145254_aq3wBr.rcdb.d (rcdb)
 Reading RCDB with compressed RC data.
-		Cell bch_toplevel has rcdb /tmp/innovus_temp_376650_eltonsilva_ci_inovador_L48dUt/nr376650_rdYVIH.rcdb.d specified
+		Cell bch_toplevel has rcdb /tmp/innovus_temp_145254_eltonsilva_ci_inovador_WPXQux/nr145254_aq3wBr.rcdb.d specified
 Cell bch_toplevel, hinst 
 Reading RCDB with compressed RC data.
-Done read_parasitics... (cpu: 0:00:00.1 real: 0:00:00.0 mem: 2099.410M)
+Done read_parasitics... (cpu: 0:00:00.1 real: 0:00:00.0 mem: 2088.945M)
 #
 #Restore RCDB.
 #Remove Post Track Assignment Wire Spread
@@ -1256,9 +1230,9 @@ Done read_parasitics... (cpu: 0:00:00.1 real: 0:00:00.0 mem: 2099.410M)
 #Complete tQuantus RC extraction.
 #Cpu time = 00:00:02
 #Elapsed time = 00:00:02
-#Increased memory = 50.77 (MB)
-#Total memory = 1799.71 (MB)
-#Peak memory = 1805.00 (MB)
+#Increased memory = 46.19 (MB)
+#Total memory = 1777.25 (MB)
+#Peak memory = 1781.96 (MB)
 #
 Un-suppress "**WARN ..." messages.
 #RC Extraction Completed...
@@ -1268,21 +1242,21 @@ AAE_INFO: The setting is changed from false to true in setDelayCalMode -SIAware
 ###############################################################
 #  Generated by:      Cadence Innovus 21.15-s110_1
 #  OS:                Linux x86_64(Host ID eltonsilva)
-#  Generated on:      Thu Sep 11 10:00:45 2025
+#  Generated on:      Tue Sep 16 12:25:30 2025
 #  Design:            bch_toplevel
 #  Command:           route_design
 ###############################################################
 #Normalized TNS: 0.000 -> -nan, r2r 0.000 -> -nan, unit 1000.000, clk period 0.000 (ns)
-#Stage 1: cpu time = 00:00:01, elapsed time = 00:00:01, memory = 1811.77 (MB), peak = 1832.46 (MB)
+#Stage 1: cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1786.58 (MB), peak = 1805.25 (MB)
 #Library Standard Delay: 41.00ps
 #Slack threshold: 0.00ps
 #*** Analyzed 0 timing critical paths, and collected 0.
-#Stage 2: cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1811.77 (MB), peak = 1832.46 (MB)
-#Stage 3: cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1812.42 (MB), peak = 1832.46 (MB)
+#Stage 2: cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1786.58 (MB), peak = 1805.25 (MB)
+#Stage 3: cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1787.23 (MB), peak = 1805.25 (MB)
 Worst slack reported in the design = 9999999562023526247432192.000000 (early)
 
 *** writeDesignTiming (0:00:00.0) ***
-#Stage 4: cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1812.67 (MB), peak = 1832.46 (MB)
+#Stage 4: cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1787.23 (MB), peak = 1805.25 (MB)
 Un-suppress "**WARN ..." messages.
 #Number of victim nets: 0
 #Number of aggressor nets: 0
@@ -1291,7 +1265,7 @@ Un-suppress "**WARN ..." messages.
 #	level 1 [   0.0, -1000.0]: 0 nets
 #	level 2 [   0.0, -1000.0]: 0 nets
 #	level 3 [   0.0, -1000.0]: 0 nets
-#Total number of nets: 823
+#Total number of nets: 827
 #Total number of significant detoured timing critical nets is 0
 #Total number of selected detoured timing critical nets is 0
 #
@@ -1301,11 +1275,11 @@ Un-suppress "**WARN ..." messages.
 #+--------------------------+-----------+
 #
 #----------------------------------------------------
-Current (total cpu=0:00:29.2, real=0:00:31.0, peak res=1832.5M, current mem=1735.3M)
+Current (total cpu=0:00:29.3, real=0:00:31.0, peak res=1805.2M, current mem=1711.4M)
 bch_toplevel
-Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1735.8M, current mem=1735.8M)
-Current (total cpu=0:00:29.2, real=0:00:31.0, peak res=1832.5M, current mem=1735.8M)
-#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1743.89 (MB), peak = 1832.46 (MB)
+Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1711.9M, current mem=1711.9M)
+Current (total cpu=0:00:29.4, real=0:00:31.0, peak res=1805.2M, current mem=1711.9M)
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1719.93 (MB), peak = 1805.25 (MB)
 #* Importing design timing data...
 #Number of victim nets: 0
 #Number of aggressor nets: 0
@@ -1314,176 +1288,179 @@ Current (total cpu=0:00:29.2, real=0:00:31.0, peak res=1832.5M, current mem=1735
 #	level 1 [   0.0, -1000.0]: 0 nets
 #	level 2 [   0.0, -1000.0]: 0 nets
 #	level 3 [   0.0, -1000.0]: 0 nets
-#Total number of nets: 823
+#Total number of nets: 827
 #
 #timing driven effort level: 3
 #Start Track Assignment With Timing Driven.
-#Done with 31 horizontal wires in 1 hboxes and 45 vertical wires in 1 hboxes.
-#Done with 3 horizontal wires in 1 hboxes and 13 vertical wires in 1 hboxes.
+#Done with 32 horizontal wires in 1 hboxes and 30 vertical wires in 1 hboxes.
+#Done with 12 horizontal wires in 1 hboxes and 8 vertical wires in 1 hboxes.
 #Done with 1 horizontal wires in 1 hboxes and 1 vertical wires in 1 hboxes.
 #
 #Track assignment summary:
 # layer   (wire length)   (overlap)     (long ovlp)	(with obs/pg/clk)  
 #------------------------------------------------------------------------
-# Metal1       104.98 	  0.00%  	  0.00% 	  0.00%
-# Metal2      1815.95 	  0.11%  	  0.00% 	  0.00%
-# Metal3      2322.32 	  0.22%  	  0.00% 	  0.00%
-# Metal4      1663.95 	  0.03%  	  0.00% 	  0.00%
-# Metal5      1592.40 	  0.05%  	  0.00% 	  0.00%
-# Metal6       839.76 	  0.04%  	  0.00% 	  0.00%
-# Metal7       482.03 	  0.02%  	  0.00% 	  0.00%
-# Metal8         0.00 	  0.00%  	  0.00% 	  0.00%
+# Metal1       159.08 	  0.00%  	  0.00% 	  0.00%
+# Metal2      1649.36 	  0.08%  	  0.00% 	  0.00%
+# Metal3      1975.35 	  0.22%  	  0.00% 	  0.00%
+# Metal4      1808.25 	  0.03%  	  0.00% 	  0.00%
+# Metal5      1365.59 	  0.08%  	  0.00% 	  0.00%
+# Metal6       831.24 	  0.03%  	  0.00% 	  0.00%
+# Metal7       490.68 	  0.00%  	  0.00% 	  0.00%
+# Metal8        28.09 	  0.00%  	  0.00% 	  0.00%
 # Metal9         0.00 	  0.00%  	  0.00% 	  0.00%
 # Metal10        0.00 	  0.00%  	  0.00% 	  0.00%
 # Metal11        0.00 	  0.00%  	  0.00% 	  0.00%
 #------------------------------------------------------------------------
-# All        8821.38  	  0.10% 	  0.00% 	  0.00%
+# All        8307.63  	  0.09% 	  0.00% 	  0.00%
 #Complete Track Assignment With Timing Driven.
-#Total wire length = 8724 um.
-#Total half perimeter of net bounding box = 8140 um.
-#Total wire length on LAYER Metal1 = 104 um.
-#Total wire length on LAYER Metal2 = 1779 um.
-#Total wire length on LAYER Metal3 = 2286 um.
-#Total wire length on LAYER Metal4 = 1656 um.
-#Total wire length on LAYER Metal5 = 1587 um.
-#Total wire length on LAYER Metal6 = 832 um.
-#Total wire length on LAYER Metal7 = 480 um.
-#Total wire length on LAYER Metal8 = 0 um.
+#Total wire length = 8209 um.
+#Total half perimeter of net bounding box = 7787 um.
+#Total wire length on LAYER Metal1 = 158 um.
+#Total wire length on LAYER Metal2 = 1610 um.
+#Total wire length on LAYER Metal3 = 1954 um.
+#Total wire length on LAYER Metal4 = 1796 um.
+#Total wire length on LAYER Metal5 = 1350 um.
+#Total wire length on LAYER Metal6 = 826 um.
+#Total wire length on LAYER Metal7 = 487 um.
+#Total wire length on LAYER Metal8 = 28 um.
 #Total wire length on LAYER Metal9 = 0 um.
 #Total wire length on LAYER Metal10 = 0 um.
 #Total wire length on LAYER Metal11 = 0 um.
-#Total number of vias = 6323
-#Up-Via Summary (total 6323):
+#Total number of vias = 6284
+#Up-Via Summary (total 6284):
 #           
 #-----------------------
 # Metal1           2756
-# Metal2           1720
-# Metal3            916
-# Metal4            563
-# Metal5            283
-# Metal6             85
+# Metal2           1686
+# Metal3            933
+# Metal4            559
+# Metal5            253
+# Metal6             93
+# Metal7              4
 #-----------------------
-#                  6323 
+#                  6284 
 #
-#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1743.91 (MB), peak = 1832.46 (MB)
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1719.94 (MB), peak = 1805.25 (MB)
 #
 #Routing data preparation, pin analysis, global routing and track assignment statistics:
 #Cpu time = 00:00:04
 #Elapsed time = 00:00:04
-#Increased memory = 7.77 (MB)
-#Total memory = 1743.91 (MB)
-#Peak memory = 1832.46 (MB)
-#Start reading timing information from file .timing_file_376650.tif.gz ...
+#Increased memory = 1.42 (MB)
+#Total memory = 1719.94 (MB)
+#Peak memory = 1805.25 (MB)
+#Start reading timing information from file .timing_file_145254.tif.gz ...
 #WARNING (NRDB-194) 
 #No setup time constraints read in
-#Read in timing information for 68 ports, 785 instances from timing file .timing_file_376650.tif.gz.
+#Read in timing information for 33 ports, 791 instances from timing file .timing_file_145254.tif.gz.
 #
 #Start Detail Routing..
 #start initial detail routing ...
-#   number of violations = 3
+#   number of violations = 1
 #
 #    By Layer and Type :
-#	          Short   Totals
-#	Metal1        0        0
-#	Metal2        3        3
-#	Totals        3        3
-#cpu time = 00:00:02, elapsed time = 00:00:02, memory = 1746.52 (MB), peak = 1832.46 (MB)
+#	         EOLSpc   Totals
+#	Metal1        1        1
+#	Totals        1        1
+#cpu time = 00:00:03, elapsed time = 00:00:03, memory = 1720.98 (MB), peak = 1811.87 (MB)
 #start 1st optimization iteration ...
 #   number of violations = 0
-#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1747.12 (MB), peak = 1832.46 (MB)
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1720.79 (MB), peak = 1811.87 (MB)
 #Complete Detail Routing.
-#Total wire length = 9257 um.
-#Total half perimeter of net bounding box = 8140 um.
-#Total wire length on LAYER Metal1 = 138 um.
-#Total wire length on LAYER Metal2 = 2647 um.
-#Total wire length on LAYER Metal3 = 2900 um.
-#Total wire length on LAYER Metal4 = 1743 um.
-#Total wire length on LAYER Metal5 = 1199 um.
-#Total wire length on LAYER Metal6 = 339 um.
-#Total wire length on LAYER Metal7 = 292 um.
-#Total wire length on LAYER Metal8 = 0 um.
+#Total wire length = 8697 um.
+#Total half perimeter of net bounding box = 7787 um.
+#Total wire length on LAYER Metal1 = 172 um.
+#Total wire length on LAYER Metal2 = 2529 um.
+#Total wire length on LAYER Metal3 = 2797 um.
+#Total wire length on LAYER Metal4 = 1624 um.
+#Total wire length on LAYER Metal5 = 855 um.
+#Total wire length on LAYER Metal6 = 442 um.
+#Total wire length on LAYER Metal7 = 264 um.
+#Total wire length on LAYER Metal8 = 14 um.
 #Total wire length on LAYER Metal9 = 0 um.
 #Total wire length on LAYER Metal10 = 0 um.
 #Total wire length on LAYER Metal11 = 0 um.
-#Total number of vias = 6258
-#Up-Via Summary (total 6258):
+#Total number of vias = 6126
+#Up-Via Summary (total 6126):
 #           
 #-----------------------
 # Metal1           2860
-# Metal2           2100
-# Metal3            799
-# Metal4            336
-# Metal5            126
-# Metal6             37
+# Metal2           2074
+# Metal3            741
+# Metal4            288
+# Metal5            124
+# Metal6             35
+# Metal7              4
 #-----------------------
-#                  6258 
+#                  6126 
 #
 #Total number of DRC violations = 0
 #Cpu time = 00:00:03
 #Elapsed time = 00:00:03
-#Increased memory = 3.21 (MB)
-#Total memory = 1747.12 (MB)
-#Peak memory = 1832.46 (MB)
+#Increased memory = 0.85 (MB)
+#Total memory = 1720.79 (MB)
+#Peak memory = 1811.87 (MB)
 #
 #start routing for process antenna violation fix ...
-#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1747.12 (MB), peak = 1832.46 (MB)
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1720.79 (MB), peak = 1811.87 (MB)
 #
-#Total wire length = 9257 um.
-#Total half perimeter of net bounding box = 8140 um.
-#Total wire length on LAYER Metal1 = 138 um.
-#Total wire length on LAYER Metal2 = 2647 um.
-#Total wire length on LAYER Metal3 = 2900 um.
-#Total wire length on LAYER Metal4 = 1743 um.
-#Total wire length on LAYER Metal5 = 1199 um.
-#Total wire length on LAYER Metal6 = 339 um.
-#Total wire length on LAYER Metal7 = 292 um.
-#Total wire length on LAYER Metal8 = 0 um.
+#Total wire length = 8697 um.
+#Total half perimeter of net bounding box = 7787 um.
+#Total wire length on LAYER Metal1 = 172 um.
+#Total wire length on LAYER Metal2 = 2529 um.
+#Total wire length on LAYER Metal3 = 2797 um.
+#Total wire length on LAYER Metal4 = 1624 um.
+#Total wire length on LAYER Metal5 = 855 um.
+#Total wire length on LAYER Metal6 = 442 um.
+#Total wire length on LAYER Metal7 = 264 um.
+#Total wire length on LAYER Metal8 = 14 um.
 #Total wire length on LAYER Metal9 = 0 um.
 #Total wire length on LAYER Metal10 = 0 um.
 #Total wire length on LAYER Metal11 = 0 um.
-#Total number of vias = 6258
-#Up-Via Summary (total 6258):
+#Total number of vias = 6126
+#Up-Via Summary (total 6126):
 #           
 #-----------------------
 # Metal1           2860
-# Metal2           2100
-# Metal3            799
-# Metal4            336
-# Metal5            126
-# Metal6             37
+# Metal2           2074
+# Metal3            741
+# Metal4            288
+# Metal5            124
+# Metal6             35
+# Metal7              4
 #-----------------------
-#                  6258 
+#                  6126 
 #
 #Total number of DRC violations = 0
 #Total number of process antenna violations = 0
 #Total number of net violated process antenna rule = 0
 #
 #
-#Total wire length = 9257 um.
-#Total half perimeter of net bounding box = 8140 um.
-#Total wire length on LAYER Metal1 = 138 um.
-#Total wire length on LAYER Metal2 = 2647 um.
-#Total wire length on LAYER Metal3 = 2900 um.
-#Total wire length on LAYER Metal4 = 1743 um.
-#Total wire length on LAYER Metal5 = 1199 um.
-#Total wire length on LAYER Metal6 = 339 um.
-#Total wire length on LAYER Metal7 = 292 um.
-#Total wire length on LAYER Metal8 = 0 um.
+#Total wire length = 8697 um.
+#Total half perimeter of net bounding box = 7787 um.
+#Total wire length on LAYER Metal1 = 172 um.
+#Total wire length on LAYER Metal2 = 2529 um.
+#Total wire length on LAYER Metal3 = 2797 um.
+#Total wire length on LAYER Metal4 = 1624 um.
+#Total wire length on LAYER Metal5 = 855 um.
+#Total wire length on LAYER Metal6 = 442 um.
+#Total wire length on LAYER Metal7 = 264 um.
+#Total wire length on LAYER Metal8 = 14 um.
 #Total wire length on LAYER Metal9 = 0 um.
 #Total wire length on LAYER Metal10 = 0 um.
 #Total wire length on LAYER Metal11 = 0 um.
-#Total number of vias = 6258
-#Up-Via Summary (total 6258):
+#Total number of vias = 6126
+#Up-Via Summary (total 6126):
 #           
 #-----------------------
 # Metal1           2860
-# Metal2           2100
-# Metal3            799
-# Metal4            336
-# Metal5            126
-# Metal6             37
+# Metal2           2074
+# Metal3            741
+# Metal4            288
+# Metal5            124
+# Metal6             35
+# Metal7              4
 #-----------------------
-#                  6258 
+#                  6126 
 #
 #Total number of DRC violations = 0
 #Total number of process antenna violations = 0
@@ -1491,48 +1468,49 @@ Current (total cpu=0:00:29.2, real=0:00:31.0, peak res=1832.5M, current mem=1735
 #
 #
 #Start Post Route via swapping...
-#99.66% of area are rerouted by ECO routing.
+#99.59% of area are rerouted by ECO routing.
 #   number of violations = 0
-#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1746.08 (MB), peak = 1832.46 (MB)
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1720.27 (MB), peak = 1811.87 (MB)
 #CELL_VIEW bch_toplevel,init has no DRC violation.
 #Total number of DRC violations = 0
 #Total number of process antenna violations = 0
 #Total number of net violated process antenna rule = 0
 #Post Route via swapping is done.
-#Total wire length = 9257 um.
-#Total half perimeter of net bounding box = 8140 um.
-#Total wire length on LAYER Metal1 = 138 um.
-#Total wire length on LAYER Metal2 = 2647 um.
-#Total wire length on LAYER Metal3 = 2900 um.
-#Total wire length on LAYER Metal4 = 1743 um.
-#Total wire length on LAYER Metal5 = 1199 um.
-#Total wire length on LAYER Metal6 = 339 um.
-#Total wire length on LAYER Metal7 = 292 um.
-#Total wire length on LAYER Metal8 = 0 um.
+#Total wire length = 8697 um.
+#Total half perimeter of net bounding box = 7787 um.
+#Total wire length on LAYER Metal1 = 172 um.
+#Total wire length on LAYER Metal2 = 2529 um.
+#Total wire length on LAYER Metal3 = 2797 um.
+#Total wire length on LAYER Metal4 = 1624 um.
+#Total wire length on LAYER Metal5 = 855 um.
+#Total wire length on LAYER Metal6 = 442 um.
+#Total wire length on LAYER Metal7 = 264 um.
+#Total wire length on LAYER Metal8 = 14 um.
 #Total wire length on LAYER Metal9 = 0 um.
 #Total wire length on LAYER Metal10 = 0 um.
 #Total wire length on LAYER Metal11 = 0 um.
-#Total number of vias = 6258
-#Total number of multi-cut vias = 5868 ( 93.8%)
-#Total number of single cut vias = 390 (  6.2%)
-#Up-Via Summary (total 6258):
+#Total number of vias = 6126
+#Total number of multi-cut vias = 5742 ( 93.7%)
+#Total number of single cut vias = 384 (  6.3%)
+#Up-Via Summary (total 6126):
 #                   single-cut          multi-cut      Total
 #-----------------------------------------------------------
-# Metal1           261 (  9.1%)      2599 ( 90.9%)       2860
-# Metal2           102 (  4.9%)      1998 ( 95.1%)       2100
-# Metal3            24 (  3.0%)       775 ( 97.0%)        799
-# Metal4             3 (  0.9%)       333 ( 99.1%)        336
-# Metal5             0 (  0.0%)       126 (100.0%)        126
-# Metal6             0 (  0.0%)        37 (100.0%)         37
+# Metal1           265 (  9.3%)      2595 ( 90.7%)       2860
+# Metal2            97 (  4.7%)      1977 ( 95.3%)       2074
+# Metal3            19 (  2.6%)       722 ( 97.4%)        741
+# Metal4             3 (  1.0%)       285 ( 99.0%)        288
+# Metal5             0 (  0.0%)       124 (100.0%)        124
+# Metal6             0 (  0.0%)        35 (100.0%)         35
+# Metal7             0 (  0.0%)         4 (100.0%)          4
 #-----------------------------------------------------------
-#                  390 (  6.2%)      5868 ( 93.8%)       6258 
+#                  384 (  6.3%)      5742 ( 93.7%)       6126 
 #
 #
 #Start Post Route wire spreading..
 #
 #Start DRC checking..
 #   number of violations = 0
-#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1745.92 (MB), peak = 1832.46 (MB)
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1720.14 (MB), peak = 1811.87 (MB)
 #CELL_VIEW bch_toplevel,init has no DRC violation.
 #Total number of DRC violations = 0
 #Total number of process antenna violations = 0
@@ -1540,131 +1518,147 @@ Current (total cpu=0:00:29.2, real=0:00:31.0, peak res=1832.5M, current mem=1735
 #
 #Start data preparation for wire spreading...
 #
-#Data preparation is done on Thu Sep 11 10:00:49 2025
+#Data preparation is done on Tue Sep 16 12:25:34 2025
 #
 #
 #Start Post Route Wire Spread.
-#Done with 118 horizontal wires in 1 hboxes and 119 vertical wires in 1 hboxes.
+#Done with 129 horizontal wires in 1 hboxes and 100 vertical wires in 1 hboxes.
 #Complete Post Route Wire Spread.
 #
-#Total wire length = 9338 um.
-#Total half perimeter of net bounding box = 8140 um.
-#Total wire length on LAYER Metal1 = 140 um.
-#Total wire length on LAYER Metal2 = 2655 um.
-#Total wire length on LAYER Metal3 = 2917 um.
-#Total wire length on LAYER Metal4 = 1769 um.
-#Total wire length on LAYER Metal5 = 1218 um.
-#Total wire length on LAYER Metal6 = 344 um.
-#Total wire length on LAYER Metal7 = 293 um.
-#Total wire length on LAYER Metal8 = 0 um.
+#Total wire length = 8774 um.
+#Total half perimeter of net bounding box = 7787 um.
+#Total wire length on LAYER Metal1 = 176 um.
+#Total wire length on LAYER Metal2 = 2530 um.
+#Total wire length on LAYER Metal3 = 2818 um.
+#Total wire length on LAYER Metal4 = 1648 um.
+#Total wire length on LAYER Metal5 = 871 um.
+#Total wire length on LAYER Metal6 = 452 um.
+#Total wire length on LAYER Metal7 = 264 um.
+#Total wire length on LAYER Metal8 = 14 um.
 #Total wire length on LAYER Metal9 = 0 um.
 #Total wire length on LAYER Metal10 = 0 um.
 #Total wire length on LAYER Metal11 = 0 um.
-#Total number of vias = 6258
-#Total number of multi-cut vias = 5868 ( 93.8%)
-#Total number of single cut vias = 390 (  6.2%)
-#Up-Via Summary (total 6258):
+#Total number of vias = 6126
+#Total number of multi-cut vias = 5742 ( 93.7%)
+#Total number of single cut vias = 384 (  6.3%)
+#Up-Via Summary (total 6126):
 #                   single-cut          multi-cut      Total
 #-----------------------------------------------------------
-# Metal1           261 (  9.1%)      2599 ( 90.9%)       2860
-# Metal2           102 (  4.9%)      1998 ( 95.1%)       2100
-# Metal3            24 (  3.0%)       775 ( 97.0%)        799
-# Metal4             3 (  0.9%)       333 ( 99.1%)        336
-# Metal5             0 (  0.0%)       126 (100.0%)        126
-# Metal6             0 (  0.0%)        37 (100.0%)         37
+# Metal1           265 (  9.3%)      2595 ( 90.7%)       2860
+# Metal2            97 (  4.7%)      1977 ( 95.3%)       2074
+# Metal3            19 (  2.6%)       722 ( 97.4%)        741
+# Metal4             3 (  1.0%)       285 ( 99.0%)        288
+# Metal5             0 (  0.0%)       124 (100.0%)        124
+# Metal6             0 (  0.0%)        35 (100.0%)         35
+# Metal7             0 (  0.0%)         4 (100.0%)          4
 #-----------------------------------------------------------
-#                  390 (  6.2%)      5868 ( 93.8%)       6258 
+#                  384 (  6.3%)      5742 ( 93.7%)       6126 
 #
 #
 #Start DRC checking..
 #   number of violations = 0
-#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1745.73 (MB), peak = 1832.46 (MB)
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1719.64 (MB), peak = 1811.87 (MB)
 #CELL_VIEW bch_toplevel,init has no DRC violation.
 #Total number of DRC violations = 0
 #Total number of process antenna violations = 0
 #Total number of net violated process antenna rule = 0
 #   number of violations = 0
-#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1745.73 (MB), peak = 1832.46 (MB)
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1719.64 (MB), peak = 1811.87 (MB)
 #CELL_VIEW bch_toplevel,init has no DRC violation.
 #Total number of DRC violations = 0
 #Total number of process antenna violations = 0
 #Total number of net violated process antenna rule = 0
 #Post Route wire spread is done.
-#Total wire length = 9338 um.
-#Total half perimeter of net bounding box = 8140 um.
-#Total wire length on LAYER Metal1 = 140 um.
-#Total wire length on LAYER Metal2 = 2655 um.
-#Total wire length on LAYER Metal3 = 2917 um.
-#Total wire length on LAYER Metal4 = 1769 um.
-#Total wire length on LAYER Metal5 = 1218 um.
-#Total wire length on LAYER Metal6 = 344 um.
-#Total wire length on LAYER Metal7 = 293 um.
-#Total wire length on LAYER Metal8 = 0 um.
+#Total wire length = 8774 um.
+#Total half perimeter of net bounding box = 7787 um.
+#Total wire length on LAYER Metal1 = 176 um.
+#Total wire length on LAYER Metal2 = 2530 um.
+#Total wire length on LAYER Metal3 = 2818 um.
+#Total wire length on LAYER Metal4 = 1648 um.
+#Total wire length on LAYER Metal5 = 871 um.
+#Total wire length on LAYER Metal6 = 452 um.
+#Total wire length on LAYER Metal7 = 264 um.
+#Total wire length on LAYER Metal8 = 14 um.
 #Total wire length on LAYER Metal9 = 0 um.
 #Total wire length on LAYER Metal10 = 0 um.
 #Total wire length on LAYER Metal11 = 0 um.
-#Total number of vias = 6258
-#Total number of multi-cut vias = 5868 ( 93.8%)
-#Total number of single cut vias = 390 (  6.2%)
-#Up-Via Summary (total 6258):
+#Total number of vias = 6126
+#Total number of multi-cut vias = 5742 ( 93.7%)
+#Total number of single cut vias = 384 (  6.3%)
+#Up-Via Summary (total 6126):
 #                   single-cut          multi-cut      Total
 #-----------------------------------------------------------
-# Metal1           261 (  9.1%)      2599 ( 90.9%)       2860
-# Metal2           102 (  4.9%)      1998 ( 95.1%)       2100
-# Metal3            24 (  3.0%)       775 ( 97.0%)        799
-# Metal4             3 (  0.9%)       333 ( 99.1%)        336
-# Metal5             0 (  0.0%)       126 (100.0%)        126
-# Metal6             0 (  0.0%)        37 (100.0%)         37
+# Metal1           265 (  9.3%)      2595 ( 90.7%)       2860
+# Metal2            97 (  4.7%)      1977 ( 95.3%)       2074
+# Metal3            19 (  2.6%)       722 ( 97.4%)        741
+# Metal4             3 (  1.0%)       285 ( 99.0%)        288
+# Metal5             0 (  0.0%)       124 (100.0%)        124
+# Metal6             0 (  0.0%)        35 (100.0%)         35
+# Metal7             0 (  0.0%)         4 (100.0%)          4
 #-----------------------------------------------------------
-#                  390 (  6.2%)      5868 ( 93.8%)       6258 
+#                  384 (  6.3%)      5742 ( 93.7%)       6126 
 #
 #route_detail Statistics:
-#Cpu time = 00:00:04
-#Elapsed time = 00:00:04
-#Increased memory = 1.83 (MB)
-#Total memory = 1745.73 (MB)
-#Peak memory = 1832.46 (MB)
+#Cpu time = 00:00:03
+#Elapsed time = 00:00:03
+#Increased memory = -0.30 (MB)
+#Total memory = 1719.64 (MB)
+#Peak memory = 1811.87 (MB)
 #	no debugging net set
 #
 #route_global_detail statistics:
 #Cpu time = 00:00:09
 #Elapsed time = 00:00:09
-#Increased memory = 80.60 (MB)
-#Total memory = 1742.82 (MB)
-#Peak memory = 1832.46 (MB)
+#Increased memory = 73.49 (MB)
+#Total memory = 1716.09 (MB)
+#Peak memory = 1811.87 (MB)
 #Number of warnings = 3
 #Total number of warnings = 4
 #Number of fails = 0
 #Total number of fails = 0
-#Complete route_global_detail on Thu Sep 11 10:00:49 2025
+#Complete route_global_detail on Tue Sep 16 12:25:34 2025
 #
 #Default setup view is reset to analysis_normal_slow_max.
 #Default setup view is reset to analysis_normal_slow_max.
 AAE_INFO: Post Route call back at the end of routeDesign
-#route_design: cpu time = 00:00:14, elapsed time = 00:00:14, memory = 1731.63 (MB), peak = 1832.46 (MB)
-#% End route_design (date=09/11 10:00:49, total cpu=0:00:13.6, real=0:00:13.0, peak res=1832.5M, current mem=1731.6M)
-@file 138: #------------------------------------ [18]
-@file 139: # set_db timing_analysis_type ocv
-@file 140: # time_design -post_route >> $lyt/reports/${design}_tns.rpt 
-@file 141: # set_interactive_constraint_modes {basic_constraint}
-@file 142: # set_propagated_clock [all_clocks] 
-@file 143: #------------------------------------ [19]
-@@file 144: add_fillers -base_cells {FILL64 FILL32 FILL16 FILL8 FILL4 FILL2 FILL1}
+#route_design: cpu time = 00:00:13, elapsed time = 00:00:13, memory = 1704.95 (MB), peak = 1811.87 (MB)
+#% End route_design (date=09/16 12:25:34, total cpu=0:00:13.3, real=0:00:13.0, peak res=1811.9M, current mem=1704.9M)
+@@file 141: check_drc
+#-check_same_via_cell true               # bool, default=false, user setting
+ *** Starting Verify DRC (MEM: 1995.4) ***
+
+  VERIFY DRC ...... Starting Verification
+  VERIFY DRC ...... Initializing
+  VERIFY DRC ...... Deleting Existing Violations
+  VERIFY DRC ...... Creating Sub-Areas
+  VERIFY DRC ...... Using new threading
+
+  Verification Complete : 0 Viols.
+
+ *** End Verify DRC (CPU: 0:00:00.1  ELAPSED TIME: 0.00  MEM: 264.1M) ***
+
+@file 142: #------------------------------------ [18]
+@file 143: # set_db timing_analysis_type ocv
+@file 144: # time_design -post_route >> $lyt/reports/${design}_tns.rpt 
+@file 145: # set_interactive_constraint_modes {basic_constraint}
+@file 146: # set_propagated_clock [all_clocks] 
+@file 147: #------------------------------------ [19]
+@@file 148: add_fillers -base_cells {FILL64 FILL32 FILL16 FILL8 FILL4 FILL2 FILL1}
 **WARN: (IMPSP-5217):	add_fillers command is running on a postRoute database. It is recommended to be followed by eco_route -target command to make the DRC clean.
 Type 'man IMPSP-5217' for more detail.
 *INFO: Adding fillers to top-module.
 *INFO:   Added 0 filler inst  (cell FILL64 / prefix FILLER).
-*INFO:   Added 0 filler inst  (cell FILL32 / prefix FILLER).
-*INFO:   Added 5 filler insts (cell FILL16 / prefix FILLER).
-*INFO:   Added 7 filler insts (cell FILL8 / prefix FILLER).
-*INFO:   Added 12 filler insts (cell FILL4 / prefix FILLER).
-*INFO:   Added 21 filler insts (cell FILL2 / prefix FILLER).
-*INFO:   Added 25 filler insts (cell FILL1 / prefix FILLER).
-*INFO: Total 70 filler insts added - prefix FILLER (CPU: 0:00:00.0).
-For 70 new insts, @file 145: #------------------------------------ [20]
-@@file 146: check_drc
+*INFO:   Added 1 filler inst  (cell FILL32 / prefix FILLER).
+*INFO:   Added 1 filler inst  (cell FILL16 / prefix FILLER).
+*INFO:   Added 3 filler insts (cell FILL8 / prefix FILLER).
+*INFO:   Added 16 filler insts (cell FILL4 / prefix FILLER).
+*INFO:   Added 26 filler insts (cell FILL2 / prefix FILLER).
+*INFO:   Added 31 filler insts (cell FILL1 / prefix FILLER).
+*INFO: Total 78 filler insts added - prefix FILLER (CPU: 0:00:00.0).
+For 78 new insts, @file 149: #------------------------------------ [20]
+@@file 150: check_drc
 #-check_same_via_cell true               # bool, default=false, user setting
- *** Starting Verify DRC (MEM: 2027.7) ***
+ *** Starting Verify DRC (MEM: 2019.4) ***
 
   VERIFY DRC ...... Starting Verification
   VERIFY DRC ...... Initializing
@@ -1676,12 +1670,12 @@ For 70 new insts, @file 145: #------------------------------------ [20]
 
  *** End Verify DRC (CPU: 0:00:00.1  ELAPSED TIME: 1.00  MEM: 256.1M) ***
 
-@@file 147: delete_routes -regular_wire_with_drc ;
-@file 147: # command to delete routed nets with DRC violations
-@file 148:
-@@file 149: route_design
-#% Begin route_design (date=09/11 10:00:50, mem=1734.9M)
-#route_design: cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1733.76 (MB), peak = 1832.46 (MB)
+@@file 151: delete_routes -regular_wire_with_drc ;
+@file 151: # command to delete routed nets with DRC violations
+@file 152:
+@@file 153: route_design
+#% Begin route_design (date=09/16 12:25:35, mem=1712.4M)
+#route_design: cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1711.03 (MB), peak = 1811.87 (MB)
 AAE_INFO: Pre Route call back at the beginning of routeDesign
 #**INFO: setDesignMode -flowEffort standard
 #**INFO: setDesignMode -powerEffort none
@@ -1705,52 +1699,52 @@ route_design_detail_use_min_spacing_for_blockage                                
 route_design_extract_third_party_compatible                                                false
 route_design_global_exp_timing_driven_use_tif_timing_engine_for_import_design              false
 route_design_strict_honor_route_rule                                                       false
-setNanoRouteMode -timingEngine                                                             .timing_file_376650.tif.gz
+setNanoRouteMode -timingEngine                                                             .timing_file_145254.tif.gz
 getAnalysisMode -cts                                                                       postCTS
 getAnalysisMode -virtualIPO                                                                false
 getDelayCalMode -engine                                                                    aae
-getNanoRouteMode -timingEngine                                                             .timing_file_376650.tif.gz
+getNanoRouteMode -timingEngine                                                             .timing_file_145254.tif.gz
 getAnalysisMode -cts                                                                       postCTS
 getAnalysisMode -virtualIPO                                                                false
 #**INFO: multi-cut via swapping will be performed after routing.
 #**INFO: All auto set options tuned by route_design will be restored to their original settings on command completion.
-Begin checking placement ... (start mem=2027.7M, init mem=2027.8M)
-*info: Placed = 855           
+Begin checking placement ... (start mem=2019.5M, init mem=2019.5M)
+*info: Placed = 869           
 *info: Unplaced = 0           
-Placement Density:100.00%(1707/1707)
-Placement Density (including fixed std cells):100.00%(1707/1707)
-Finished check_place (total: cpu=0:00:00.0, real=0:00:00.0; vio checks: cpu=0:00:00.0, real=0:00:00.0; mem=2027.8M)
+Placement Density:100.00%(1497/1497)
+Placement Density (including fixed std cells):100.00%(1497/1497)
+Finished check_place (total: cpu=0:00:00.0, real=0:00:00.0; vio checks: cpu=0:00:00.0, real=0:00:00.0; mem=2019.5M)
 
 changeUseClockNetStatus Option :  -noFixedNetWires 
 *** Changed status on (0) nets in Clock.
-*** End changeUseClockNetStatus (cpu=0:00:00.0, real=0:00:00.0, mem=2027.8M) ***
+*** End changeUseClockNetStatus (cpu=0:00:00.0, real=0:00:00.0, mem=2019.5M) ***
 #**INFO: auto set of droutePostRouteSwapVia to multiCut
 
 route_global_detail
 
-#Start route_global_detail on Thu Sep 11 10:00:54 2025
+#Start route_global_detail on Tue Sep 16 12:25:39 2025
 #
 #Warning: design is detail-routed. Trial route is skipped!
 Updating RC grid for preRoute extraction ...
 Initializing multi-corner resistance tables ...
 #Invoke dbWirePreImport deleteTR=1 convert_unrouted=0 selected_only=0 (nr_selected_net=0)
 #num needed restored net=0
-#need_extraction net=0 (total=874)
-#Start reading timing information from file .timing_file_376650.tif.gz ...
+#need_extraction net=0 (total=845)
+#Start reading timing information from file .timing_file_145254.tif.gz ...
 #WARNING (NRDB-194) 
 #No setup time constraints read in
-#Read in timing information for 68 ports, 785 instances from timing file .timing_file_376650.tif.gz.
+#Read in timing information for 33 ports, 791 instances from timing file .timing_file_145254.tif.gz.
 #NanoRoute Version 21.15-s110_1 NR220912-2004/21_15-UB
-#Total number of trivial nets (e.g. < 2 pins) = 51 (skipped).
-#Total number of routable nets = 823.
-#Total number of nets in the design = 874.
-#823 routable nets have routed wires.
+#Total number of trivial nets (e.g. < 2 pins) = 18 (skipped).
+#Total number of routable nets = 827.
+#Total number of nets in the design = 845.
+#827 routable nets have routed wires.
 #No nets have been global routed.
-#Start routing data preparation on Thu Sep 11 10:00:54 2025
+#Start routing data preparation on Tue Sep 16 12:25:39 2025
 #
 #Minimum voltage of a net in the design = 0.000.
 #Maximum voltage of a net in the design = 1.100.
-#Voltage range [0.000 - 1.100] has 872 nets.
+#Voltage range [0.000 - 1.100] has 843 nets.
 #Voltage range [0.900 - 1.100] has 1 net.
 #Voltage range [0.000 - 0.000] has 1 net.
 #Build and mark too close pins for the same net.
@@ -1768,139 +1762,142 @@ Initializing multi-corner resistance tables ...
 # Metal9       H   Track-Pitch = 0.19000    Line-2-Via Pitch = 0.15000
 # Metal10      V   Track-Pitch = 0.50000    Line-2-Via Pitch = 0.42000
 # Metal11      H   Track-Pitch = 0.47500    Line-2-Via Pitch = 0.43000
-#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1738.58 (MB), peak = 1832.46 (MB)
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1716.72 (MB), peak = 1811.87 (MB)
 #Regenerating Ggrids automatically.
 #Auto generating G-grids with size=15 tracks, using layer Metal3's pitch = 0.19000.
 #Using automatically generated G-grids.
 #(check_and_prepare_match_target_file) no match_target_file in constraint. quit
 #Done routing data preparation.
-#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 1743.09 (MB), peak = 1832.46 (MB)
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 1721.03 (MB), peak = 1811.87 (MB)
 #
-#Finished routing data preparation on Thu Sep 11 10:00:55 2025
+#Finished routing data preparation on Tue Sep 16 12:25:40 2025
 #
 #Cpu time = 00:00:01
 #Elapsed time = 00:00:01
-#Increased memory = 8.47 (MB)
-#Total memory = 1743.09 (MB)
-#Peak memory = 1832.46 (MB)
+#Increased memory = 8.70 (MB)
+#Total memory = 1721.03 (MB)
+#Peak memory = 1811.87 (MB)
 #
 #
-#Start global routing on Thu Sep 11 10:00:55 2025
+#Start global routing on Tue Sep 16 12:25:40 2025
 #
 #
-#Start global routing initialization on Thu Sep 11 10:00:55 2025
+#Start global routing initialization on Tue Sep 16 12:25:40 2025
 #
 #WARNING (NRGR-22) Design is already detail routed.
 #Routing data preparation, pin analysis, global routing and track assignment statistics:
 #Cpu time = 00:00:01
 #Elapsed time = 00:00:01
-#Increased memory = 8.47 (MB)
-#Total memory = 1743.09 (MB)
-#Peak memory = 1832.46 (MB)
+#Increased memory = 8.70 (MB)
+#Total memory = 1721.03 (MB)
+#Peak memory = 1811.87 (MB)
 #
 #Start Detail Routing..
 #start 1st optimization iteration ...
 #   number of violations = 0
-#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1743.09 (MB), peak = 1832.46 (MB)
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1721.03 (MB), peak = 1811.87 (MB)
 #Complete Detail Routing.
-#Total wire length = 9338 um.
-#Total half perimeter of net bounding box = 8140 um.
-#Total wire length on LAYER Metal1 = 140 um.
-#Total wire length on LAYER Metal2 = 2655 um.
-#Total wire length on LAYER Metal3 = 2917 um.
-#Total wire length on LAYER Metal4 = 1769 um.
-#Total wire length on LAYER Metal5 = 1218 um.
-#Total wire length on LAYER Metal6 = 344 um.
-#Total wire length on LAYER Metal7 = 293 um.
-#Total wire length on LAYER Metal8 = 0 um.
+#Total wire length = 8774 um.
+#Total half perimeter of net bounding box = 7787 um.
+#Total wire length on LAYER Metal1 = 176 um.
+#Total wire length on LAYER Metal2 = 2530 um.
+#Total wire length on LAYER Metal3 = 2818 um.
+#Total wire length on LAYER Metal4 = 1648 um.
+#Total wire length on LAYER Metal5 = 871 um.
+#Total wire length on LAYER Metal6 = 452 um.
+#Total wire length on LAYER Metal7 = 264 um.
+#Total wire length on LAYER Metal8 = 14 um.
 #Total wire length on LAYER Metal9 = 0 um.
 #Total wire length on LAYER Metal10 = 0 um.
 #Total wire length on LAYER Metal11 = 0 um.
-#Total number of vias = 6258
-#Total number of multi-cut vias = 5868 ( 93.8%)
-#Total number of single cut vias = 390 (  6.2%)
-#Up-Via Summary (total 6258):
+#Total number of vias = 6126
+#Total number of multi-cut vias = 5742 ( 93.7%)
+#Total number of single cut vias = 384 (  6.3%)
+#Up-Via Summary (total 6126):
 #                   single-cut          multi-cut      Total
 #-----------------------------------------------------------
-# Metal1           261 (  9.1%)      2599 ( 90.9%)       2860
-# Metal2           102 (  4.9%)      1998 ( 95.1%)       2100
-# Metal3            24 (  3.0%)       775 ( 97.0%)        799
-# Metal4             3 (  0.9%)       333 ( 99.1%)        336
-# Metal5             0 (  0.0%)       126 (100.0%)        126
-# Metal6             0 (  0.0%)        37 (100.0%)         37
+# Metal1           265 (  9.3%)      2595 ( 90.7%)       2860
+# Metal2            97 (  4.7%)      1977 ( 95.3%)       2074
+# Metal3            19 (  2.6%)       722 ( 97.4%)        741
+# Metal4             3 (  1.0%)       285 ( 99.0%)        288
+# Metal5             0 (  0.0%)       124 (100.0%)        124
+# Metal6             0 (  0.0%)        35 (100.0%)         35
+# Metal7             0 (  0.0%)         4 (100.0%)          4
 #-----------------------------------------------------------
-#                  390 (  6.2%)      5868 ( 93.8%)       6258 
+#                  384 (  6.3%)      5742 ( 93.7%)       6126 
 #
 #Total number of DRC violations = 0
 #Cpu time = 00:00:00
 #Elapsed time = 00:00:00
-#Increased memory = 0.07 (MB)
-#Total memory = 1743.16 (MB)
-#Peak memory = 1832.46 (MB)
+#Increased memory = 0.25 (MB)
+#Total memory = 1721.28 (MB)
+#Peak memory = 1811.87 (MB)
 #
 #start routing for process antenna violation fix ...
-#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1743.16 (MB), peak = 1832.46 (MB)
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1721.28 (MB), peak = 1811.87 (MB)
 #
-#Total wire length = 9338 um.
-#Total half perimeter of net bounding box = 8140 um.
-#Total wire length on LAYER Metal1 = 140 um.
-#Total wire length on LAYER Metal2 = 2655 um.
-#Total wire length on LAYER Metal3 = 2917 um.
-#Total wire length on LAYER Metal4 = 1769 um.
-#Total wire length on LAYER Metal5 = 1218 um.
-#Total wire length on LAYER Metal6 = 344 um.
-#Total wire length on LAYER Metal7 = 293 um.
-#Total wire length on LAYER Metal8 = 0 um.
+#Total wire length = 8774 um.
+#Total half perimeter of net bounding box = 7787 um.
+#Total wire length on LAYER Metal1 = 176 um.
+#Total wire length on LAYER Metal2 = 2530 um.
+#Total wire length on LAYER Metal3 = 2818 um.
+#Total wire length on LAYER Metal4 = 1648 um.
+#Total wire length on LAYER Metal5 = 871 um.
+#Total wire length on LAYER Metal6 = 452 um.
+#Total wire length on LAYER Metal7 = 264 um.
+#Total wire length on LAYER Metal8 = 14 um.
 #Total wire length on LAYER Metal9 = 0 um.
 #Total wire length on LAYER Metal10 = 0 um.
 #Total wire length on LAYER Metal11 = 0 um.
-#Total number of vias = 6258
-#Total number of multi-cut vias = 5868 ( 93.8%)
-#Total number of single cut vias = 390 (  6.2%)
-#Up-Via Summary (total 6258):
+#Total number of vias = 6126
+#Total number of multi-cut vias = 5742 ( 93.7%)
+#Total number of single cut vias = 384 (  6.3%)
+#Up-Via Summary (total 6126):
 #                   single-cut          multi-cut      Total
 #-----------------------------------------------------------
-# Metal1           261 (  9.1%)      2599 ( 90.9%)       2860
-# Metal2           102 (  4.9%)      1998 ( 95.1%)       2100
-# Metal3            24 (  3.0%)       775 ( 97.0%)        799
-# Metal4             3 (  0.9%)       333 ( 99.1%)        336
-# Metal5             0 (  0.0%)       126 (100.0%)        126
-# Metal6             0 (  0.0%)        37 (100.0%)         37
+# Metal1           265 (  9.3%)      2595 ( 90.7%)       2860
+# Metal2            97 (  4.7%)      1977 ( 95.3%)       2074
+# Metal3            19 (  2.6%)       722 ( 97.4%)        741
+# Metal4             3 (  1.0%)       285 ( 99.0%)        288
+# Metal5             0 (  0.0%)       124 (100.0%)        124
+# Metal6             0 (  0.0%)        35 (100.0%)         35
+# Metal7             0 (  0.0%)         4 (100.0%)          4
 #-----------------------------------------------------------
-#                  390 (  6.2%)      5868 ( 93.8%)       6258 
+#                  384 (  6.3%)      5742 ( 93.7%)       6126 
 #
 #Total number of DRC violations = 0
 #Total number of process antenna violations = 0
 #Total number of net violated process antenna rule = 0
 #
 #
-#Total wire length = 9338 um.
-#Total half perimeter of net bounding box = 8140 um.
-#Total wire length on LAYER Metal1 = 140 um.
-#Total wire length on LAYER Metal2 = 2655 um.
-#Total wire length on LAYER Metal3 = 2917 um.
-#Total wire length on LAYER Metal4 = 1769 um.
-#Total wire length on LAYER Metal5 = 1218 um.
-#Total wire length on LAYER Metal6 = 344 um.
-#Total wire length on LAYER Metal7 = 293 um.
-#Total wire length on LAYER Metal8 = 0 um.
+#Total wire length = 8774 um.
+#Total half perimeter of net bounding box = 7787 um.
+#Total wire length on LAYER Metal1 = 176 um.
+#Total wire length on LAYER Metal2 = 2530 um.
+#Total wire length on LAYER Metal3 = 2818 um.
+#Total wire length on LAYER Metal4 = 1648 um.
+#Total wire length on LAYER Metal5 = 871 um.
+#Total wire length on LAYER Metal6 = 452 um.
+#Total wire length on LAYER Metal7 = 264 um.
+#Total wire length on LAYER Metal8 = 14 um.
 #Total wire length on LAYER Metal9 = 0 um.
 #Total wire length on LAYER Metal10 = 0 um.
 #Total wire length on LAYER Metal11 = 0 um.
-#Total number of vias = 6258
-#Total number of multi-cut vias = 5868 ( 93.8%)
-#Total number of single cut vias = 390 (  6.2%)
-#Up-Via Summary (total 6258):
+#Total number of vias = 6126
+#Total number of multi-cut vias = 5742 ( 93.7%)
+#Total number of single cut vias = 384 (  6.3%)
+#Up-Via Summary (total 6126):
 #                   single-cut          multi-cut      Total
 #-----------------------------------------------------------
-# Metal1           261 (  9.1%)      2599 ( 90.9%)       2860
-# Metal2           102 (  4.9%)      1998 ( 95.1%)       2100
-# Metal3            24 (  3.0%)       775 ( 97.0%)        799
-# Metal4             3 (  0.9%)       333 ( 99.1%)        336
-# Metal5             0 (  0.0%)       126 (100.0%)        126
-# Metal6             0 (  0.0%)        37 (100.0%)         37
+# Metal1           265 (  9.3%)      2595 ( 90.7%)       2860
+# Metal2            97 (  4.7%)      1977 ( 95.3%)       2074
+# Metal3            19 (  2.6%)       722 ( 97.4%)        741
+# Metal4             3 (  1.0%)       285 ( 99.0%)        288
+# Metal5             0 (  0.0%)       124 (100.0%)        124
+# Metal6             0 (  0.0%)        35 (100.0%)         35
+# Metal7             0 (  0.0%)         4 (100.0%)          4
 #-----------------------------------------------------------
-#                  390 (  6.2%)      5868 ( 93.8%)       6258 
+#                  384 (  6.3%)      5742 ( 93.7%)       6126 
 #
 #Total number of DRC violations = 0
 #Total number of process antenna violations = 0
@@ -1910,47 +1907,48 @@ Initializing multi-corner resistance tables ...
 #Start Post Route via swapping...
 #No area is rerouted by ECO routing. Post route via swapping is skipped.
 #   number of violations = 0
-#cpu time = 00:00:39, elapsed time = 488221:00:56, memory = 1743.20 (MB), peak = 1832.46 (MB)
+#cpu time = 00:00:39, elapsed time = 488343:25:41, memory = 1721.29 (MB), peak = 1811.87 (MB)
 #CELL_VIEW bch_toplevel,init has no DRC violation.
 #Total number of DRC violations = 0
 #Total number of process antenna violations = 0
 #Total number of net violated process antenna rule = 0
 #No via is swapped.
 #Post Route via swapping is done.
-#Total wire length = 9338 um.
-#Total half perimeter of net bounding box = 8140 um.
-#Total wire length on LAYER Metal1 = 140 um.
-#Total wire length on LAYER Metal2 = 2655 um.
-#Total wire length on LAYER Metal3 = 2917 um.
-#Total wire length on LAYER Metal4 = 1769 um.
-#Total wire length on LAYER Metal5 = 1218 um.
-#Total wire length on LAYER Metal6 = 344 um.
-#Total wire length on LAYER Metal7 = 293 um.
-#Total wire length on LAYER Metal8 = 0 um.
+#Total wire length = 8774 um.
+#Total half perimeter of net bounding box = 7787 um.
+#Total wire length on LAYER Metal1 = 176 um.
+#Total wire length on LAYER Metal2 = 2530 um.
+#Total wire length on LAYER Metal3 = 2818 um.
+#Total wire length on LAYER Metal4 = 1648 um.
+#Total wire length on LAYER Metal5 = 871 um.
+#Total wire length on LAYER Metal6 = 452 um.
+#Total wire length on LAYER Metal7 = 264 um.
+#Total wire length on LAYER Metal8 = 14 um.
 #Total wire length on LAYER Metal9 = 0 um.
 #Total wire length on LAYER Metal10 = 0 um.
 #Total wire length on LAYER Metal11 = 0 um.
-#Total number of vias = 6258
-#Total number of multi-cut vias = 5868 ( 93.8%)
-#Total number of single cut vias = 390 (  6.2%)
-#Up-Via Summary (total 6258):
+#Total number of vias = 6126
+#Total number of multi-cut vias = 5742 ( 93.7%)
+#Total number of single cut vias = 384 (  6.3%)
+#Up-Via Summary (total 6126):
 #                   single-cut          multi-cut      Total
 #-----------------------------------------------------------
-# Metal1           261 (  9.1%)      2599 ( 90.9%)       2860
-# Metal2           102 (  4.9%)      1998 ( 95.1%)       2100
-# Metal3            24 (  3.0%)       775 ( 97.0%)        799
-# Metal4             3 (  0.9%)       333 ( 99.1%)        336
-# Metal5             0 (  0.0%)       126 (100.0%)        126
-# Metal6             0 (  0.0%)        37 (100.0%)         37
+# Metal1           265 (  9.3%)      2595 ( 90.7%)       2860
+# Metal2            97 (  4.7%)      1977 ( 95.3%)       2074
+# Metal3            19 (  2.6%)       722 ( 97.4%)        741
+# Metal4             3 (  1.0%)       285 ( 99.0%)        288
+# Metal5             0 (  0.0%)       124 (100.0%)        124
+# Metal6             0 (  0.0%)        35 (100.0%)         35
+# Metal7             0 (  0.0%)         4 (100.0%)          4
 #-----------------------------------------------------------
-#                  390 (  6.2%)      5868 ( 93.8%)       6258 
+#                  384 (  6.3%)      5742 ( 93.7%)       6126 
 #
 #
 #Start Post Route wire spreading..
 #
 #Start DRC checking..
 #   number of violations = 0
-#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1744.79 (MB), peak = 1832.46 (MB)
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1720.70 (MB), peak = 1811.87 (MB)
 #CELL_VIEW bch_toplevel,init has no DRC violation.
 #Total number of DRC violations = 0
 #Total number of process antenna violations = 0
@@ -1958,113 +1956,115 @@ Initializing multi-corner resistance tables ...
 #
 #Start data preparation for wire spreading...
 #
-#Data preparation is done on Thu Sep 11 10:00:56 2025
+#Data preparation is done on Tue Sep 16 12:25:41 2025
 #
 #
 #Start Post Route Wire Spread.
-#Done with 7 horizontal wires in 1 hboxes and 10 vertical wires in 1 hboxes.
+#Done with 7 horizontal wires in 1 hboxes and 13 vertical wires in 1 hboxes.
 #Complete Post Route Wire Spread.
 #
-#Total wire length = 9340 um.
-#Total half perimeter of net bounding box = 8140 um.
-#Total wire length on LAYER Metal1 = 140 um.
-#Total wire length on LAYER Metal2 = 2655 um.
-#Total wire length on LAYER Metal3 = 2918 um.
-#Total wire length on LAYER Metal4 = 1770 um.
-#Total wire length on LAYER Metal5 = 1219 um.
-#Total wire length on LAYER Metal6 = 344 um.
-#Total wire length on LAYER Metal7 = 293 um.
-#Total wire length on LAYER Metal8 = 0 um.
+#Total wire length = 8774 um.
+#Total half perimeter of net bounding box = 7787 um.
+#Total wire length on LAYER Metal1 = 176 um.
+#Total wire length on LAYER Metal2 = 2530 um.
+#Total wire length on LAYER Metal3 = 2818 um.
+#Total wire length on LAYER Metal4 = 1649 um.
+#Total wire length on LAYER Metal5 = 871 um.
+#Total wire length on LAYER Metal6 = 452 um.
+#Total wire length on LAYER Metal7 = 264 um.
+#Total wire length on LAYER Metal8 = 14 um.
 #Total wire length on LAYER Metal9 = 0 um.
 #Total wire length on LAYER Metal10 = 0 um.
 #Total wire length on LAYER Metal11 = 0 um.
-#Total number of vias = 6258
-#Total number of multi-cut vias = 5868 ( 93.8%)
-#Total number of single cut vias = 390 (  6.2%)
-#Up-Via Summary (total 6258):
+#Total number of vias = 6126
+#Total number of multi-cut vias = 5742 ( 93.7%)
+#Total number of single cut vias = 384 (  6.3%)
+#Up-Via Summary (total 6126):
 #                   single-cut          multi-cut      Total
 #-----------------------------------------------------------
-# Metal1           261 (  9.1%)      2599 ( 90.9%)       2860
-# Metal2           102 (  4.9%)      1998 ( 95.1%)       2100
-# Metal3            24 (  3.0%)       775 ( 97.0%)        799
-# Metal4             3 (  0.9%)       333 ( 99.1%)        336
-# Metal5             0 (  0.0%)       126 (100.0%)        126
-# Metal6             0 (  0.0%)        37 (100.0%)         37
+# Metal1           265 (  9.3%)      2595 ( 90.7%)       2860
+# Metal2            97 (  4.7%)      1977 ( 95.3%)       2074
+# Metal3            19 (  2.6%)       722 ( 97.4%)        741
+# Metal4             3 (  1.0%)       285 ( 99.0%)        288
+# Metal5             0 (  0.0%)       124 (100.0%)        124
+# Metal6             0 (  0.0%)        35 (100.0%)         35
+# Metal7             0 (  0.0%)         4 (100.0%)          4
 #-----------------------------------------------------------
-#                  390 (  6.2%)      5868 ( 93.8%)       6258 
+#                  384 (  6.3%)      5742 ( 93.7%)       6126 
 #
 #
 #Start DRC checking..
 #   number of violations = 0
-#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1744.77 (MB), peak = 1832.46 (MB)
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1720.74 (MB), peak = 1811.87 (MB)
 #CELL_VIEW bch_toplevel,init has no DRC violation.
 #Total number of DRC violations = 0
 #Total number of process antenna violations = 0
 #Total number of net violated process antenna rule = 0
 #   number of violations = 0
-#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1744.77 (MB), peak = 1832.46 (MB)
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1720.74 (MB), peak = 1811.87 (MB)
 #CELL_VIEW bch_toplevel,init has no DRC violation.
 #Total number of DRC violations = 0
 #Total number of process antenna violations = 0
 #Total number of net violated process antenna rule = 0
 #Post Route wire spread is done.
-#Total wire length = 9340 um.
-#Total half perimeter of net bounding box = 8140 um.
-#Total wire length on LAYER Metal1 = 140 um.
-#Total wire length on LAYER Metal2 = 2655 um.
-#Total wire length on LAYER Metal3 = 2918 um.
-#Total wire length on LAYER Metal4 = 1770 um.
-#Total wire length on LAYER Metal5 = 1219 um.
-#Total wire length on LAYER Metal6 = 344 um.
-#Total wire length on LAYER Metal7 = 293 um.
-#Total wire length on LAYER Metal8 = 0 um.
+#Total wire length = 8774 um.
+#Total half perimeter of net bounding box = 7787 um.
+#Total wire length on LAYER Metal1 = 176 um.
+#Total wire length on LAYER Metal2 = 2530 um.
+#Total wire length on LAYER Metal3 = 2818 um.
+#Total wire length on LAYER Metal4 = 1649 um.
+#Total wire length on LAYER Metal5 = 871 um.
+#Total wire length on LAYER Metal6 = 452 um.
+#Total wire length on LAYER Metal7 = 264 um.
+#Total wire length on LAYER Metal8 = 14 um.
 #Total wire length on LAYER Metal9 = 0 um.
 #Total wire length on LAYER Metal10 = 0 um.
 #Total wire length on LAYER Metal11 = 0 um.
-#Total number of vias = 6258
-#Total number of multi-cut vias = 5868 ( 93.8%)
-#Total number of single cut vias = 390 (  6.2%)
-#Up-Via Summary (total 6258):
+#Total number of vias = 6126
+#Total number of multi-cut vias = 5742 ( 93.7%)
+#Total number of single cut vias = 384 (  6.3%)
+#Up-Via Summary (total 6126):
 #                   single-cut          multi-cut      Total
 #-----------------------------------------------------------
-# Metal1           261 (  9.1%)      2599 ( 90.9%)       2860
-# Metal2           102 (  4.9%)      1998 ( 95.1%)       2100
-# Metal3            24 (  3.0%)       775 ( 97.0%)        799
-# Metal4             3 (  0.9%)       333 ( 99.1%)        336
-# Metal5             0 (  0.0%)       126 (100.0%)        126
-# Metal6             0 (  0.0%)        37 (100.0%)         37
+# Metal1           265 (  9.3%)      2595 ( 90.7%)       2860
+# Metal2            97 (  4.7%)      1977 ( 95.3%)       2074
+# Metal3            19 (  2.6%)       722 ( 97.4%)        741
+# Metal4             3 (  1.0%)       285 ( 99.0%)        288
+# Metal5             0 (  0.0%)       124 (100.0%)        124
+# Metal6             0 (  0.0%)        35 (100.0%)         35
+# Metal7             0 (  0.0%)         4 (100.0%)          4
 #-----------------------------------------------------------
-#                  390 (  6.2%)      5868 ( 93.8%)       6258 
+#                  384 (  6.3%)      5742 ( 93.7%)       6126 
 #
 #route_detail Statistics:
 #Cpu time = 00:00:01
 #Elapsed time = 00:00:01
-#Increased memory = 1.68 (MB)
-#Total memory = 1744.77 (MB)
-#Peak memory = 1832.46 (MB)
+#Increased memory = -0.29 (MB)
+#Total memory = 1720.74 (MB)
+#Peak memory = 1811.87 (MB)
 #	no debugging net set
 #
 #route_global_detail statistics:
 #Cpu time = 00:00:02
 #Elapsed time = 00:00:02
-#Increased memory = 5.85 (MB)
-#Total memory = 1739.71 (MB)
-#Peak memory = 1832.46 (MB)
+#Increased memory = 4.52 (MB)
+#Total memory = 1715.68 (MB)
+#Peak memory = 1811.87 (MB)
 #Number of warnings = 2
 #Total number of warnings = 7
 #Number of fails = 0
 #Total number of fails = 0
-#Complete route_global_detail on Thu Sep 11 10:00:56 2025
+#Complete route_global_detail on Tue Sep 16 12:25:41 2025
 #
 #Default setup view is reset to analysis_normal_slow_max.
 #Default setup view is reset to analysis_normal_slow_max.
 AAE_INFO: Post Route call back at the end of routeDesign
-#route_design: cpu time = 00:00:07, elapsed time = 00:00:07, memory = 1737.85 (MB), peak = 1832.46 (MB)
-#% End route_design (date=09/11 10:00:56, total cpu=0:00:06.6, real=0:00:06.0, peak res=1737.9M, current mem=1737.9M)
-@file 150:
-@@file 151: check_drc
+#route_design: cpu time = 00:00:06, elapsed time = 00:00:06, memory = 1715.67 (MB), peak = 1811.87 (MB)
+#% End route_design (date=09/16 12:25:41, total cpu=0:00:06.2, real=0:00:06.0, peak res=1715.7M, current mem=1715.7M)
+@file 154:
+@@file 155: check_drc
 #-check_same_via_cell true               # bool, default=false, user setting
- *** Starting Verify DRC (MEM: 2032.2) ***
+ *** Starting Verify DRC (MEM: 2034.0) ***
 
   VERIFY DRC ...... Starting Verification
   VERIFY DRC ...... Initializing
@@ -2076,7 +2076,7 @@ AAE_INFO: Post Route call back at the end of routeDesign
 
  *** End Verify DRC (CPU: 0:00:00.1  ELAPSED TIME: 0.00  MEM: 256.1M) ***
 
-@@file 152: route_eco -fix_drc ;
+@@file 156: route_eco -fix_drc ;
 **INFO: User settings:
 design_process_node                                                                        45
 extract_rc_model_file                                                                      rc_model.bin
@@ -2085,28 +2085,28 @@ route_design_detail_use_min_spacing_for_blockage                                
 route_design_extract_third_party_compatible                                                false
 route_design_global_exp_timing_driven_use_tif_timing_engine_for_import_design              true
 route_design_strict_honor_route_rule                                                       false
-setNanoRouteMode -timingEngine                                                             .timing_file_376650.tif.gz
+setNanoRouteMode -timingEngine                                                             .timing_file_145254.tif.gz
 getAnalysisMode -cts                                                                       postCTS
 getAnalysisMode -virtualIPO                                                                false
 getDelayCalMode -engine                                                                    aae
-getNanoRouteMode -timingEngine                                                             .timing_file_376650.tif.gz
+getNanoRouteMode -timingEngine                                                             .timing_file_145254.tif.gz
 getAnalysisMode -cts                                                                       postCTS
 getAnalysisMode -virtualIPO                                                                false
 
 route_detail -fix_drc
 
-#Start route_detail on Thu Sep 11 10:01:01 2025
+#Start route_detail on Tue Sep 16 12:25:45 2025
 #
 #Invoke dbWirePreImport deleteTR=1 convert_unrouted=0 selected_only=0 (nr_selected_net=0)
 #num needed restored net=0
-#need_extraction net=0 (total=874)
+#need_extraction net=0 (total=845)
 #NanoRoute Version 21.15-s110_1 NR220912-2004/21_15-UB
 #WARNING (NRDB-942) Reset route_design_exp_with_eco_for_shielding to false because there is no existing shielding wire.
-#Start routing data preparation on Thu Sep 11 10:01:01 2025
+#Start routing data preparation on Tue Sep 16 12:25:45 2025
 #
 #Minimum voltage of a net in the design = 0.000.
 #Maximum voltage of a net in the design = 1.100.
-#Voltage range [0.000 - 1.100] has 872 nets.
+#Voltage range [0.000 - 1.100] has 843 nets.
 #Voltage range [0.900 - 1.100] has 1 net.
 #Voltage range [0.000 - 0.000] has 1 net.
 #Build and mark too close pins for the same net.
@@ -2123,77 +2123,78 @@ route_detail -fix_drc
 # Metal9       H   Track-Pitch = 0.19000    Line-2-Via Pitch = 0.15000
 # Metal10      V   Track-Pitch = 0.50000    Line-2-Via Pitch = 0.42000
 # Metal11      H   Track-Pitch = 0.47500    Line-2-Via Pitch = 0.43000
-#Processed 70/0 dirty instances, 0/0 dirty terms, 0/0 dirty fterms, 0/0 dirty pgterms, 0/0 misc dirty regions(70 insts marked dirty, reset pre-exisiting dirty flag on 70 insts, 0 nets marked need extraction)
-#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1742.02 (MB), peak = 1832.46 (MB)
+#Processed 78/0 dirty instances, 0/0 dirty terms, 0/0 dirty fterms, 0/0 dirty pgterms, 0/0 misc dirty regions(78 insts marked dirty, reset pre-exisiting dirty flag on 78 insts, 0 nets marked need extraction)
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1719.43 (MB), peak = 1811.87 (MB)
 #Regenerating Ggrids automatically.
 #Auto generating G-grids with size=15 tracks, using layer Metal3's pitch = 0.19000.
 #Using automatically generated G-grids.
 #(check_and_prepare_match_target_file) no match_target_file in constraint. quit
 #Done routing data preparation.
-#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1746.33 (MB), peak = 1832.46 (MB)
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1723.93 (MB), peak = 1811.87 (MB)
 #
 #Start Detail Routing..
 #start initial detail routing ...
-# ECO: 100.0% of the total area was rechecked for DRC, and 0.0% required routing.
+# ECO: 83.3% of the total area was rechecked for DRC, and 0.0% required routing.
 #   number of violations = 0
-#70 out of 855 instances (8.2%) need to be verified(marked ipoed), dirty area = 4.1%.
+#78 out of 869 instances (9.0%) need to be verified(marked ipoed), dirty area = 4.0%.
 #0.0% of the total area is being checked for drcs
 #0.0% of the total area was checked
 #   number of violations = 0
-#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1748.99 (MB), peak = 1832.46 (MB)
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1723.41 (MB), peak = 1811.87 (MB)
 #Complete Detail Routing.
-#Total wire length = 9340 um.
-#Total half perimeter of net bounding box = 8140 um.
-#Total wire length on LAYER Metal1 = 140 um.
-#Total wire length on LAYER Metal2 = 2655 um.
-#Total wire length on LAYER Metal3 = 2918 um.
-#Total wire length on LAYER Metal4 = 1770 um.
-#Total wire length on LAYER Metal5 = 1219 um.
-#Total wire length on LAYER Metal6 = 344 um.
-#Total wire length on LAYER Metal7 = 293 um.
-#Total wire length on LAYER Metal8 = 0 um.
+#Total wire length = 8774 um.
+#Total half perimeter of net bounding box = 7787 um.
+#Total wire length on LAYER Metal1 = 176 um.
+#Total wire length on LAYER Metal2 = 2530 um.
+#Total wire length on LAYER Metal3 = 2818 um.
+#Total wire length on LAYER Metal4 = 1649 um.
+#Total wire length on LAYER Metal5 = 871 um.
+#Total wire length on LAYER Metal6 = 452 um.
+#Total wire length on LAYER Metal7 = 264 um.
+#Total wire length on LAYER Metal8 = 14 um.
 #Total wire length on LAYER Metal9 = 0 um.
 #Total wire length on LAYER Metal10 = 0 um.
 #Total wire length on LAYER Metal11 = 0 um.
-#Total number of vias = 6258
-#Total number of multi-cut vias = 5868 ( 93.8%)
-#Total number of single cut vias = 390 (  6.2%)
-#Up-Via Summary (total 6258):
+#Total number of vias = 6126
+#Total number of multi-cut vias = 5742 ( 93.7%)
+#Total number of single cut vias = 384 (  6.3%)
+#Up-Via Summary (total 6126):
 #                   single-cut          multi-cut      Total
 #-----------------------------------------------------------
-# Metal1           261 (  9.1%)      2599 ( 90.9%)       2860
-# Metal2           102 (  4.9%)      1998 ( 95.1%)       2100
-# Metal3            24 (  3.0%)       775 ( 97.0%)        799
-# Metal4             3 (  0.9%)       333 ( 99.1%)        336
-# Metal5             0 (  0.0%)       126 (100.0%)        126
-# Metal6             0 (  0.0%)        37 (100.0%)         37
+# Metal1           265 (  9.3%)      2595 ( 90.7%)       2860
+# Metal2            97 (  4.7%)      1977 ( 95.3%)       2074
+# Metal3            19 (  2.6%)       722 ( 97.4%)        741
+# Metal4             3 (  1.0%)       285 ( 99.0%)        288
+# Metal5             0 (  0.0%)       124 (100.0%)        124
+# Metal6             0 (  0.0%)        35 (100.0%)         35
+# Metal7             0 (  0.0%)         4 (100.0%)          4
 #-----------------------------------------------------------
-#                  390 (  6.2%)      5868 ( 93.8%)       6258 
+#                  384 (  6.3%)      5742 ( 93.7%)       6126 
 #
 #Total number of DRC violations = 0
 #Cpu time = 00:00:01
 #Elapsed time = 00:00:01
-#Increased memory = 11.27 (MB)
-#Total memory = 1748.99 (MB)
-#Peak memory = 1832.46 (MB)
+#Increased memory = 7.83 (MB)
+#Total memory = 1723.41 (MB)
+#Peak memory = 1811.87 (MB)
 #	no debugging net set
 #
 #route_detail statistics:
 #Cpu time = 00:00:01
 #Elapsed time = 00:00:01
-#Increased memory = 5.57 (MB)
-#Total memory = 1743.93 (MB)
-#Peak memory = 1832.46 (MB)
+#Increased memory = 0.18 (MB)
+#Total memory = 1718.35 (MB)
+#Peak memory = 1811.87 (MB)
 #Number of warnings = 1
 #Total number of warnings = 8
 #Number of fails = 0
 #Total number of fails = 0
-#Complete route_detail on Thu Sep 11 10:01:02 2025
+#Complete route_detail on Tue Sep 16 12:25:46 2025
 #
-@file 152: # tries to fix remaining violation nets
-@@file 153: check_drc
+@file 156: # tries to fix remaining violation nets
+@@file 157: check_drc
 #-check_same_via_cell true               # bool, default=false, user setting
- *** Starting Verify DRC (MEM: 2035.7) ***
+ *** Starting Verify DRC (MEM: 2037.5) ***
 
   VERIFY DRC ...... Starting Verification
   VERIFY DRC ...... Initializing
@@ -2205,52 +2206,55 @@ route_detail -fix_drc
 
  *** End Verify DRC (CPU: 0:00:00.1  ELAPSED TIME: 0.00  MEM: 264.1M) ***
 
-@file 154: # delete_routes -layer 6
-@file 155: #  -route_only_layers 4:5;# route_only_layers option restricts eco routing to specified layer range 
-@file 156: # check_drc
-@file 157:
-@file 158: #------------------------------------ [21]
-@file 159: # add_metal_fill -layers {Metal1 Metal2 Metal3 Metal4}
-@file 160:
-@file 161: #------------------------------------ [22]
-@@file 162: check_antenna
- *** Starting Verify Antenna (MEM: 2043.8) ***
+@file 158: # delete_routes -layer 6
+@file 159: #  -route_only_layers 4:5;# route_only_layers option restricts eco routing to specified layer range 
+@file 160: # check_drc
+@file 161:
+@file 162: #------------------------------------ [21]
+@file 163: # add_metal_fill -layers {Metal1 Metal2 Metal3 Metal4}
+@file 164:
+@file 165: #------------------------------------ [22]
+@@file 166: check_antenna
+ *** Starting Verify Antenna (MEM: 2045.5) ***
 
 Report File: bch_toplevel.verify_antenna.rpt
   VERIFY Antenna ...... Starting Verification
   VERIFY Antenna ...... Using new threading
 #- FE data import: obj_type VIA:
-#--layer Metal1 obj num 177
-#--layer Metal2 obj num 182
-#--layer Metal3 obj num 53
-#--layer Metal4 obj num 4
-#- total obj num 416
+#--layer Metal1 obj num 72
+#--layer Metal2 obj num 63
+#--layer Metal3 obj num 25
+#--layer Metal4 obj num 10
+#--layer Metal5 obj num 8
+#--layer Metal6 obj num 2
+#- total obj num 180
 #- FE data import: obj_type INSTANCE_PIN:
-#--layer Metal1 obj num 106
+#--layer Metal1 obj num 40
 #--layer Metal3 obj num 1
-#- total obj num 107
+#- total obj num 41
 #- FE data import: obj_type WIRE:
-#--layer Metal1 obj num 1
-#--layer Metal2 obj num 113
-#--layer Metal3 obj num 41
-#--layer Metal4 obj num 17
-#- total obj num 172
+#--layer Metal2 obj num 55
+#--layer Metal3 obj num 21
+#--layer Metal4 obj num 7
+#--layer Metal5 obj num 2
+#--layer Metal6 obj num 7
+#- total obj num 92
 Verification Complete: 0 Violations
- *** End Verify Antenna (CPU: 0:00:00.0  ELAPSED TIME: 0.00  MEM: 0.0M) ***
+ *** End Verify Antenna (CPU: 0:00:00.1  ELAPSED TIME: 0.00  MEM: 0.0M) ***
 
 ******* DONE VERIFY ANTENNA ********
-@file 163: puts "SALVAR DESIGN?"
+@file 167: puts "SALVAR DESIGN?"
 SALVAR DESIGN?
-@@file 164: suspend
+@@file 168: suspend
 **INFO(SUSPEND): The current script is stopped at 'suspend' command. Type 'resume' to continue.
 [SUSPEND]innovus 2> resume
-@innovus 3> @@file 165: write_netlist $lyt/${design}/${design}_lyt.v
+@innovus 3> @@file 169: write_netlist $lyt/${design}/${design}_lyt.v
 Writing Netlist "/home/ci_inovador/Documentos/inge4-workspace/layout/bch_toplevel/bch_toplevel_lyt.v" ...
-@@file 166: write_sdf -edge check_edge -map_setuphold merge_always -map_recrem merge_always -version 3.0  $lyt/${design}/${design}_lyt.sdf
+@@file 170: write_sdf -edge check_edge -map_setuphold merge_always -map_recrem merge_always -version 3.0  $lyt/${design}/${design}_lyt.sdf
 **WARN: (SDF-808):	The software is currently operating in a high performance mode which optimizes the handling of multiple timing arcs between input and output pin pairs. With the current settings, the SDF file generated will contain the same delay information for all of these arcs. To have the SDF recalculated with explicit pin pair data, you should use the option '-recompute_delay_calc'. This setting is recommended for generating SDF for functional  simulation applications.
 AAE_INFO: opIsDesignInPostRouteState() is 1
 AAE_INFO: deleting AAE DB due to opIsDesignInPostRouteState() is changed ...
-AAE DB initialization (MEM=2282.28 CPU=0:00:00.0 REAL=0:00:00.0) 
+AAE DB initialization (MEM=2284.05 CPU=0:00:00.0 REAL=0:00:00.0) 
 #################################################################################
 # Design Stage: PostRoute
 # Design Name: bch_toplevel
@@ -2259,7 +2263,7 @@ AAE DB initialization (MEM=2282.28 CPU=0:00:00.0 REAL=0:00:00.0)
 # Parasitics Mode: No SPEF/RCDB 
 # Signoff Settings: SI Off 
 #################################################################################
-Extraction called for design 'bch_toplevel' of instances=855 and nets=874 using extraction engine 'pre_route' .
+Extraction called for design 'bch_toplevel' of instances=869 and nets=845 using extraction engine 'pre_route' .
 pre_route RC Extraction called for design bch_toplevel.
 RC Extraction called in multi-corner(2) mode.
 RCMode: PreRoute
@@ -2273,83 +2277,83 @@ PreRoute extraction is honoring NDR/Shielding/ExtraSpace for clock nets.
 Using Quantus QRC technology file ...
 Updating RC grid for preRoute extraction ...
 Initializing multi-corner resistance tables ...
-PreRoute RC Extraction DONE (CPU Time: 0:00:00.0  Real Time: 0:00:00.0  MEM: 2290.281M)
-Start delay calculation (fullDC) (1 T). (MEM=2304.85)
-Total number of fetched objects 870
+PreRoute RC Extraction DONE (CPU Time: 0:00:00.0  Real Time: 0:00:00.0  MEM: 2292.051M)
+Start delay calculation (fullDC) (1 T). (MEM=2310.39)
+Total number of fetched objects 843
 AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
-Total number of fetched objects 870
+Total number of fetched objects 843
 AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
-End delay calculation. (MEM=2385.23 CPU=0:00:00.1 REAL=0:00:00.0)
-End delay calculation (fullDC). (MEM=2385.23 CPU=0:00:00.1 REAL=0:00:00.0)
-@@file 167: get_db power_method
-@@file 168: report_power -power_unit uW > $lyt/${design}/reports/${design}_pwr.rpt
+End delay calculation. (MEM=2388.77 CPU=0:00:00.1 REAL=0:00:00.0)
+End delay calculation (fullDC). (MEM=2388.77 CPU=0:00:00.1 REAL=0:00:00.0)
+@@file 171: get_db power_method
+@@file 172: report_power -power_unit uW > $lyt/${design}/reports/${design}_pwr.rpt
 env CDS_WORKAREA is set to /home/ci_inovador/Documentos/inge4-workspace/work
-@@file 169: set_db power_corner min
-@file 170: #   write_stream -mode ALL -unit 2000 $lyt/${design}.gsd
-@@file 171: write_def -floorplan -netlist -routing $lyt/${design}/${design}_lyt.def
-Writing DEF file '/home/ci_inovador/Documentos/inge4-workspace/layout/bch_toplevel/bch_toplevel_lyt.def', current time is Thu Sep 11 10:01:23 2025 ...
+@@file 173: set_db power_corner min
+@file 174: #   write_stream -mode ALL -unit 2000 $lyt/${design}.gsd
+@@file 175: write_def -floorplan -netlist -routing $lyt/${design}/${design}_lyt.def
+Writing DEF file '/home/ci_inovador/Documentos/inge4-workspace/layout/bch_toplevel/bch_toplevel_lyt.def', current time is Tue Sep 16 12:28:47 2025 ...
 unitPerMicron=2000, dbgMicronPerDBU=0.000500, unitPerDBU=1.000000
-DEF file '/home/ci_inovador/Documentos/inge4-workspace/layout/bch_toplevel/bch_toplevel_lyt.def' is written, current time is Thu Sep 11 10:01:23 2025 ...
-@@file 172: report_area > $lyt/${design}/reports/${design}_area.rpt
-@@file 173: report_timing -unconstrained > $lyt/${design}/reports/${design}_timing.rpt
-@@file 174: write_db $design.enc
+DEF file '/home/ci_inovador/Documentos/inge4-workspace/layout/bch_toplevel/bch_toplevel_lyt.def' is written, current time is Tue Sep 16 12:28:47 2025 ...
+@@file 176: report_area > $lyt/${design}/reports/${design}_area.rpt
+@@file 177: report_timing -unconstrained > $lyt/${design}/reports/${design}_timing.rpt
+@@file 178: write_db $design.enc
 slow_timing fast_timing
-#% Begin save design ... (date=09/11 10:01:23, mem=1943.3M)
-% Begin Save ccopt configuration ... (date=09/11 10:01:23, mem=1943.3M)
-% End Save ccopt configuration ... (date=09/11 10:01:23, total cpu=0:00:00.0, real=0:00:00.0, peak res=1944.5M, current mem=1944.5M)
-% Begin Save netlist data ... (date=09/11 10:01:23, mem=1944.5M)
+#% Begin save design ... (date=09/16 12:28:47, mem=1890.7M)
+% Begin Save ccopt configuration ... (date=09/16 12:28:47, mem=1890.7M)
+% End Save ccopt configuration ... (date=09/16 12:28:47, total cpu=0:00:00.0, real=0:00:00.0, peak res=1892.2M, current mem=1892.2M)
+% Begin Save netlist data ... (date=09/16 12:28:47, mem=1892.2M)
 Writing Binary DB to bch_toplevel.enc.tmp/bch_toplevel.v.bin in single-threaded mode...
-% End Save netlist data ... (date=09/11 10:01:23, total cpu=0:00:00.0, real=0:00:00.0, peak res=1951.0M, current mem=1945.0M)
+% End Save netlist data ... (date=09/16 12:28:47, total cpu=0:00:00.0, real=0:00:00.0, peak res=1898.2M, current mem=1892.3M)
 Saving symbol-table file ...
 Saving congestion map file bch_toplevel.enc.tmp/bch_toplevel.route.congmap.gz ...
-% Begin Save AAE data ... (date=09/11 10:01:23, mem=1945.3M)
+% Begin Save AAE data ... (date=09/16 12:28:47, mem=1892.6M)
 Saving AAE Data ...
-% End Save AAE data ... (date=09/11 10:01:23, total cpu=0:00:00.0, real=0:00:00.0, peak res=1945.3M, current mem=1945.3M)
+% End Save AAE data ... (date=09/16 12:28:47, total cpu=0:00:00.0, real=0:00:00.0, peak res=1892.6M, current mem=1892.6M)
 Saving preference file bch_toplevel.enc.tmp/gui.pref.tcl ...
 Saving mode setting ...
 Saving root attributes to be loaded post write_db ...
 Saving global file ...
 Saving root attributes to be loaded previous write_db ...
-% Begin Save floorplan data ... (date=09/11 10:01:23, mem=1950.1M)
+% Begin Save floorplan data ... (date=09/16 12:28:47, mem=1897.3M)
 Saving floorplan file ...
-% End Save floorplan data ... (date=09/11 10:01:23, total cpu=0:00:00.0, real=0:00:00.0, peak res=1950.1M, current mem=1950.1M)
-Saving PG file bch_toplevel.enc.tmp/bch_toplevel.pg.gz, version#2, (Created by Innovus v21.15-s110_1 on Thu Sep 11 10:01:23 2025)
-*** Completed savePGFile (cpu=0:00:00.0 real=0:00:01.0 mem=2354.2M) ***
+% End Save floorplan data ... (date=09/16 12:28:48, total cpu=0:00:00.0, real=0:00:01.0, peak res=1897.4M, current mem=1897.4M)
+Saving PG file bch_toplevel.enc.tmp/bch_toplevel.pg.gz, version#2, (Created by Innovus v21.15-s110_1 on Tue Sep 16 12:28:48 2025)
+*** Completed savePGFile (cpu=0:00:00.0 real=0:00:00.0 mem=2360.7M) ***
 Saving Drc markers ...
 ... No Drc file written since there is no markers found.
-% Begin Save placement data ... (date=09/11 10:01:24, mem=1950.1M)
+% Begin Save placement data ... (date=09/16 12:28:48, mem=1897.4M)
 ** Saving stdCellPlacement_binary (version# 2) ...
 Save Adaptive View Pruning View Names to Binary file
-% End Save placement data ... (date=09/11 10:01:24, total cpu=0:00:00.0, real=0:00:00.0, peak res=1950.4M, current mem=1950.4M)
-% Begin Save routing data ... (date=09/11 10:01:24, mem=1950.4M)
+% End Save placement data ... (date=09/16 12:28:48, total cpu=0:00:00.0, real=0:00:00.0, peak res=1897.7M, current mem=1897.7M)
+% Begin Save routing data ... (date=09/16 12:28:48, mem=1897.7M)
 Saving route file ...
-*** Completed saveRoute (cpu=0:00:00.0 real=0:00:00.0 mem=2355.2M) ***
-% End Save routing data ... (date=09/11 10:01:24, total cpu=0:00:00.0, real=0:00:00.0, peak res=1950.5M, current mem=1950.5M)
+*** Completed saveRoute (cpu=0:00:00.0 real=0:00:00.0 mem=2361.8M) ***
+% End Save routing data ... (date=09/16 12:28:48, total cpu=0:00:00.0, real=0:00:00.0, peak res=1897.7M, current mem=1897.7M)
 Saving property file bch_toplevel.enc.tmp/bch_toplevel.prop
-*** Completed saveProperty (cpu=0:00:00.0 real=0:00:00.0 mem=2358.2M) ***
+*** Completed saveProperty (cpu=0:00:00.0 real=0:00:00.0 mem=2364.8M) ***
 #Saving pin access data to file bch_toplevel.enc.tmp/bch_toplevel.apa ...
 #
 Saving preRoute extracted patterns in file 'bch_toplevel.enc.tmp/bch_toplevel.techData.gz' ...
 Saving preRoute extraction data in directory 'bch_toplevel.enc.tmp/extraction/' ...
-% Begin Save power constraints data ... (date=09/11 10:01:24, mem=1953.7M)
-% End Save power constraints data ... (date=09/11 10:01:24, total cpu=0:00:00.0, real=0:00:00.0, peak res=1953.7M, current mem=1953.7M)
+% Begin Save power constraints data ... (date=09/16 12:28:48, mem=1901.0M)
+% End Save power constraints data ... (date=09/16 12:28:48, total cpu=0:00:00.0, real=0:00:00.0, peak res=1901.0M, current mem=1901.0M)
 rc_best rc_worst
 rc_best rc_worst
 rc_best rc_worst
 rc_best rc_worst
 rc_best rc_worst
 Generated self-contained design bch_toplevel.enc.tmp
-#% End save design ... (date=09/11 10:01:24, total cpu=0:00:00.7, real=0:00:01.0, peak res=1980.7M, current mem=1956.4M)
+#% End save design ... (date=09/16 12:28:48, total cpu=0:00:00.8, real=0:00:01.0, peak res=1928.0M, current mem=1903.6M)
 *** Message Summary: 0 warning(s), 0 error(s)
 
-@@file 175: gui_fit
-@@file 176: gui_create_floorplan_snapshot -dir $ROOT/pics/$design/ -name $design.png -overwrite
+@@file 179: gui_fit
+@@file 180: gui_create_floorplan_snapshot -dir $ROOT/pics/$design/ -name $design.png -overwrite
 Starting snapshot creation...
 ### Start verbose source output (echo_comments mode) for 'checkplace.ss.rpt' ...
 ###############################################################
 #  Generated by:      Cadence Innovus 21.15-s110_1
 #  OS:                Linux x86_64(Host ID eltonsilva)
-#  Generated on:      Thu Sep 11 10:01:24 2025
+#  Generated on:      Tue Sep 16 12:28:48 2025
 #  Design:            bch_toplevel
 ###############################################################
 
@@ -2357,17 +2361,17 @@ Starting snapshot creation...
 
 ## Summary: 
 #########################################################
-## Number of Placed Instances = 855
+## Number of Placed Instances = 869
 ## Number of Unplaced Instances = 0
-## Placement Density:100.00%(1707/1707)
-## Placement Density (including fixed std cells):100.00%(1707/1707)
+## Placement Density:100.00%(1497/1497)
+## Placement Density (including fixed std cells):100.00%(1497/1497)
 ### End verbose source output for 'checkplace.ss.rpt'.
-Completed snapshot creation (cpu = 0:0:0, real = 0:0:0, mem = 2416.63M, memory increment = 2.09M)
+Completed snapshot creation (cpu = 0:0:0, real = 0:0:0, mem = 2422.18M, memory increment = 0.09M)
 Saving snapshot for fplan view to ss_bch_toplevel.png.fplan.gif
 Saving snapshot for amoeba view to ss_bch_toplevel.png.amoeba.gif
 Saving snapshot for place view to ss_bch_toplevel.png.place.gif
-@@file 177: set_db timing_analysis_check_type hold
-@@file 178: report_timing -unconstrained > $lyt/${design}/reports/${design}_hold_timing.rpt
+@@file 181: set_db timing_analysis_check_type hold
+@@file 182: report_timing -unconstrained > $lyt/${design}/reports/${design}_hold_timing.rpt
 AAE_INFO: opIsDesignInPostRouteState() is 1
 #################################################################################
 # Design Stage: PostRoute
@@ -2378,14 +2382,14 @@ AAE_INFO: opIsDesignInPostRouteState() is 1
 # Signoff Settings: SI Off 
 #################################################################################
 Calculate delays in BcWc mode...
-Start delay calculation (fullDC) (1 T). (MEM=2405.12)
+Start delay calculation (fullDC) (1 T). (MEM=2411.67)
 *** Calculating scaling factor for fast libraries using the default operating condition of each library.
-Total number of fetched objects 870
+Total number of fetched objects 843
 AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
-End delay calculation. (MEM=2432.33 CPU=0:00:00.0 REAL=0:00:00.0)
-End delay calculation (fullDC). (MEM=2432.33 CPU=0:00:00.1 REAL=0:00:00.0)
-@@file 179: set_db timing_analysis_check_type setup
-@@file 180: report_timing -unconstrained > $lyt/${design}/reports/${design}_setup_timing.rpt
+End delay calculation. (MEM=2438.88 CPU=0:00:00.0 REAL=0:00:00.0)
+End delay calculation (fullDC). (MEM=2438.88 CPU=0:00:00.1 REAL=0:00:00.0)
+@@file 183: set_db timing_analysis_check_type setup
+@@file 184: report_timing -unconstrained > $lyt/${design}/reports/${design}_setup_timing.rpt
 AAE_INFO: opIsDesignInPostRouteState() is 1
 #################################################################################
 # Design Stage: PostRoute
@@ -2396,16 +2400,16 @@ AAE_INFO: opIsDesignInPostRouteState() is 1
 # Signoff Settings: SI Off 
 #################################################################################
 Calculate delays in BcWc mode...
-Start delay calculation (fullDC) (1 T). (MEM=2420.81)
+Start delay calculation (fullDC) (1 T). (MEM=2427.36)
 *** Calculating scaling factor for slow libraries using the default operating condition of each library.
-Total number of fetched objects 870
+Total number of fetched objects 843
 AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
-End delay calculation. (MEM=2432.33 CPU=0:00:00.0 REAL=0:00:00.0)
-End delay calculation (fullDC). (MEM=2432.33 CPU=0:00:00.1 REAL=0:00:00.0)
-@file 181:
-@file 182: exit
+End delay calculation. (MEM=2438.88 CPU=0:00:00.0 REAL=0:00:01.0)
+End delay calculation (fullDC). (MEM=2438.88 CPU=0:00:00.1 REAL=0:00:01.0)
+@file 185:
+@file 186: exit
 
-*** Memory Usage v#1 (Current mem = 2387.328M, initial mem = 500.883M) ***
-*** Message Summary: 189 warning(s), 0 error(s)
+*** Memory Usage v#1 (Current mem = 2392.879M, initial mem = 492.883M) ***
+*** Message Summary: 39 warning(s), 0 error(s)
 
---- Ending "Innovus" (totcpu=0:00:48.7, real=0:01:09, mem=2387.3M) ---
+--- Ending "Innovus" (totcpu=0:00:58.9, real=0:03:49, mem=2392.9M) ---

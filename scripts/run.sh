@@ -31,9 +31,10 @@ export rpt="${ROOT}/synthesis/reports"
 # export design="syndrome_block_se"
 # export design="h_decoder_11_7"
 # export design="bch_syndrome_block"
-# export design="bch_bm_block"
+export design="bch_bm_block"
 # export design="bch_chien_block"
-export design="bch_toplevel"
+# export design="bch_toplevel"
+# export design="bch_bm_block_p"
 #------------------------------------
 
 if [ ! -d "$work_dir" ]; then

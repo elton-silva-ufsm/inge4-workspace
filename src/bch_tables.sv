@@ -89,5 +89,60 @@ function automatic logic [3:0] alpha_pow(input int i);
     end
 endfunction
 
+module gf_multiplier (
+    input  logic [3:0] a,
+    input  logic [3:0] b,
+    output logic [3:0] p
+);
+    always_comb begin
+        p = gf_mult(a, b);
+    end
+endmodule
+
+module gf_divider (
+    input  logic [3:0] a,
+    input  logic [3:0] b,
+    output logic [3:0] q
+);
+    always_comb begin
+        q = gf_div(a, b);
+    end
+endmodule
+
+module gf_power (
+    input  logic [3:0] a,
+    output logic [3:0] y
+);
+    always_comb begin
+        y = gf_pow(a);
+    end
+endmodule
+
+module xor_4 (
+    input  logic [3:0] a,
+    input  logic [3:0] b,
+    output logic [3:0] y
+);
+
+assign y = a^b;
+
+endmodule
+
+module ff_4 (
+    input logic clk,
+    input logic rst,
+    input logic [3:0] a,
+    output logic [3:0] q
+);
+
+    always_ff @(posedge clk or negedge rst) begin
+        if (!rst) begin
+            q <= 0;
+        end else begin
+            q <= a;
+        end
+    end
+
+endmodule
 
 

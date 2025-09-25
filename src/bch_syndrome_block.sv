@@ -4,9 +4,6 @@ module bch_syndrome_block (
     output logic [3:0]  S2,
     output logic [3:0]  S3
 );
-
-`include "../src/bch_tables.sv"
-
     always_comb begin
         S1 = 4'b0000;
         S2 = 4'b0000;

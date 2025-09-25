@@ -21,7 +21,9 @@ if {![file exists ${syn}/${design}]} {
     file mkdir ${syn}/${design}
 }
 
-set_db auto_ungroup both
+# set_db auto_ungroup both
+set_db auto_ungroup none
+
 
 switch $design {
    "inter_spartan_spi" {
@@ -36,6 +38,9 @@ switch $design {
 read_lib $PDK_PATH/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v0_basicCells.lib
 
 elaborate
+
+set_top_module ${design}
+
 switch $design {
    "inter_spartan_spi" {
       read_sdc $cons/ascon.sdc
@@ -57,10 +62,11 @@ syn_generic
 syn_map
 syn_opt
 
+suspend
 report_area >> ${syn}/${design}/reports/${design}_area.txt
 report_gates >> ${syn}/${design}/reports/${design}_gates.txt
 report_power >> ${syn}/${design}/reports/${design}_power.txt
-# suspend
+report_timing -unconstrained >> ${syn}/${design}/reports/${design}_time.txt
 write_hdl ${design} > ${syn}/${design}/${design}.v
 write_sdf -edge check_edge -setuphold merge_always -nonegchecks -recrem split -version 3.0 -design ${design} > ${syn}/${design}/${design}.sdf
-# exit
+exit

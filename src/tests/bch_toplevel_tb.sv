@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-`include "../src/bch_tables.sv"
+// `include "../src/bch_tables.sv"
 `include "../src/bch/chien_block.v"
 `include "../src/bch/ibm_block.v"
 `include "../src/bch/syndrome_block.v"
@@ -24,6 +24,9 @@ module bch_toplevel_tb;
     logic rst;
     logic [14:0] codeword, corrupted;
 
+
+    logic acerto_flag, debugflag;
+
     wire [14:0] corrected_codeword;
     wire [14:0] error_vector_out;
     wire [3:0]  S1_out, S2_out, S3_out, lambda1_out, lambda2_out;
@@ -33,15 +36,9 @@ module bch_toplevel_tb;
 
     bch_toplevel DUV (
         .clk(clk),
-        .rst(rst),
+        .rst(!rst),
         .codeword(codeword),
         .corrected_codeword(corrected_codeword),
-        .S1_out(S1_out),
-        .S2_out(S2_out),
-        .S3_out(S3_out),
-        .lambda1_out(lambda1_out),
-        .lambda2_out(lambda2_out),
-        .error_vector_out(error_vector_out),
         .error_flag(error_flag)
     );
 
@@ -69,8 +66,12 @@ module bch_toplevel_tb;
     // Clock generation
     initial begin
         clk = 0;
-        forever #7 clk = ~clk; //71,428 MHz
+        forever #15 clk = ~clk; //71,428 MHz
     end
+
+
+    assign acerto_flag = (corrected_codeword == r_x[1]) ? 1'b1 : 1'b0;
+    assign debugflag = ((DUV.S1 == 4'b0011) && (DUV.S2 == 4'b0101) && (DUV.S3 == 4'b0110)) ? 1'b1 : 1'b0;
 
     // Main stimulus
     initial begin
@@ -99,17 +100,17 @@ module bch_toplevel_tb;
         e4 = 0;
         e5 = 0;
 
-        repeat (2) @(negedge clk);
+        @(negedge clk);
         rst = 0;
 
         for (int i = 0; i < 120; i++) begin
             corrupted = (r_x[1] ^ e_x[i]);
             // corrupted = r_x[i]; 
             codeword =  corrupted;
-            repeat (4) @(negedge clk);
+            #1ns;
             $display("│%3d│%15b│%15b│%15b│%15b│%15b│%1b│%1b│", 
                      i+1, codeword, corrected_codeword,
-                     corrected_codeword_ref, error_vector_out, error_vector_out_ref, error_flag, error_flag_ref);
+                     corrected_codeword_ref, DUV.error_vector, error_vector_out_ref, error_flag, error_flag_ref);
 
             Ntests = i+1;
             CorrectedWords =    ((corrected_codeword == r_x[1]) && error_flag)  ? (++CorrectedWords)    : (CorrectedWords); 
@@ -123,6 +124,7 @@ module bch_toplevel_tb;
             e4 += ($countones(e_x[i]) == 4);
             e5 += ($countones(e_x[i]) == 5);
 
+            repeat(2) @(negedge clk);
 
         end
 
@@ -134,7 +136,7 @@ module bch_toplevel_tb;
         $display("╒═══════════════════════════════════════════════════════════════════════════════════════╕");
         $display("│Test n.2 - Until 5 errors in the encoded word, exploring Hamming Distance              │");
 
-        repeat (4) @(negedge clk);
+        @(negedge clk);
 
         codeword = 0;
         Ntests = 0;
@@ -153,7 +155,7 @@ module bch_toplevel_tb;
             corrupted = (r_x[1] ^ e_x5[i]);
             // corrupted = r_x[i]; 
             codeword =  corrupted;
-            repeat (4) @(negedge clk);
+            @(negedge clk);
             Ntests = i+1;
             CorrectedWords =    ((corrected_codeword == r_x[1]) && error_flag)  ? (++CorrectedWords)    : (CorrectedWords); 
             Wordswithnoerrors = ((corrected_codeword == r_x[1]) && !error_flag) ? (++Wordswithnoerrors) : (Wordswithnoerrors);

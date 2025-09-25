@@ -1,6 +1,7 @@
 `timescale 1ns / 1ps
 
 `include "../src/bch/chien_block.v"
+// `include "../src/bch_tables.sv"
 
 module bch_chien_block_tb;
 

@@ -37,7 +37,7 @@ switch $design {
    }
    default {
       # PADS ${PDK_PATH}/giolib045_v3.3/lef/giolib045.lef
-      read_physical -lef "${PDK_PATH}/gsclib045_svt_v4.4/gsclib045/lef/gsclib045_tech.lef ${PDK_PATH}/gsclib045_svt_v4.4/gsclib045/lef/gsclib045_macro.lef"
+      read_physical -lefs "${PDK_PATH}/gsclib045_svt_v4.4/gsclib045/lef/gsclib045_tech.lef ${PDK_PATH}/gsclib045_svt_v4.4/gsclib045/lef/gsclib045_macro.lef"
    }
 }
 #------------------------------------ [04]
@@ -110,10 +110,12 @@ switch $design {
   }
 	default {
 		# route_special -layer_change_range {Metal1(1) Metal4(4)} -block_pin_target nearest_target -allow_jogging 1 -crossover_via_layer_range {Metal1(1) Metal4(4)} -nets "VDD VSS" -allow_layer_change 1 -target_via_layer_range {Metal1(1) Metal4(4)}
-      route_special -layer_change_range {Metal1(1) Metal11(11)} -block_pin_target nearest_target -allow_jogging 1 -crossover_via_layer_range {Metal1(1) Metal11(11)} -nets "VDD VSS" -allow_layer_change 1 -target_via_layer_range {Metal1(1) Metal11(11)}
+      route_special -layer_change_range {Metal1(1) Metal11(11)} -block_pin_target nearest_target -allow_jogging 1 -crossover_via_layer_range {Metal2(2) Metal5(5)} -nets "VDD VSS" -allow_layer_change 1 -target_via_layer_range {Metal1(2) Metal11(11)}
   }
 }
 
+# gui_fit
+# suspend
 #------------------------------------ [12]
 if {[file exists $scr/pins/${design}_pin.tcl]} {
    source $scr/pins/${design}_pin.tcl
@@ -121,11 +123,12 @@ if {[file exists $scr/pins/${design}_pin.tcl]} {
    set_db place_global_place_io_pins 1
 }
 
-gui_fit
+# gui_fit
 # suspend
 
 #------------------------------------ [14]
 place_design
+# check_drc
 
 #------------------------------------ [15]
 set_db extract_rc_engine pre_route
@@ -135,6 +138,7 @@ extract_rc
 # opt_design -pre_cts
 #------------------------------------ [17]
 route_design
+check_drc
 #------------------------------------ [18]
 # set_db timing_analysis_type ocv
 # time_design -post_route >> $lyt/reports/${design}_tns.rpt 
