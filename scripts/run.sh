@@ -31,10 +31,14 @@ export rpt="${ROOT}/synthesis/reports"
 # export design="syndrome_block_se"
 # export design="h_decoder_11_7"
 # export design="bch_syndrome_block"
-export design="bch_bm_block"
+# export design="bch_bm_block"
 # export design="bch_chien_block"
 # export design="bch_toplevel"
 # export design="bch_bm_block_p"
+# export design="bm_stage_1"
+# export design="bm_stage_2"
+# export design="bm_stage_3"
+export design="bch_pipelined"
 #------------------------------------
 
 if [ ! -d "$work_dir" ]; then
@@ -56,7 +60,7 @@ case ${1} in
   xl)
     xrun -clean
     echo -e "\033[1;33mExecuting logical simulation...\033[0m"
-    xrun -f ${scr}/xrun_lyt.conf
+    xrun -f ${scr}/xrun_lyt.conf 
   ;;
   xg)
     xrun -clean

@@ -1,0 +1,16 @@
+    Hinst Name       Module Name          Inst Count           Total Area
+----------------------------------------------------------------------
+bch_pipelined                                    729             1812.258
+ b1                  bm_stage_1                   87              194.256
+  b1/u_div1          gf_divider                   73              108.072
+ b2                  bm_stage_2                   94              205.200
+  b2/u_mult1         gf_multiplier                78              120.384
+  b2/u_xor1          xor_4                         4               10.944
+ b3                  bm_stage_3                   88              182.628
+  b3/u_div1          gf_divider_494               80              133.380
+ cb                  cb_stage_1                  316              545.832
+  cb/cb              bch_chien_block             300              447.336
+ cr                  bch_corrector                15               51.300
+ fi                  fifo                         75              461.700
+ sb                  sy_stage_1                   53              163.818
+  sb/sy              bch_syndrome_block           43              102.258

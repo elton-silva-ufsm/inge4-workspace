@@ -1,38 +1,12 @@
 	Top level design units:
-		bch_bm_block_tb
-	Reading SDF file from location "/home/ci_inovador/Documentos/inge4-workspace/synthesis/bch_bm_block/bch_bm_block.sdf"
-xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_bm_block_tb.DUV.u_lamb1.\q_reg[0]  of module DFFRX2 <../synthesis/bch_bm_block/bch_bm_block.sdf, line 2184>.
-xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_bm_block_tb.DUV.u_lamb1.\q_reg[3]  of module DFFRX2 <../synthesis/bch_bm_block/bch_bm_block.sdf, line 2205>.
-xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_bm_block_tb.DUV.u_lamb1.\q_reg[1]  of module DFFRX2 <../synthesis/bch_bm_block/bch_bm_block.sdf, line 2226>.
-xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_bm_block_tb.DUV.u_lamb1.\q_reg[2]  of module DFFRX2 <../synthesis/bch_bm_block/bch_bm_block.sdf, line 2247>.
-xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_bm_block_tb.DUV.u_lamb2.\q_reg[0]  of module DFFRX2 <../synthesis/bch_bm_block/bch_bm_block.sdf, line 2268>.
-xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_bm_block_tb.DUV.u_lamb2.\q_reg[3]  of module DFFRX2 <../synthesis/bch_bm_block/bch_bm_block.sdf, line 2289>.
-xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_bm_block_tb.DUV.u_lamb2.\q_reg[1]  of module DFFRX2 <../synthesis/bch_bm_block/bch_bm_block.sdf, line 2310>.
-xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (27)) of instance bch_bm_block_tb.DUV.u_lamb2.\q_reg[2]  of module DFFRX2 <../synthesis/bch_bm_block/bch_bm_block.sdf, line 2331>.
-	SDF statistics: 
-		 No. of Pathdelays = 1480    	 No. of Disabled Pathdelays = 0        Annotated = 100.00% (1480/1480) 
-		 No. of Tchecks    = 56      	 No. of Disabled Tchecks    = 0        Annotated = 42.86% (24.00/56) 
+		$unit_0x125d3432
+		bch_pipelined_tb
 xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
 
 -------------------------------------
 Relinquished control to SimVision...
 xcelium> 
 xcelium> source /home/tools/cadence/installs/XCELIUM2409/tools/xcelium/files/xmsimrc
-xcelium> database -open waves -into waves.shm -default
-Created default SHM database waves
-xcelium> probe -create -shm bch_bm_block_tb.S1 bch_bm_block_tb.S2 bch_bm_block_tb.S3 bch_bm_block_tb.clk bch_bm_block_tb.flag1 bch_bm_block_tb.lambda1 bch_bm_block_tb.lambda2 bch_bm_block_tb.olambda1 bch_bm_block_tb.olambda2 bch_bm_block_tb.rst
-Created probe 1
-xcelium> run
-╒══════════════╦═════════╦═════════╕
-│PARAMETERS    ║REF      ║DUT      │
-╞════╤════╤════╬════╤════╬════╤════╡
-│S1  │S2  │S3  ║l1  │l2  ║l1  │l2  │
-│0011│0101│0110║0011│0111║0011│0111│
-│1011│1001│0010║1000│0100║1000│0100│
-│1010│1001│0010║1110│1000║1110│1000│
-│1011│1011│0010║1111│0011║1111│0011│
-│1011│1001│0110║0100│0111║0100│0111│
-╘══════════════╩═════════╩═════════╛
-Simulation complete via $finish(1) at time 60 NS + 0
-../src/tests/bch_bm_block_tb.sv:100         $finish();
-xcelium> 
+xcelium> ^C
+xcelium> exit
+xmsim: *W,NORUNCMD: No 'run' command issued.

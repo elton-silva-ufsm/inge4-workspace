@@ -66,6 +66,9 @@ switch $design {
    "bch_toplevel" {
       create_floorplan -core_density_size 1 0.95 3 3 3 3
    }
+   "bch_pipelined" {
+      create_floorplan -core_density_size 1 0.95 3 3 3 3
+   }
    default {
 		# 																		rat den l b r t
       create_floorplan -core_density_size 4 0.9 3 3 3 3
