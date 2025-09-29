@@ -23,7 +23,7 @@ module bch_pipelined (
     output logic error_flag
 );
 
-reg error_flag_reg;
+// reg error_flag_reg;
 
 wire [3:0] S1, S2, S3;  
 wire [3:0] l1_1, l1_2, l2_2, S1_o, S2_o, S3_o, S1_o2;
@@ -90,7 +90,7 @@ wire [14:0] corruptedWord;
         .lambda1(lambda1),
         .lambda2(lambda2),
         .error_vector(error_vector),
-        .error_found(error_flag_reg)
+        .error_found(error_flag)
     );
 
     // Submodule: corrector
@@ -101,12 +101,12 @@ wire [14:0] corruptedWord;
     );
 
 
-    always_ff @(posedge clk or negedge rst) begin
-        if (!rst) begin
-            error_flag     <= 0;
-        end else begin
-            error_flag     <= error_flag_reg;
-        end
-    end
+    // always_ff @(posedge clk or negedge rst) begin
+    //     if (!rst) begin
+    //         error_flag     <= 0;
+    //     end else begin
+    //         error_flag     <= error_flag_reg;
+    //     end
+    // end
 
 endmodule

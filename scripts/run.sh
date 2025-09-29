@@ -28,17 +28,23 @@ export rpt="${ROOT}/synthesis/reports"
 #------------------------------------
 # export design="and16"
 # export design="or16"
-# export design="syndrome_block_se"
+export design="syndrome_block_se"
+
 # export design="h_decoder_11_7"
+# export design="h_decoder_39_32"
+# export design="h_decoder_21_16"
+# export design="h_decoder_16_11"
+
 # export design="bch_syndrome_block"
 # export design="bch_bm_block"
 # export design="bch_chien_block"
 # export design="bch_toplevel"
 # export design="bch_bm_block_p"
+
 # export design="bm_stage_1"
 # export design="bm_stage_2"
 # export design="bm_stage_3"
-export design="bch_pipelined"
+# export design="bch_pipelined"
 #------------------------------------
 
 if [ ! -d "$work_dir" ]; then

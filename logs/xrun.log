@@ -1,12 +1,10 @@
 	Top level design units:
 		$unit_0x125d3432
 		bch_pipelined_tb
-xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
-
--------------------------------------
-Relinquished control to SimVision...
-xcelium> 
 xcelium> source /home/tools/cadence/installs/XCELIUM2409/tools/xcelium/files/xmsimrc
-xcelium> ^C
+xcelium> run
+Leitura de arquivos...
+Resumo final: acertos=58, erros=7620
+Simulation complete via $finish(1) at time 230550 NS + 0
+../src/tests/bch_pipelined_tb.sv:209         $finish;
 xcelium> exit
-xmsim: *W,NORUNCMD: No 'run' command issued.

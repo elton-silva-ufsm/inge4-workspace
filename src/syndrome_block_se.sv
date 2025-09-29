@@ -1,6 +1,6 @@
 module syndrome_block_se (
     input logic [14:0] i_CodeWord,
-    output logic [7:0] o_Syndrome,
+    // output logic [7:0] o_Syndrome,
     output logic [6:0] o_DecodWord,
     output logic o_ErrorC,
     output logic o_ErrorD
@@ -23,7 +23,7 @@ always_comb begin
     Syndrome   = (Op1[8])         ? (Op1 ^ GeneratorPolinomial)               : Op1;
 end
 
-assign o_Syndrome  = Syndrome;
+// assign o_Syndrome  = Syndrome;
 assign o_DecodWord = corrected[14:8];
 
 always_comb begin
