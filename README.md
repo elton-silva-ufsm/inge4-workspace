@@ -97,13 +97,13 @@ I
  Islândia -
  Índia -
  Indonésia -
-Irã Irão -
+ Irã -
  Iraque -
  Irlanda - Roy Keane
  Israel -
  Itália - Pirlo, Buffon
 J
- Jamaica -
+ Jamaica - Bailey, Michail Antonio
  Japão - King Kazu, Honda
  Jordânia -
 K
@@ -111,7 +111,7 @@ K
  Kuwait -
  Kosovo - Zhegrova
 L
-Laos Laos -
+ Laos -
  Lesoto -
  Letónia -
  Líbano -
@@ -128,51 +128,51 @@ M
  Maldivas -
  Mali - Pape Mata Sarr, El Bilal Touré
  Malta -
- Marrocos -
+ Marrocos - Hakimi, Ben Segir
  Ilhas Marshall -
  Mauritânia -
  Ilhas Maurícias -
- México - Ochoa
+ México - Ochoa, Santiago Gimenez
  Myanmar -
  Estados Federados da Micronésia -
  Moldávia -
  Mónaco -
  Mongólia -
  Montenegro - Adzic
- Moçambique -
+ Moçambique - Reinildo
 N
  Namíbia -
  Nauru -
  Nepal -
  Nicarágua -
  Níger -
- Nigéria -
- Noruega -
- Nova Zelândia -
+ Nigéria - Boniface, Chukwueze, Lookman
+ Noruega - Haaland, Nusa, Odegaard
+ Nova Zelândia - Chris Wood
 O
  Omã -
 P
- Países Baixos -
+ Países Baixos - X. Simons, Geertruida, Frimpong
  Paquistão -
  Palestina - 
  Palau -
  Panamá - Murillo
  Papua-Nova Guiné -
- Paraguai -
- Peru -
- Polónia -
- Portugal -
+ Paraguai - Enciso, Almiron
+ Peru - 
+ Polónia - Sczesny, Lewandowski
+ Portugal - Diogo Jota, Antonio Silva
 Q
- Quênia -
+ Quênia - 
  Quirguistão -
 R
- Reino Unido -
+ Reino Unido - Bellingham, Cole Palmer, Eberechi Eze
  República Centro-Africana - Kondogbia
- Chéquia -
+ Chéquia - Souček
  República Dominicana -
  Roménia -
  Ruanda -
- Rússia -
+ Rússia - Levy Yashin
 S
  Ilhas Salomão -
  San Marino -
@@ -181,17 +181,17 @@ S
  São Tomé e Príncipe -
  São Vicente e Granadinas -
  Samoa -
- Senegal -
+ Senegal - Nicolas JACKson
  Sérvia - Kostic
  Serra Leoa -
  Seicheles -
-Singapura Singapura -
+ Singapura -
  Síria -
  Somália -
  Sri Lanka -
  Sudão -
  Sudão do Sul -
- Suécia -
+ Suécia - Isak, Gyokeres, Ibrahimovic
  Suíça -
  Suriname -
  Tajiquistão -

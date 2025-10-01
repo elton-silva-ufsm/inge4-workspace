@@ -1,10 +1,9 @@
 	Top level design units:
-		$unit_0x125d3432
-		bch_pipelined_tb
+		bch_31_encoder_tb
 xcelium> source /home/tools/cadence/installs/XCELIUM2409/tools/xcelium/files/xmsimrc
 xcelium> run
-Leitura de arquivos...
-Resumo final: acertos=58, erros=7620
-Simulation complete via $finish(1) at time 230550 NS + 0
-../src/tests/bch_pipelined_tb.sv:209         $finish;
+Message: 10101010101010101010
+Codeword: 1010101010101010101000000000000
+Simulation complete via $finish(1) at time 10 NS + 0
+../src/tests/bch_31_encoder_tb.sv:21     $finish;
 xcelium> exit

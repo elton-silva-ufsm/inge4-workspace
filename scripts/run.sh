@@ -28,7 +28,7 @@ export rpt="${ROOT}/synthesis/reports"
 #------------------------------------
 # export design="and16"
 # export design="or16"
-export design="syndrome_block_se"
+# export design="syndrome_block_se"
 
 # export design="h_decoder_11_7"
 # export design="h_decoder_39_32"
@@ -45,6 +45,9 @@ export design="syndrome_block_se"
 # export design="bm_stage_2"
 # export design="bm_stage_3"
 # export design="bch_pipelined"
+
+
+export design="bch_31_encoder"
 #------------------------------------
 
 if [ ! -d "$work_dir" ]; then
@@ -55,22 +58,22 @@ cd $work_dir
 case ${1} in
   x)
     xrun -clean
-    echo -e "\033[1;33mExecuting logical simulation...\033[0m"
+    echo -e "\033[1;33mExecuting HDL simulation...\033[0m"
     xrun -f ${scr}/xrun.conf
   ;;
   xs)
     xrun -clean
-    echo -e "\033[1;33mExecuting logical simulation...\033[0m"
+    echo -e "\033[1;33mExecuting Post-Synthesis simulation...\033[0m"
     xrun -f ${scr}/xrun_syn.conf
   ;;
   xl)
     xrun -clean
-    echo -e "\033[1;33mExecuting logical simulation...\033[0m"
+    echo -e "\033[1;33mExecuting Post-P&R simulation...\033[0m"
     xrun -f ${scr}/xrun_lyt.conf 
   ;;
   xg)
     xrun -clean
-    echo -e "\033[1;33mExecuting logical simulation...\033[0m"
+    echo -e "\033[1;33mExecuting hdl simulation with gui...\033[0m"
     xrun -gui -f ${scr}/xrun.conf
   ;;
   xc)
