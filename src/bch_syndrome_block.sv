@@ -1,3 +1,5 @@
+`include "../src/bch_tables.sv"
+
 module bch_syndrome_block (
     input  logic [14:0] codeword,
     output logic [3:0]  S1,

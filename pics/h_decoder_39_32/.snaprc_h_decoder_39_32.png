@@ -1,0 +1,21 @@
+#----------------------------------------------------------
+# /home/ci_inovador/Documentos/inge4-workspace/pics/h_decoder_39_32//.snaprc_h_decoder_39_32.png : snapshot resource file                          
+# label = h_decoder_39_32.png                                      
+#----------------------------------------------------------
+set tmpstr ""
+set tmpbar ""
+lappend tmpstr "dir" $sdir
+lappend tmpstr "label" h_decoder_39_32.png
+lappend tmpstr "fplan" $sdir/ss_h_decoder_39_32.png.fplan.gif
+lappend tmpstr "amoeba" $sdir/ss_h_decoder_39_32.png.amoeba.gif
+lappend tmpstr "place" $sdir/ss_h_decoder_39_32.png.place.gif
+lappend tmpstr "trgGlbOverflowPctH" 0
+lappend tmpstr "trgGlbOverflowPctV" 0
+lappend tmpbar "Congestion"
+lappend tmpstr "Congestion" 0
+lappend tmpbar WNS
+lappend tmpstr WNS 2147483647.0
+lappend tmpbar TNS
+lappend tmpstr TNS 2147483647.0
+lappend tmpbar Overlap
+lappend tmpstr Overlap 0

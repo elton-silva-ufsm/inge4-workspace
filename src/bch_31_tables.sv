@@ -20,7 +20,7 @@ function automatic logic [4:0] antilog_table (input int idx);
         16: antilog_table = 5'b11011; // α¹⁶ = x⁴+x³+x+1         = 'd27 
         17: antilog_table = 5'b10011; // α¹⁷ = x⁴+x+1            = 'd19 
         18: antilog_table = 5'b00011; // α¹⁸ = x+1               = 'd3  
-        19: antilog_table = 5'b00110; // α¹⁶ = x²+x              = 'd6  
+        19: antilog_table = 5'b00110; // α¹⁹ = x²+x              = 'd6  
         20: antilog_table = 5'b01100; // α²⁰ = x³+x²             = 'd12 
         21: antilog_table = 5'b11000; // α²¹ = x⁴+x³             = 'd24 
         22: antilog_table = 5'b10101; // α²² = x⁴+x²+1           = 'd21 
@@ -32,6 +32,7 @@ function automatic logic [4:0] antilog_table (input int idx);
         28: antilog_table = 5'b10110; // α²⁸ = x⁴+x²+x           = 'd22 
         29: antilog_table = 5'b01001; // α²⁹ = x³+1              = 'd9 
         30: antilog_table = 5'b10010; // α³⁰ = x⁴+x              = 'd18
+        31: antilog_table = 5'b00000; // α⁻∞ = 0
         default: antilog_table = 5'b00000;
     endcase
 endfunction
@@ -91,8 +92,7 @@ endfunction
 function automatic logic [4:0] gf_pow(input int exp);
     int idx;
     begin
-        idx = exp % 31;
-        if (idx < 0) idx += 31;
+        idx = exp % 'd31;
         gf_pow = antilog_table(idx);
     end
 endfunction
@@ -112,14 +112,14 @@ function automatic logic [4:0] gf_div(input logic [4:0] a, input logic [4:0] b);
     end
 endfunction
 
-function automatic logic [4:0] alpha_pow(input int i);
-    int idx;
-    begin
-        idx = i % 31;
-        if (idx < 0) idx += 31;
-        alpha_pow = antilog_table(idx);
-    end
-endfunction
+// function automatic logic [4:0] alpha_pow(input int i);
+//     int idx;
+//     begin
+//         idx = i % 31;
+//         if (idx < 0) idx += 31;
+//         alpha_pow = antilog_table(idx);
+//     end
+// endfunction
 
 module gf_multiplier (
     input  logic [4:0] a,
@@ -150,7 +150,7 @@ module gf_power (
     end
 endmodule
 
-module xor_4 (
+module xor_5 (
     input  logic [4:0] a,
     input  logic [4:0] b,
     output logic [4:0] y
@@ -160,7 +160,7 @@ assign y = a^b;
 
 endmodule
 
-module ff_4 (
+module ff_5 (
     input logic clk,
     input logic rst,
     input logic [4:0] a,

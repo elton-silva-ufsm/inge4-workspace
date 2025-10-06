@@ -1,9 +1,20 @@
 	Top level design units:
-		bch_31_encoder_tb
+		$unit_0x43e3f3b9
+		bch_pipe2_top_tb
+xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
 xcelium> source /home/tools/cadence/installs/XCELIUM2409/tools/xcelium/files/xmsimrc
+xcelium> database -open waves -into waves.shm -default
+Created default SHM database waves
+xcelium> probe -create -shm bch_pipe2_top_tb.acerto_flag bch_pipe2_top_tb.clk bch_pipe2_top_tb.codeword bch_pipe2_top_tb.corrected_codeword bch_pipe2_top_tb.corrupted bch_pipe2_top_tb.d_x bch_pipe2_top_tb.e_x bch_pipe2_top_tb.e_x5 bch_pipe2_top_tb.error_flag bch_pipe2_top_tb.r_x bch_pipe2_top_tb.rst
+Created probe 1
+xcelium> reset
+Loaded snapshot worklib.bch_pipe2_top_tb:sv
 xcelium> run
-Message: 10101010101010101010
-Codeword: 1010101010101010101000000000000
-Simulation complete via $finish(1) at time 10 NS + 0
-../src/tests/bch_31_encoder_tb.sv:21     $finish;
+Simulation complete via $finish(1) at time 3690 NS + 0
+../src/tests/bch_pipe2_top_tb.sv:63         $finish;
+xcelium> ^C
 xcelium> exit

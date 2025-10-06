@@ -14,11 +14,11 @@ AAE_INFO: opIsDesignInPostRouteState() is 1
 # Signoff Settings: SI Off 
 #################################################################################
 Calculate delays in BcWc mode...
-Start delay calculation (fullDC) (1 T). (MEM=2369.16)
-Total number of fetched objects 843
+Start delay calculation (fullDC) (1 T). (MEM=2331.02)
+Total number of fetched objects 926
 AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
-End delay calculation. (MEM=2385.2 CPU=0:00:00.0 REAL=0:00:00.0)
-End delay calculation (fullDC). (MEM=2385.2 CPU=0:00:00.1 REAL=0:00:00.0)
+End delay calculation. (MEM=2342.53 CPU=0:00:00.0 REAL=0:00:00.0)
+End delay calculation (fullDC). (MEM=2342.53 CPU=0:00:00.1 REAL=0:00:00.0)
 Set Default Frequency 100MHz.
 
 Begin Power Analysis
@@ -34,48 +34,48 @@ Begin Processing Timing Library for Power Calculation
 
 Begin Processing Power Net/Grid for Power Calculation
 
-Ended Processing Power Net/Grid for Power Calculation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=1879.11MB/3910.87MB/1879.11MB)
+Ended Processing Power Net/Grid for Power Calculation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=1806.18MB/3864.72MB/1806.18MB)
 
 Begin Processing Timing Window Data for Power Calculation
 
-Ended Processing Timing Window Data for Power Calculation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=1879.11MB/3910.87MB/1879.11MB)
+Ended Processing Timing Window Data for Power Calculation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=1806.18MB/3864.72MB/1806.18MB)
 
 Begin Processing User Attributes
 
-Ended Processing User Attributes: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=1879.11MB/3910.87MB/1879.11MB)
+Ended Processing User Attributes: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=1806.18MB/3864.72MB/1806.18MB)
 
 Begin Processing Signal Activity
 
 
 Starting Levelizing
-2025-Sep-16 12:28:47 (2025-Sep-16 15:28:47 GMT)
-2025-Sep-16 12:28:47 (2025-Sep-16 15:28:47 GMT): 10%
-2025-Sep-16 12:28:47 (2025-Sep-16 15:28:47 GMT): 20%
-2025-Sep-16 12:28:47 (2025-Sep-16 15:28:47 GMT): 30%
-2025-Sep-16 12:28:47 (2025-Sep-16 15:28:47 GMT): 40%
-2025-Sep-16 12:28:47 (2025-Sep-16 15:28:47 GMT): 50%
-2025-Sep-16 12:28:47 (2025-Sep-16 15:28:47 GMT): 60%
-2025-Sep-16 12:28:47 (2025-Sep-16 15:28:47 GMT): 70%
-2025-Sep-16 12:28:47 (2025-Sep-16 15:28:47 GMT): 80%
-2025-Sep-16 12:28:47 (2025-Sep-16 15:28:47 GMT): 90%
+2025-Oct-06 17:07:01 (2025-Oct-06 20:07:01 GMT)
+2025-Oct-06 17:07:01 (2025-Oct-06 20:07:01 GMT): 10%
+2025-Oct-06 17:07:01 (2025-Oct-06 20:07:01 GMT): 20%
+2025-Oct-06 17:07:01 (2025-Oct-06 20:07:01 GMT): 30%
+2025-Oct-06 17:07:01 (2025-Oct-06 20:07:01 GMT): 40%
+2025-Oct-06 17:07:01 (2025-Oct-06 20:07:01 GMT): 50%
+2025-Oct-06 17:07:01 (2025-Oct-06 20:07:01 GMT): 60%
+2025-Oct-06 17:07:01 (2025-Oct-06 20:07:01 GMT): 70%
+2025-Oct-06 17:07:01 (2025-Oct-06 20:07:01 GMT): 80%
+2025-Oct-06 17:07:01 (2025-Oct-06 20:07:01 GMT): 90%
 
 Finished Levelizing
-2025-Sep-16 12:28:47 (2025-Sep-16 15:28:47 GMT)
+2025-Oct-06 17:07:01 (2025-Oct-06 20:07:01 GMT)
 
 Starting Activity Propagation
-2025-Sep-16 12:28:47 (2025-Sep-16 15:28:47 GMT)
+2025-Oct-06 17:07:01 (2025-Oct-06 20:07:01 GMT)
 ** INFO:  (VOLTUS_POWR-1356): No default input activity has been set. Defaulting to 0.2.
 Use 'set_default_switching_activity -input_activity' command to change the default activity value.
 
-2025-Sep-16 12:28:47 (2025-Sep-16 15:28:47 GMT): 10%
-2025-Sep-16 12:28:47 (2025-Sep-16 15:28:47 GMT): 20%
-2025-Sep-16 12:28:47 (2025-Sep-16 15:28:47 GMT): 30%
-2025-Sep-16 12:28:47 (2025-Sep-16 15:28:47 GMT): 40%
-2025-Sep-16 12:28:47 (2025-Sep-16 15:28:47 GMT): 50%
+2025-Oct-06 17:07:01 (2025-Oct-06 20:07:01 GMT): 10%
+2025-Oct-06 17:07:01 (2025-Oct-06 20:07:01 GMT): 20%
+2025-Oct-06 17:07:01 (2025-Oct-06 20:07:01 GMT): 30%
+2025-Oct-06 17:07:01 (2025-Oct-06 20:07:01 GMT): 40%
+2025-Oct-06 17:07:01 (2025-Oct-06 20:07:01 GMT): 50%
 
 Finished Activity Propagation
-2025-Sep-16 12:28:47 (2025-Sep-16 15:28:47 GMT)
-Ended Processing Signal Activity: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=1879.11MB/3910.87MB/1879.11MB)
+2025-Oct-06 17:07:01 (2025-Oct-06 20:07:01 GMT)
+Ended Processing Signal Activity: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=1806.18MB/3864.72MB/1806.18MB)
 
 Begin Power Computation
 
@@ -88,39 +88,39 @@ Begin Power Computation
 
 
 Starting Calculating power
-2025-Sep-16 12:28:47 (2025-Sep-16 15:28:47 GMT)
+2025-Oct-06 17:07:01 (2025-Oct-06 20:07:01 GMT)
  ... Calculating switching power
-2025-Sep-16 12:28:47 (2025-Sep-16 15:28:47 GMT): 10%
-2025-Sep-16 12:28:47 (2025-Sep-16 15:28:47 GMT): 20%
-2025-Sep-16 12:28:47 (2025-Sep-16 15:28:47 GMT): 30%
-2025-Sep-16 12:28:47 (2025-Sep-16 15:28:47 GMT): 40%
-2025-Sep-16 12:28:47 (2025-Sep-16 15:28:47 GMT): 50%
+2025-Oct-06 17:07:01 (2025-Oct-06 20:07:01 GMT): 10%
+2025-Oct-06 17:07:01 (2025-Oct-06 20:07:01 GMT): 20%
+2025-Oct-06 17:07:01 (2025-Oct-06 20:07:01 GMT): 30%
+2025-Oct-06 17:07:01 (2025-Oct-06 20:07:01 GMT): 40%
+2025-Oct-06 17:07:01 (2025-Oct-06 20:07:01 GMT): 50%
  ... Calculating internal and leakage power
-2025-Sep-16 12:28:47 (2025-Sep-16 15:28:47 GMT): 60%
-2025-Sep-16 12:28:47 (2025-Sep-16 15:28:47 GMT): 70%
-2025-Sep-16 12:28:47 (2025-Sep-16 15:28:47 GMT): 80%
-2025-Sep-16 12:28:47 (2025-Sep-16 15:28:47 GMT): 90%
+2025-Oct-06 17:07:01 (2025-Oct-06 20:07:01 GMT): 60%
+2025-Oct-06 17:07:01 (2025-Oct-06 20:07:01 GMT): 70%
+2025-Oct-06 17:07:01 (2025-Oct-06 20:07:01 GMT): 80%
+2025-Oct-06 17:07:01 (2025-Oct-06 20:07:01 GMT): 90%
 
 Finished Calculating power
-2025-Sep-16 12:28:47 (2025-Sep-16 15:28:47 GMT)
+2025-Oct-06 17:07:01 (2025-Oct-06 20:07:01 GMT)
       # of MSMV cell(s) missing power_level: 0
-Ended Power Computation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=1880.67MB/3918.87MB/1880.67MB)
+Ended Power Computation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=1807.71MB/3872.73MB/1807.71MB)
 
 Begin Processing User Attributes
 
-Ended Processing User Attributes: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=1880.67MB/3918.87MB/1880.67MB)
+Ended Processing User Attributes: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=1807.71MB/3872.73MB/1807.71MB)
 
-Ended Power Analysis: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=1880.67MB/3918.87MB/1880.67MB)
+Ended Power Analysis: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=1807.71MB/3872.73MB/1807.71MB)
 
 Begin Boundary Leakage Calculation
 Ended Boundary Leakage Calculation: (cpu=0:00:00, real=0:00:00,
-mem(process/total/peak)=1880.67MB/3918.87MB/1880.67MB)
+mem(process/total/peak)=1807.71MB/3872.73MB/1807.71MB)
 Begin Static Power Report Generation
 *----------------------------------------------------------------------------------------
 *	Innovus 21.15-s110_1 (64bit) 09/23/2022 13:08 (Linux 3.10.0-693.el7.x86_64)
 *	
 *
-* 	Date & Time:	2025-Sep-16 12:28:47 (2025-Sep-16 15:28:47 GMT)
+* 	Date & Time:	2025-Oct-06 17:07:01 (2025-Oct-06 20:07:01 GMT)
 *
 *----------------------------------------------------------------------------------------
 *
@@ -162,39 +162,39 @@ Begin Static Power Report Generation
 
 Total Power
 -----------------------------------------------------------------------------------------
-Total Internal Power:       32.47429245 	   50.0174%
-Total Switching Power:      32.42327027 	   49.9388%
-Total Leakage Power:         0.02841187 	    0.0438%
-Total Power:                64.92597459
+Total Internal Power:       40.31242699 	   51.1941%
+Total Switching Power:      38.40063118 	   48.7663%
+Total Leakage Power:         0.03117048 	    0.0396%
+Total Power:                78.74422866
 -----------------------------------------------------------------------------------------
 
 
 Group                           Internal   Switching     Leakage       Total  Percentage 
                                 Power      Power         Power         Power  (%)        
 -----------------------------------------------------------------------------------------
-Sequential                         2.452        3.42    0.004009        5877       9.051
+Sequential                         2.995       3.345    0.003989        6344       8.057
 Macro                                  0           0           0           0           0
 IO                                     0           0           0           0           0
-Combinational                      30.02          29      0.0244   5.905e+04       90.95
+Combinational                      37.32       35.06     0.02718    7.24e+04       91.94
 Clock (Combinational)                  0           0           0           0           0
 Clock (Sequential)                     0           0           0           0           0
 -----------------------------------------------------------------------------------------
-Total                          3.247e+04   3.242e+04       28.41   6.493e+04       1e+05
+Total                          4.031e+04    3.84e+04       31.17   7.874e+04       1e+05
 -----------------------------------------------------------------------------------------
 
 
 Rail                  Voltage   Internal   Switching     Leakage       Total  Percentage 
                                 Power      Power         Power         Power  (%)        
 -----------------------------------------------------------------------------------------
-VDD                       0.9  3.247e+04   3.242e+04       28.41   6.493e+04       1e+05
+VDD                       0.9  4.031e+04    3.84e+04       31.17   7.874e+04       1e+05
  
  
 -----------------------------------------------------------------------------------------
 *	Power Distribution Summary: 
-*              Highest Average Power:             g333969__5115 (ADDFX1):           0.7083
-*              Highest Leakage Power:            error_flag_reg (DFFRX2):        0.0001852
-*                Total Cap:      2.18649e-12 F
-*                Total instances in design:   791
+*              Highest Average Power:     bm/u_div1/g2104__4733 (ADDFX1):           0.6231
+*              Highest Leakage Power:            error_flag_reg (DFFRX2):        0.0001868
+*                Total Cap:      2.10091e-12 F
+*                Total instances in design:   881
 *                Total instances in design with no power:     0
 *                Total instances in design with no activty:     0
 
@@ -204,5 +204,5 @@ VDD                       0.9  3.247e+04   3.242e+04       28.41   6.493e+04    
 ** INFO:  (VOLTUS_POWR-3465): There are 0 decaps and 0 fillers in the design
 
 Ended Static Power Report Generation: (cpu=0:00:00, real=0:00:00,
-mem(process/total/peak)=1881.95MB/3918.87MB/1881.95MB)
+mem(process/total/peak)=1807.71MB/3872.73MB/1807.71MB)
 

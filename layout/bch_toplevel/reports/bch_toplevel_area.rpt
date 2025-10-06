@@ -1,3 +1,19 @@
     Hinst Name       Module Name          Inst Count           Total Area
 ----------------------------------------------------------------------
-bch_toplevel                                     791             1422.378
+bch_toplevel                                     881             1566.360
+ bm                  bch_bm_block                507              855.684
+  bm/u_div1          gf_divider                   81              134.064
+  bm/u_div2          gf_divider_484               81              134.064
+  bm/u_lamb1         ff_4                          4               24.624
+  bm/u_lamb2         ff_4_615                      4               24.624
+  bm/u_mult1         gf_multiplier                78              120.384
+  bm/u_mult2         gf_multiplier_487            78              120.384
+  bm/u_mult3         gf_multiplier_486            78              120.384
+  bm/u_mult4         gf_multiplier_485            78              120.384
+  bm/u_xor1          xor_4                         4               10.944
+  bm/u_xor2          xor_4_490                     4               10.944
+  bm/u_xor3          xor_4_489                     4               10.944
+  bm/u_xor4          xor_4_488                     4               10.944
+ cb                  bch_chien_block             300              446.994
+ cr                  bch_corrector                15               41.040
+ sb                  bch_syndrome_block           43              102.258

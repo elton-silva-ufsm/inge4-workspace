@@ -38,13 +38,9 @@ module bch_bm_block (
 
         D1 = xor2;
         D2 = xor4;
-        // if (S1 != 0) begin
-            lambda1_next = div1; 
-            lambda2_next = div2; 
-        // end else begin
-            // lambda1_next = 4'd0;
-            // lambda2_next = 4'd0;
-        // end
+        
+        lambda1_next = div1; 
+        lambda2_next = div2; 
     end
 
 endmodule

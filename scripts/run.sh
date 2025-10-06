@@ -33,7 +33,7 @@ export rpt="${ROOT}/synthesis/reports"
 # export design="h_decoder_11_7"
 # export design="h_decoder_39_32"
 # export design="h_decoder_21_16"
-# export design="h_decoder_16_11"
+export design="h_decoder_16_11"
 
 # export design="bch_syndrome_block"
 # export design="bch_bm_block"
@@ -45,9 +45,16 @@ export rpt="${ROOT}/synthesis/reports"
 # export design="bm_stage_2"
 # export design="bm_stage_3"
 # export design="bch_pipelined"
+# export design="bch_pipe2"
+
+# export design="bch_pipe2_top"
+
+# export design="bch_comb_top"
 
 
-export design="bch_31_encoder"
+# export design="bch_31_encoder"
+# export design="bch_31_syndrome"
+# export design="bch_31_bm"
 #------------------------------------
 
 if [ ! -d "$work_dir" ]; then

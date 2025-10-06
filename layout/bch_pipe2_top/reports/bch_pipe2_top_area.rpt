@@ -1,0 +1,13 @@
+    Hinst Name       Module Name          Inst Count           Total Area
+----------------------------------------------------------------------
+bch_pipe2_top                                    571             1202.814
+ bm                  bch_pipe2                   159              257.868
+  bm/u_div1          gf_divider                   73              108.072
+  bm/u_div2          gf_divider_486               80              133.380
+  bm/u_mult1         gf_multiplier                 2                5.472
+  bm/u_xor1          xor_4                         4               10.944
+ cb                  bch_chien_block             300              447.336
+ cr                  bch_corrector                15               41.040
+ sb                  bch_syndrome_block           43              102.258
+ u_ff2               ff_4                          4               24.624
+ u_ff3               ff_4_586                      4               24.624

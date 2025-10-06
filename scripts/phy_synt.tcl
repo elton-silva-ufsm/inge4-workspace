@@ -69,9 +69,12 @@ switch $design {
    "bch_pipelined" {
       create_floorplan -core_density_size 1 0.95 3 3 3 3
    }
+   "bch_pipe2_top" {
+      create_floorplan -core_density_size 1 0.95 3 3 3 3
+   }
    default {
 		# 																		rat den l b r t
-      create_floorplan -core_density_size 4 0.9 3 3 3 3
+      create_floorplan -core_density_size 1 0.9 3 3 3 3
    }
 }
 
@@ -168,7 +171,7 @@ check_drc
 #------------------------------------ [22]
 check_antenna
 puts "SALVAR DESIGN?"
-suspend
+# suspend
 write_netlist $lyt/${design}/${design}_lyt.v
 write_sdf -edge check_edge -map_setuphold merge_always -map_recrem merge_always -version 3.0  $lyt/${design}/${design}_lyt.sdf
 get_db power_method
@@ -177,13 +180,24 @@ set_db power_corner min
 #   write_stream -mode ALL -unit 2000 $lyt/${design}.gsd
 write_def -floorplan -netlist -routing $lyt/${design}/${design}_lyt.def
 report_area > $lyt/${design}/reports/${design}_area.rpt
-report_timing -unconstrained > $lyt/${design}/reports/${design}_timing.rpt
+# report_timing -unconstrained > $lyt/${design}/reports/${design}_timing.rpt
 write_db $design.enc
 gui_fit
 gui_create_floorplan_snapshot -dir $ROOT/pics/$design/ -name $design.png -overwrite
+
+set_analysis_view -setup analysis_normal_fast_min -hold analysis_normal_fast_min
+
 set_db timing_analysis_check_type hold
-report_timing -unconstrained > $lyt/${design}/reports/${design}_hold_timing.rpt
+report_timing -unconstrained > $lyt/${design}/reports/${design}_hold_f_timing.rpt
 set_db timing_analysis_check_type setup
-report_timing -unconstrained > $lyt/${design}/reports/${design}_setup_timing.rpt
+report_timing -unconstrained > $lyt/${design}/reports/${design}_setup_f_timing.rpt
+
+
+set_analysis_view -setup analysis_normal_slow_max -hold analysis_normal_slow_max
+
+set_db timing_analysis_check_type hold
+report_timing -unconstrained > $lyt/${design}/reports/${design}_hold_s_timing.rpt
+set_db timing_analysis_check_type setup
+report_timing -unconstrained > $lyt/${design}/reports/${design}_setup_s_timing.rpt
 
 exit
