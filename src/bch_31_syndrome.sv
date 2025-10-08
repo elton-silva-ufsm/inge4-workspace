@@ -1,3 +1,5 @@
+// `include "../src/bch_31_modules.sv"
+
 module bch_31_syndrome(
     input  logic [30:0] codeword,
     output logic [ 4:0] S1,

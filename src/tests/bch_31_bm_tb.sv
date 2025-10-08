@@ -1,4 +1,5 @@
 `include "../src/bch_31_tables.sv"
+`include "../src/bch_31_modules.sv"
 
 module bch_31_bm_tb;
 
