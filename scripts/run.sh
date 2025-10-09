@@ -51,10 +51,10 @@ export rpt="${ROOT}/synthesis/reports"
 
 # export design="bch_comb_top"
 
-
 # export design="bch_31_encoder"
 # export design="bch_31_syndrome"
 # export design="bch_31_bm"
+# export design="bch_31_bm_comb"
 # export design="bch_31_chien"
 
 # export design="bch_31_top"
@@ -102,7 +102,7 @@ case ${1} in
     # xrun ${src}/bch_encoder.sv \
     # xrun ${src}/h_encoder_11_7.sv \
     # xrun ${src}/test_decoder_bch.sv \
-    xrun ${src}/error_generator5.sv \
+    xrun ${src}/error_generator31.sv \
     -access +rw -nohistory -quiet -sv \
     -log ${logs}/xrun.log -timescale 1ns/10ps # -gui
   ;;

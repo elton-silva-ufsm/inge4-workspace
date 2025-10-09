@@ -1,4 +1,4 @@
-// `include "../src/bch_31_tables.sv"
+// `include "../src/bch_31_modules.sv"
 
 module bch_31_chien (
     input  logic [4:0] lambda1,

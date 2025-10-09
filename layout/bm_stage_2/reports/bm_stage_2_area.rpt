@@ -1,0 +1,5 @@
+    Hinst Name       Module Name          Inst Count           Total Area
+----------------------------------------------------------------------
+bm_stage_2                                        94              221.616
+ u_mult1             gf_multiplier                78              120.384
+ u_xor1              xor_4                         4               10.944

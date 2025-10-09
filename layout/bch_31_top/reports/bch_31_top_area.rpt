@@ -1,0 +1,17 @@
+    Hinst Name       Module Name          Inst Count           Total Area
+----------------------------------------------------------------------
+bch_31_top                                      2398             3736.350
+ u_bm                bch_31_bm_comb              963             1566.702
+  u_bm/u_div1        gf_divider                  158              246.924
+  u_bm/u_div2        gf_divider_1037             158              246.924
+  u_bm/u_mult1       gf_multiplier                 3                8.208
+  u_bm/u_mult2       gf_multiplier_1             151              250.344
+  u_bm/u_mult3       gf_multiplier_1_1041        151              250.344
+  u_bm/u_mult4       gf_multiplier_1_1040        151              250.344
+  u_bm/u_mult5       gf_multiplier_1_1039        153              231.192
+  u_bm/u_mult6       gf_multiplier_1038            3                8.208
+  u_bm/u_xor1        xor_5                         5               13.680
+  u_bm/u_xor2        xor_5_1043                    5               13.680
+  u_bm/u_xor3        xor_5_1042                    5               13.680
+ u_chien             bch_31_chien               1253             1718.892
+ u_syndrome          bch_31_syndrome             151              344.736

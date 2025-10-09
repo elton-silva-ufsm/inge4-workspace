@@ -1,0 +1,10 @@
+    Hinst Name       Module Name          Inst Count           Total Area
+----------------------------------------------------------------------
+bch_bm_block_p                                   278              630.648
+ s1                  bm_stage_1                   96              231.876
+  s1/u_div1          gf_divider                   80              133.380
+ s2                  bm_stage_2                   94              205.200
+  s2/u_mult1         gf_multiplier                78              120.384
+  s2/u_xor1          xor_4                         4               10.944
+ s3                  bm_stage_3                   88              193.572
+  s3/u_div1          gf_divider_24                80              133.380

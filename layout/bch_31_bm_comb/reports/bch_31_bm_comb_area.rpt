@@ -1,0 +1,15 @@
+    Hinst Name       Module Name          Inst Count           Total Area
+----------------------------------------------------------------------
+bch_31_bm_comb                                  1112             1827.306
+ u_div1              gf_divider                  158              246.924
+ u_div2              gf_divider_22               158              246.924
+ u_div3              gf_divider_21               158              246.924
+ u_mult1             gf_multiplier                 3                8.208
+ u_mult2             gf_multiplier_1             151              250.344
+ u_mult3             gf_multiplier_1_26          151              250.344
+ u_mult4             gf_multiplier_1_25          151              250.344
+ u_mult5             gf_multiplier_1_24          151              250.344
+ u_mult6             gf_multiplier_23              3                8.208
+ u_xor1              xor_5                         5               13.680
+ u_xor2              xor_5_28                      5               13.680
+ u_xor3              xor_5_27                      5               13.680

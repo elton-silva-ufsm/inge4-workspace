@@ -1,0 +1,32 @@
+    Hinst Name       Module Name          Inst Count           Total Area
+----------------------------------------------------------------------
+bch_31_pipe                                     2677             4858.452
+ u_bm                bch_31_bm                  1141             2006.172
+  u_bm/u_div1        gf_divider                  158              246.924
+  u_bm/u_div2        gf_divider_1071             158              246.924
+  u_bm/u_div3        gf_divider_1070             158              246.924
+  u_bm/u_ff1         ff_5                          5               30.780
+  u_bm/u_ff2         ff_5_1308                     5               30.780
+  u_bm/u_ff3         ff_5_1307                     5               30.780
+  u_bm/u_ff4         ff_5_1306                     5               30.780
+  u_bm/u_ff5         ff_5_1305                     5               30.780
+  u_bm/u_ff6         ff_5_1304                     5               30.780
+  u_bm/u_mult1       gf_multiplier                 3                8.208
+  u_bm/u_mult2       gf_multiplier_1             151              250.344
+  u_bm/u_mult3       gf_multiplier_1_1075        151              250.344
+  u_bm/u_mult4       gf_multiplier_1_1074        151              250.344
+  u_bm/u_mult5       gf_multiplier_1_1073        151              250.344
+  u_bm/u_mult6       gf_multiplier_1072            3                8.208
+  u_bm/u_xor1        xor_5                         5               13.680
+  u_bm/u_xor2        xor_5_1077                    5               13.680
+  u_bm/u_xor3        xor_5_1076                    5               13.680
+ u_chien             bch_31_chien               1241             1705.896
+ u_corrector         bch_31_corrector             31              106.020
+ u_ff_cw             ff_31                        31              190.836
+ u_ff_cw2            ff_31_1299                   31              190.836
+ u_ff_cw3            ff_31_1298                   31              190.836
+ u_ff_s1             ff_5_1303                     5               30.780
+ u_ff_s2             ff_5_1302                     5               30.780
+ u_ff_s3             ff_5_1301                     5               30.780
+ u_ff_s4             ff_5_1300                     5               30.780
+ u_syndrome          bch_31_syndrome             151              344.736
