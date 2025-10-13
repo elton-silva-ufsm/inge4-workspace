@@ -62,7 +62,7 @@ syn_generic
 syn_map
 syn_opt
 
-suspend
+# suspend
 report_area >> ${syn}/${design}/reports/${design}_area.txt
 report_gates >> ${syn}/${design}/reports/${design}_gates.txt
 report_power >> ${syn}/${design}/reports/${design}_power.txt

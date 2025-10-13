@@ -1,0 +1,21 @@
+#----------------------------------------------------------
+# /home/ci_inovador/Documentos/inge4-workspace/pics/bch_32_bits_v2//.snaprc_bch_32_bits_v2.png : snapshot resource file                          
+# label = bch_32_bits_v2.png                                      
+#----------------------------------------------------------
+set tmpstr ""
+set tmpbar ""
+lappend tmpstr "dir" $sdir
+lappend tmpstr "label" bch_32_bits_v2.png
+lappend tmpstr "fplan" $sdir/ss_bch_32_bits_v2.png.fplan.gif
+lappend tmpstr "amoeba" $sdir/ss_bch_32_bits_v2.png.amoeba.gif
+lappend tmpstr "place" $sdir/ss_bch_32_bits_v2.png.place.gif
+lappend tmpstr "trgGlbOverflowPctH" 0
+lappend tmpstr "trgGlbOverflowPctV" 0
+lappend tmpbar "Congestion"
+lappend tmpstr "Congestion" 0
+lappend tmpbar WNS
+lappend tmpstr WNS 2147483647.0
+lappend tmpbar TNS
+lappend tmpstr TNS 2147483647.0
+lappend tmpbar Overlap
+lappend tmpstr Overlap 0

@@ -30,10 +30,12 @@ export rpt="${ROOT}/synthesis/reports"
 # export design="or16"
 # export design="syndrome_block_se"
 
-# export design="h_decoder_11_7"
+# export design="h_decoder_12_7"
 # export design="h_decoder_39_32"
-# export design="h_decoder_21_16"
+# export design="h_decoder_22_16"
 # export design="h_decoder_16_11"
+# export design="h_decoder_32_26"
+# export design="h_decoder_64_57"
 
 # export design="bch_syndrome_block"
 # export design="bch_bm_block"
@@ -58,8 +60,12 @@ export rpt="${ROOT}/synthesis/reports"
 # export design="bch_31_chien"
 
 # export design="bch_31_top"
-export design="bch_31_pipe"
-#------------------------------------
+# export design="bch_31_pipe"
+# export design="bch_32_bits_v1"  
+# export design="bch_32_bits_v1_p"  
+export design="bch_32_bits_v2"  
+# export design="bch_32_bits_v2_p"  
+# ------------------------------------
 
 if [ ! -d "$work_dir" ]; then
   mkdir -p "$work_dir"
@@ -123,8 +129,8 @@ case ${1} in
     innovus -stylus -abort_on_error -overwrite -db ${design}.enc
   ;;
   all)
-    echo -e "\033[1;33mExecuting logical simulation...\033[0m"
-    xrun -f ${scr}/xrun.conf
+    # echo -e "\033[1;33mExecuting logical simulation...\033[0m"
+    # xrun -f ${scr}/xrun.conf
     
     echo -e "\033[1;33mExecuting logic synthesis...\033[0m"
     genus -a -o -b -logs "${logs}/genus.log /dev/null" \

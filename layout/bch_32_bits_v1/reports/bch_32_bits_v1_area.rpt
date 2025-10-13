@@ -1,0 +1,35 @@
+    Hinst Name         Module Name          Inst Count           Total Area
+------------------------------------------------------------------------
+bch_32_bits_v1                                    4143             6539.382
+ u_bch1                bch_31_top                 2071             3268.836
+  u_bch1/u_bm          bch_31_bm_comb             1168             1823.544
+   u_bch1/u_bm/u_div1  gf_divider                  156              243.162
+   u_bch1/u_bm/u_div2  gf_divider_1229             158              246.924
+   u_bch1/u_bm/u_div3  gf_divider_1228             158              246.924
+   u_bch1/u_bm/u_mult1 gf_multiplier                 3                8.208
+   u_bch1/u_bm/u_mult2 gf_multiplier_7_1239        168              257.868
+   u_bch1/u_bm/u_mult3 gf_multiplier_7_1237        169              259.578
+   u_bch1/u_bm/u_mult4 gf_multiplier_7_1235        168              257.868
+   u_bch1/u_bm/u_mult5 gf_multiplier_7_1233        158              231.876
+   u_bch1/u_bm/u_mult6 gf_multiplier_1232            3                8.208
+   u_bch1/u_bm/u_xor1  xor_5                         5               13.680
+   u_bch1/u_bm/u_xor2  xor_5_1244                    5               13.680
+   u_bch1/u_bm/u_xor3  xor_5_1243                    5               13.680
+  u_bch1/u_chien       bch_31_chien                788             1153.566
+  u_bch1/u_syndrome    bch_31_syndrome              99              237.006
+ u_bch2                bch_31_top_1224            2071             3268.836
+  u_bch2/u_bm          bch_31_bm_comb_1221        1168             1823.544
+   u_bch2/u_bm/u_div1  gf_divider_1227             156              243.162
+   u_bch2/u_bm/u_div2  gf_divider_1226             158              246.924
+   u_bch2/u_bm/u_div3  gf_divider_1225             158              246.924
+   u_bch2/u_bm/u_mult1 gf_multiplier_1231            3                8.208
+   u_bch2/u_bm/u_mult2 gf_multiplier_7             168              257.868
+   u_bch2/u_bm/u_mult3 gf_multiplier_7_1238        169              259.578
+   u_bch2/u_bm/u_mult4 gf_multiplier_7_1236        168              257.868
+   u_bch2/u_bm/u_mult5 gf_multiplier_7_1234        158              231.876
+   u_bch2/u_bm/u_mult6 gf_multiplier_1230            3                8.208
+   u_bch2/u_bm/u_xor1  xor_5_1242                    5               13.680
+   u_bch2/u_bm/u_xor2  xor_5_1241                    5               13.680
+   u_bch2/u_bm/u_xor3  xor_5_1240                    5               13.680
+  u_bch2/u_chien       bch_31_chien_1222           788             1153.566
+  u_bch2/u_syndrome    bch_31_syndrome_1223         99              237.006
